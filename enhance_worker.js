@@ -1,1 +1,153 @@
-let success_rate=[50,45,45,40,40,40,35,35,35,35,30,30,30,30,30,30,30,30,30,30];function cal_exp(t,e){return 14+1.4*t*(1+e)}self.onmessage=function(t){for(total_tries=0,curr_tries=0,total_used_proto=0,curr_used_proto=0,enhance_level=0,curr_em=0,curr_cost=0,l_cost=1e300,h_cost=0,r=0,s_tries=18<=t.data.stop_at?1276777:15<=t.data.stop_at?976777:13<=t.data.stop_at?16397:1639,result={tries:0,used_proto:0,mat_1:0,mat_2:0,mat_3:0,mat_4:0,mat_5:0,prc_1:0,prc_2:0,prc_3:0,prc_4:0,prc_5:0,coins:0,proto_prc:0,cost:0,time:0,exp:0};curr_em<t.data.em;){for(curr_em++,enhance_level=t.data.start_at,curr_tries=0,curr_used_proto=0;enhance_level<t.data.stop_at;)total_tries++,curr_tries++,r=100*Math.random()+0,r<=Number((success_rate[enhance_level]*t.data.total_bonus+0.0005).toFixed(2))?t.data.use_blessing?(r=100*Math.random()+0,r<=1?(result.exp+=(cal_exp(t.data.item_level,enhance_level)+cal_exp(t.data.item_level,enhance_level+1))*t.data.wisdom,enhance_level+=2):(result.exp+=cal_exp(t.data.item_level,enhance_level)*t.data.wisdom,enhance_level++)):(result.exp+=cal_exp(t.data.item_level,enhance_level)*t.data.wisdom,enhance_level++):t.data.use_proto&&enhance_level>=t.data.proto_at?(total_used_proto++,curr_used_proto++,result.exp+=cal_exp(t.data.item_level,enhance_level)*t.data.wisdom*.1,enhance_level--):(result.exp+=cal_exp(t.data.item_level,enhance_level)*t.data.wisdom*.1,enhance_level=0),total_tries%s_tries==0&&self.postMessage({type:0,data:total_tries.toString()});result.tries+=curr_tries,result.used_proto+=curr_used_proto,result.mat_1+=curr_tries*t.data.mat_1,result.mat_2+=curr_tries*t.data.mat_2,result.mat_3+=curr_tries*t.data.mat_3,result.mat_4+=curr_tries*t.data.mat_4,result.mat_5+=curr_tries*t.data.mat_5,result.prc_1+=curr_tries*t.data.mat_1*t.data.prc_1,result.prc_2+=curr_tries*t.data.mat_2*t.data.prc_2,result.prc_3+=curr_tries*t.data.mat_3*t.data.prc_3,result.prc_4+=curr_tries*t.data.mat_4*t.data.prc_4,result.prc_5+=curr_tries*t.data.mat_5*t.data.prc_5,result.coins+=curr_tries*t.data.coins,result.time+=curr_tries*t.data.time,result.proto_prc+=curr_used_proto*t.data.proto_price,result.cost=result.prc_1+result.prc_2+result.prc_3+result.prc_4+result.prc_5+result.coins+result.proto_prc,curr_cost=curr_tries*t.data.mat_1*t.data.prc_1+curr_tries*t.data.mat_2*t.data.prc_2+curr_tries*t.data.mat_3*t.data.prc_3+curr_tries*t.data.mat_4*t.data.prc_4+curr_tries*t.data.mat_5*t.data.prc_5+curr_tries*t.data.coins+curr_used_proto*t.data.proto_price,curr_cost<l_cost&&(l_cost=curr_cost),curr_cost>h_cost&&(h_cost=curr_cost),self.postMessage({type:1,data:curr_em})}for(key in result)result[key]/=t.data.em;result.l_cost=l_cost,result.h_cost=h_cost,self.postMessage({type:2,data:result})};
+let success_rate = [
+  50, //+1
+  45, //+2
+  45, //+3
+  40, //+4
+  40, //+5
+  40, //+6
+  35, //+7
+  35, //+8
+  35, //+9
+  35, //+10
+  30, //+11
+  30, //+12
+  30, //+13
+  30, //+14
+  30, //+15
+  30, //+16
+  30, //+17
+  30, //+18
+  30, //+19
+  30 //+20
+  ];
+
+function cal_exp(il, el) {
+  return 14 + 1.4*il*(1+el)
+}
+
+self.onmessage = function(e) {
+  total_tries = 0
+  curr_tries = 0
+  total_used_proto = 0
+  curr_used_proto = 0
+  enhance_level = 0
+  curr_em = 0
+  curr_cost = 0
+  l_cost = 1e300
+  h_cost = 0
+  r = 0
+
+  //this is just for the sake off tries to be updated faster or slower depedning of stop_at
+  if(e.data.stop_at >= 18)
+    s_tries = 1276777
+  else if(e.data.stop_at >= 15)
+    s_tries = 976777
+  else if(e.data.stop_at >= 13)
+    s_tries = 16397
+  else
+    s_tries = 1639
+
+  //used for result
+  result = {
+    tries: 0,
+    used_proto: 0,
+    mat_1: 0,
+    mat_2: 0,
+    mat_3: 0,
+    mat_4: 0,
+    mat_5: 0,
+    prc_1: 0,
+    prc_2: 0,
+    prc_3: 0,
+    prc_4: 0,
+    prc_5: 0,
+    coins: 0,
+    proto_prc: 0,
+    cost: 0,
+    time: 0,
+    exp: 0,
+  }
+  //start 1 or 10 or 100
+  while(curr_em < e.data.em) {
+    curr_em++
+    enhance_level = e.data.start_at
+    curr_tries = 0
+    curr_used_proto = 0
+    //loop till reaching desired item level
+    while(enhance_level < e.data.stop_at) {
+      total_tries++
+      curr_tries++
+      r = Math.random() * (100 - 0) + 0
+      if(r <= Number((success_rate[enhance_level]*e.data.total_bonus+0.0005).toFixed(2))) {
+        if(e.data.use_blessing) {
+          r = Math.random() * (100 - 0) + 0
+          if(r <= 1) {
+            result.exp += (cal_exp(e.data.item_level, enhance_level)+cal_exp(e.data.item_level, enhance_level+1))*e.data.wisdom
+            enhance_level += 2
+          }
+          else {
+            result.exp += cal_exp(e.data.item_level, enhance_level)*e.data.wisdom
+            enhance_level++
+          }
+        }
+        else {
+          result.exp += cal_exp(e.data.item_level, enhance_level)*e.data.wisdom
+          enhance_level++
+        }
+      }
+      else if(e.data.use_proto && enhance_level >= e.data.proto_at) {
+        total_used_proto++
+        curr_used_proto++
+        result.exp += cal_exp(e.data.item_level, enhance_level)*e.data.wisdom*0.1
+        enhance_level--
+      }
+      else {
+        result.exp += cal_exp(e.data.item_level, enhance_level)*e.data.wisdom*0.1
+        enhance_level = 0
+      }
+
+      if(total_tries % s_tries == 0)
+        self.postMessage({"type": 0, "data": total_tries.toString()})
+    }
+
+    result.tries += curr_tries
+    result.used_proto += curr_used_proto
+    result.mat_1 += curr_tries * e.data.mat_1
+    result.mat_2 += curr_tries * e.data.mat_2
+    result.mat_3 += curr_tries * e.data.mat_3
+    result.mat_4 += curr_tries * e.data.mat_4
+    result.mat_5 += curr_tries * e.data.mat_5
+    result.prc_1 += curr_tries * e.data.mat_1 * e.data.prc_1
+    result.prc_2 += curr_tries * e.data.mat_2 * e.data.prc_2
+    result.prc_3 += curr_tries * e.data.mat_3 * e.data.prc_3
+    result.prc_4 += curr_tries * e.data.mat_4 * e.data.prc_4
+    result.prc_5 += curr_tries * e.data.mat_5 * e.data.prc_5
+    result.coins += curr_tries * e.data.coins
+    result.time += curr_tries * e.data.time
+    result.proto_prc += curr_used_proto * e.data.proto_price
+    result.cost = result.prc_1 + result.prc_2 + result.prc_3 + result.prc_4 + result.prc_5 + result.coins + result.proto_prc
+
+    curr_cost = (curr_tries * e.data.mat_1 * e.data.prc_1) + (curr_tries * e.data.mat_2 * e.data.prc_2) +
+      (curr_tries * e.data.mat_3 * e.data.prc_3) + (curr_tries * e.data.mat_4 * e.data.prc_4) + 
+      (curr_tries * e.data.mat_5 * e.data.prc_5) + (curr_tries * e.data.coins) + (curr_used_proto * e.data.proto_price)
+
+    if(curr_cost < l_cost)
+      l_cost = curr_cost
+
+    if(curr_cost > h_cost)
+      h_cost = curr_cost
+
+    self.postMessage({"type": 1, "data": curr_em})
+  }
+
+  //get average by dividing 1 / 10 / 100
+  for(key in result) {
+    result[key] /= e.data.em
+  }
+
+  //set after dividing
+  result.l_cost = l_cost
+  result.h_cost = h_cost
+
+  self.postMessage({"type": 2, "data": result})
+}

@@ -249,6 +249,7 @@ function reset() {
 
 	$("#i_item_level").val("0")
 	for(i = 1; i <=5; i++) {
+		$("#mat_"+i+"_cell").css("display", "none")
 		$("#i_mat_"+i).val("0")
 		$("#prc_"+i).val("0")
 	}
@@ -349,12 +350,6 @@ function change_item(id) {
 	$("#proto_at_cell").css("display", "none")
 	$("#i_proto_price").val("0")
 	$("#i_proto_at").val("2")
-
-	for(i = 1; i < 6; i++) {
-		$("#mat_"+i+"_cell").css("display", "none")
-		$("#i_mat_"+i).val("0")
-		$("#i_prc_"+i).val("0")
-	}
 
 	$("#item_stats").css("display", "flex")
 	materials = []

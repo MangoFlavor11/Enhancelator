@@ -207,7 +207,6 @@ function remove_tea(id) {
 }
 
 function validate_field(id, key, value, min, max) {
-	console.log(id, key, value, min, max)
 	if (value === "") {
 		$("#"+id).val("")
 		bundle[key] = 0
@@ -472,13 +471,13 @@ $(document).ready(function() {
 
 	//generte items list
 	for(key in items_data) {
-    $("#sel_item").append('<div id="'+key+'_list" value="'+key+'"><svg><use xlink:href="#'+key+'"></svg></use></div>')
+    $("#sel_item").append('<div id="'+key+'_list" value="'+key+'" class="sel_item_div"><svg><use xlink:href="#'+key+'"></svg></use></div>')
 	}
 
 	//generte ehancers items list
 	temp = Object.keys(items_data)
 	for(i = 296; i < temp.length; i++) {
-		$("#enhancer_item").append('<div id="'+temp[i]+'_enhance" value="'+temp[i]+'"><svg><use xlink:href="#'+temp[i]+'"></svg></use></div>')
+		$("#enhancer_item").append('<div id="'+temp[i]+'_enhance" value="'+temp[i]+'" class="sel_item_div"><svg><use xlink:href="#'+temp[i]+'"></svg></use></div>')
 	}
 
 	$("#menu_bg").on("click", function() {
@@ -512,7 +511,7 @@ $(document).ready(function() {
   	filter()
   })
 
-  $("#sel_item").on("click", "div", function() {
+  $("#sel_item").on("click", ".sel_item_div", function() {
   	change_item($(this).attr("value"))
   	update_values()
   })
@@ -573,7 +572,7 @@ $(document).ready(function() {
 		}
 	})
 
-	$("#enhancer_item").on("click", "div", function() {
+	$("#enhancer_item").on("click", ".sel_item_div", function() {
   	change_enhancer($(this).attr("value"))
   	update_values()
   })

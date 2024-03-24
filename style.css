@@ -220,6 +220,8 @@ ul {
 	padding: 15%;
 }
 
+.sel_item_div{}
+
 .item_stats {
 	display: none;
 	align-items: center;

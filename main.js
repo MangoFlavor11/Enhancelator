@@ -4,7 +4,7 @@ Obviously i do not own the game nor any art assets in the this projects
 */
 
 var worker = "",
-bundle = {
+info_ = {
 	item_level: 0,
 	start_at: 0,
 	stop_at: 10,
@@ -141,15 +141,15 @@ function formatTime(seconds) {
 
 //called after changing anything, because you can't have avg with different sets
 function update_values() {
-	if(bundle.enhance_skill+bundle.enhance_tea >= bundle.item_level)
-		bundle.total_bonus = 1+(0.05*(bundle.enhance_skill+bundle.enhance_tea+bundle.laboratory_level-bundle.item_level)+bundle.enhancer_bonus)/100
+	if(info_.enhance_skill+info_.enhance_tea >= info_.item_level)
+		info_.total_bonus = 1+(0.05*(info_.enhance_skill+info_.enhance_tea+info_.laboratory_level-info_.item_level)+info_.enhancer_bonus)/100
 	else
-		bundle.total_bonus = (1-(0.5*(1-(bundle.enhance_skill+bundle.enhance_tea)/bundle.item_level)))+((0.05*bundle.laboratory_level)+bundle.enhancer_bonus)/100
+		info_.total_bonus = (1-(0.5*(1-(info_.enhance_skill+info_.enhance_tea)/info_.item_level)))+((0.05*info_.laboratory_level)+info_.enhancer_bonus)/100
 	for(i = 0; i < success_rate.length; i++) {
-		es = Number(success_rate[i]*bundle.total_bonus+0.0005).toFixed(2)
+		es = Number(success_rate[i]*info_.total_bonus+0.0005).toFixed(2)
 		$(".success_rate_list").find("li:eq("+i+")").text("+"+(i+1)+": +"+es+"%")
 	}
-	$("#i_time").val((12/(1+(bundle.enhance_skill>bundle.item_level?(bundle.enhance_skill+bundle.enhance_tea+bundle.laboratory_level-bundle.item_level)/100:bundle.laboratory_level/100))).toFixed(2))
+	$("#i_time").val((12/(1+(info_.enhance_skill>info_.item_level?(info_.enhance_skill+info_.enhance_tea+info_.laboratory_level-info_.item_level)/100:info_.laboratory_level/100))).toFixed(2))
 	reset_results()
 }
 
@@ -162,7 +162,7 @@ function add_tea() {
 			$("#enhancing_tea_tea").remove()
 			$("#super_enhancing_tea_tea").remove()
 			selected_teas.splice(selected_teas.indexOf(selected == "enhancing_tea" ? "super_enhancing_tea":"enhancing_tea"), 1)
-			bundle.enhance_tea = 0
+			info_.enhance_tea = 0
 		}
 	}
 	//================================================
@@ -173,16 +173,16 @@ function add_tea() {
 	}
 	switch(selected) {
 	case "enhancing_tea":
-		bundle.enhance_tea = 3
+		info_.enhance_tea = 3
 		break
 	case "super_enhancing_tea":
-		bundle.enhance_tea = 6
+		info_.enhance_tea = 6
 		break
 	case "blessed_tea":
-		bundle.use_blessing = true
+		info_.use_blessing = true
 		break
 	case "wisdom_tea":
-		bundle.wisdom = 1.12
+		info_.wisdom = 1.12
 		break
 	}
 }
@@ -192,16 +192,16 @@ function remove_tea(id) {
 	selected_teas.splice(selected_teas.indexOf(id), 1)
 	switch(id) {
 	case "enhancing_tea":
-		bundle.enhance_tea = 0
+		info_.enhance_tea = 0
 		break
 	case "super_enhancing_tea":
-		bundle.enhance_tea = 0
+		info_.enhance_tea = 0
 		break
 	case "blessed_tea":
-		bundle.use_blessing = false
+		info_.use_blessing = false
 		break
 	case "wisdom_tea":
-		bundle.wisdom = 1
+		info_.wisdom = 1
 		break
 	}
 }
@@ -209,7 +209,7 @@ function remove_tea(id) {
 function validate_field(id, key, value, min, max) {
 	if (value === "") {
 		$("#"+id).val("")
-		bundle[key] = 0
+		info_[key] = 0
 		update_values()
 		return
 	}
@@ -232,7 +232,7 @@ function validate_field(id, key, value, min, max) {
 		temp = Number(temp).toLocaleString()
 
 	$("#"+id).val(temp)
-	bundle[key] = Number(temp.replace(/,/g, ''))
+	info_[key] = Number(temp.replace(/,/g, ''))
 	update_values()
 }
 
@@ -311,7 +311,7 @@ function update_result() {
 		$("#r_mat_"+i+"_cell").css("display", "none")
 	}
 
-	if(bundle.use_proto)
+	if(info_.use_proto)
 		$("#used_proto_cell").css("display", "flex")
 	for(i = 0; i < materials.length; i++) {
 		$("#r_mat_"+(i+1)+"_cell").css("display", "flex")
@@ -322,22 +322,22 @@ function update_result() {
 }
 
 function get_values() {
-	for(key in bundle) {
+	for(key in info_) {
 		if(key !== "total_bonus" && key !== "em")
 			if(key == "use_proto")
-				bundle[key] = $("#"+key).prop('checked')
+				info_[key] = $("#"+key).prop('checked')
 			else if(key == "proto_at") {
 				if(Number($("#i_"+key).val().replace(/,/g, '') <= 1))
 					$("#i_"+key).val("2")
-				bundle[key] = Number($("#i_"+key).val().replace(/,/g, ''))
+				info_[key] = Number($("#i_"+key).val().replace(/,/g, ''))
 			}
 			else if(key == "stop_at") {
 				if(Number($("#i_"+key).val().replace(/,/g, '') <= 1))
 					$("#i_"+key).val("1")
-				bundle[key] = Number($("#i_"+key).val().replace(/,/g, ''))
+				info_[key] = Number($("#i_"+key).val().replace(/,/g, ''))
 			}
 			else if(key != "wisdom" && key != "use_blessing" && key != "enhance_tea")
-				bundle[key] = Number($("#i_"+key).val().replace(/,/g, ''))
+				info_[key] = Number($("#i_"+key).val().replace(/,/g, ''))
 	}
 }
 
@@ -359,18 +359,18 @@ function change_item(id) {
 		elm = items_data[id].enhancementCosts[i]
 		if(elm[0] == "coin") {
 			$("#i_coins").val(elm[1])
-			bundle.coins = elm[1]
+			info_.coins = elm[1]
 		}
 		else {
 			materials.push(elm[0])
 			$("#mat_"+(i+1)+"_cell").css("display", "flex")
 			$("#mat_"+(i+1)+"_icon > svg > use").attr("xlink:href", "#"+elm[0])
 			$("#i_mat_"+(i+1)).val(elm[1])
-			bundle["mat_"+(i+1)] = elm[1]
+			info_["mat_"+(i+1)] = elm[1]
 		}
 	}
 	$("#i_item_level").val(items_data[id].itemLevel)
-	bundle.item_level = items_data[id].itemLevel
+	info_.item_level = items_data[id].itemLevel
 	for(key in items_data) {
 	  $("#"+key+"_list").css("display", "flex")
 	}
@@ -460,7 +460,7 @@ function change_enhancer(id) {
 		break
 	}
 	$("#i_enhancer_bonus").val((temp).toFixed(2))
-	bundle.enhancer_bonus = temp
+	info_.enhancer_bonus = temp
 	close_sel_menus()
 }
 
@@ -529,8 +529,8 @@ $(document).ready(function() {
   })
 
   $("#use_proto").on("input", function() {
-		bundle.use_proto = $("#use_proto").prop('checked')
-		if(bundle.use_proto) {
+		info_.use_proto = $("#use_proto").prop('checked')
+		if(info_.use_proto) {
 			$("#proto_price_cell").css("display", "flex")
 			$("#proto_at_cell").css("display", "flex")
 		}
@@ -609,41 +609,41 @@ function on_click_btn(id) {
 		$(".button").css("opacity", 0.5)
 
 		if(id == "start_1")
-			bundle.em = 1
+			info_.em = 1
 		else if(id == "start_10")
-			bundle.em = 10
+			info_.em = 10
 		else
-			bundle.em = 100
+			info_.em = 100
 
 		$("#cal").text("Calculating 0%")
 		$("#t_tries").text("Tries 0")
 		$("#calculating").css("display", "flex")
 
 		worker = new Worker('enhance_worker.js')
-		all_result.em += bundle.em
+		all_result.em += info_.em
 		close_sel_menus()
-		worker.postMessage({"bundle": bundle, "avg": avg_result, "all": all_result})
+		worker.postMessage({"info_": info_, "avg": avg_result, "all": all_result})
 
 		worker.onmessage = function(e) {
 			if(e.data.type == 0) {
-				if(bundle.em == 1)
+				if(info_.em == 1)
 					$("#t_tries").text("Tries "+(e.data.data).toLocaleString())
-				else if(bundle.em == 10)
+				else if(info_.em == 10)
 					$("#t_tries").text("Tries "+(e.data.data/10).toLocaleString())
 				else
 					$("#t_tries").text("Tries "+(e.data.data/100).toLocaleString())				
 			}
 			else if(e.data.type == 1) {
-				if(bundle.em == 1)
+				if(info_.em == 1)
 					$("#cal").text("Calculating "+e.data.data*100+"%")
-				else if(bundle.em == 10)
+				else if(info_.em == 10)
 					$("#cal").text("Calculating "+e.data.data*10+"%")
 				else
 					$("#cal").text("Calculating "+e.data.data+"%")
 			}
 			else {
 				$("#calculating").css("display", "none")
-				if(bundle.em == 1) {
+				if(info_.em == 1) {
 					$("#result_title").text("Total")
 				}
 				else {

@@ -47,7 +47,7 @@ function find_lowest_Highest(arr) {
 }
 
 self.onmessage = function(e) {
-  bundle = e.data.bundle
+  info_ = e.data.info_
   total_tries = 0
   curr_tries = 0
   total_used_proto = 0
@@ -58,11 +58,11 @@ self.onmessage = function(e) {
   r = 0
 
   //this is just for the sake off tries to be updated faster or slower depedning of stop_at
-  if(bundle.stop_at >= 18)
+  if(info_.stop_at >= 18)
     s_tries = 1276777
-  else if(bundle.stop_at >= 15)
+  else if(info_.stop_at >= 15)
     s_tries = 976777
-  else if(bundle.stop_at >= 13)
+  else if(info_.stop_at >= 13)
     s_tries = 16397
   else
     s_tries = 1639
@@ -72,42 +72,42 @@ self.onmessage = function(e) {
   avg_result = e.data.avg
 
   //start 1 or 10 or 100
-  while(curr_em < bundle.em) {
+  while(curr_em < info_.em) {
     curr_em++
-    enhance_level = bundle.start_at
+    enhance_level = info_.start_at
     curr_tries = 0
     curr_used_proto = 0
 
     //loop till reaching desired item level
-    while(enhance_level <bundle.stop_at) {
+    while(enhance_level <info_.stop_at) {
       total_tries++
       curr_tries++
       r = Math.random() * (100 - 0) + 0
-      if(r <= Number((success_rate[enhance_level]*bundle.total_bonus+0.0005).toFixed(2))) {
-        if(bundle.use_blessing) {
+      if(r <= Number((success_rate[enhance_level]*info_.total_bonus+0.0005).toFixed(2))) {
+        if(info_.use_blessing) {
           r = Math.random() * (100 - 0) + 0
           if(r <= 1) {
-            all_result.exp += (cal_exp(bundle.item_level, enhance_level)+cal_exp(bundle.item_level, enhance_level+1))*bundle.wisdom
+            all_result.exp += (cal_exp(info_.item_level, enhance_level)+cal_exp(info_.item_level, enhance_level+1))*info_.wisdom
             enhance_level += 2
           }
           else {
-            all_result.exp += cal_exp(bundle.item_level, enhance_level)*bundle.wisdom
+            all_result.exp += cal_exp(info_.item_level, enhance_level)*info_.wisdom
             enhance_level++
           }
         }
         else {
-          all_result.exp += cal_exp(bundle.item_level, enhance_level)*bundle.wisdom
+          all_result.exp += cal_exp(info_.item_level, enhance_level)*info_.wisdom
           enhance_level++
         }
       }
-      else if(bundle.use_proto && enhance_level >= bundle.proto_at) {
+      else if(info_.use_proto && enhance_level >= info_.proto_at) {
         total_used_proto++
         curr_used_proto++
-        all_result.exp += cal_exp(bundle.item_level, enhance_level)*bundle.wisdom*0.1
+        all_result.exp += cal_exp(info_.item_level, enhance_level)*info_.wisdom*0.1
         enhance_level--
       }
       else {
-        all_result.exp += cal_exp(bundle.item_level, enhance_level)*bundle.wisdom*0.1
+        all_result.exp += cal_exp(info_.item_level, enhance_level)*info_.wisdom*0.1
         enhance_level = 0
       }
 
@@ -117,24 +117,24 @@ self.onmessage = function(e) {
 
     all_result.tries += curr_tries
     all_result.used_proto += curr_used_proto
-    all_result.mat_1 += curr_tries * bundle.mat_1
-    all_result.mat_2 += curr_tries * bundle.mat_2
-    all_result.mat_3 += curr_tries * bundle.mat_3
-    all_result.mat_4 += curr_tries * bundle.mat_4
-    all_result.mat_5 += curr_tries * bundle.mat_5
-    all_result.prc_1 += curr_tries * bundle.mat_1 * bundle.prc_1
-    all_result.prc_2 += curr_tries * bundle.mat_2 * bundle.prc_2
-    all_result.prc_3 += curr_tries * bundle.mat_3 * bundle.prc_3
-    all_result.prc_4 += curr_tries * bundle.mat_4 * bundle.prc_4
-    all_result.prc_5 += curr_tries * bundle.mat_5 * bundle.prc_5
-    all_result.coins += curr_tries * bundle.coins
-    all_result.time += curr_tries * bundle.time
-    all_result.proto_prc += curr_used_proto * bundle.proto_price
+    all_result.mat_1 += curr_tries * info_.mat_1
+    all_result.mat_2 += curr_tries * info_.mat_2
+    all_result.mat_3 += curr_tries * info_.mat_3
+    all_result.mat_4 += curr_tries * info_.mat_4
+    all_result.mat_5 += curr_tries * info_.mat_5
+    all_result.prc_1 += curr_tries * info_.mat_1 * info_.prc_1
+    all_result.prc_2 += curr_tries * info_.mat_2 * info_.prc_2
+    all_result.prc_3 += curr_tries * info_.mat_3 * info_.prc_3
+    all_result.prc_4 += curr_tries * info_.mat_4 * info_.prc_4
+    all_result.prc_5 += curr_tries * info_.mat_5 * info_.prc_5
+    all_result.coins += curr_tries * info_.coins
+    all_result.time += curr_tries * info_.time
+    all_result.proto_prc += curr_used_proto * info_.proto_price
     all_result.cost = all_result.prc_1 + all_result.prc_2 + all_result.prc_3 + all_result.prc_4 + all_result.prc_5 + all_result.coins + all_result.proto_prc
 
-    curr_cost = (curr_tries * bundle.mat_1 * bundle.prc_1) + (curr_tries * bundle.mat_2 * bundle.prc_2) +
-      (curr_tries * bundle.mat_3 * bundle.prc_3) + (curr_tries * bundle.mat_4 * bundle.prc_4) + 
-      (curr_tries * bundle.mat_5 * bundle.prc_5) + (curr_tries * bundle.coins) + (curr_used_proto * bundle.proto_price)
+    curr_cost = (curr_tries * info_.mat_1 * info_.prc_1) + (curr_tries * info_.mat_2 * info_.prc_2) +
+      (curr_tries * info_.mat_3 * info_.prc_3) + (curr_tries * info_.mat_4 * info_.prc_4) + 
+      (curr_tries * info_.mat_5 * info_.prc_5) + (curr_tries * info_.coins) + (curr_used_proto * info_.proto_price)
 
     if(all_result.l_cost == 0) {
       all_result.l_cost = curr_cost

@@ -175,7 +175,7 @@ function add_tea() {
 	//================================================
 
 	if(!selected_teas.includes(selected)) {
-		$("#selected_teas").append('<div id="'+selected+'_tea" class="selected_tea"><div id="'+selected+'/remove" class="selected_tea_x btn"><p>X</p></div><svg><use xlink:href="#'+selected+'"></use></svg></div>')
+		$("#selected_teas").append('<div id="'+selected+'_tea" class="selected_tea"><div id="'+selected+'/remove" class="selected_tea_x btn"><p>&#10005;</p></div><svg><use xlink:href="#'+selected+'"></use></svg></div>')
 		selected_teas.push(selected)
 	}
 	switch(selected) {
@@ -268,6 +268,15 @@ function reset() {
 	materials = []
 	close_sel_menus()
 	update_values()
+}
+
+function stop_calc(stop) {
+	if(stop)
+		all_result.em -= info_.em
+	$("#calculating").css("display", "none")
+	$(".button").on("click", (e)=> {on_click_btn(e.currentTarget.id)})
+	$(".button").css("opacity", 1)
+	worker.terminate()
 }
 
 function close_sel_menus() {
@@ -671,7 +680,6 @@ function on_click_btn(id) {
 					$("#cal").text("Calculating "+e.data.data+"%")
 			}
 			else {
-				$("#calculating").css("display", "none")
 				if(info_.em == 1) {
 					$("#result_title").text("Total")
 				}
@@ -685,9 +693,7 @@ function on_click_btn(id) {
 				all_result = e.data.all
 				avg_result = e.data.avg
 	    	update_result()
-	    	$(".button").on("click", (e)=> {on_click_btn(e.currentTarget.id)})
-	    	$(".button").css("opacity", 1)
-	  		worker.terminate()	
+	    	stop_calc(false)
 			}
 		}
 

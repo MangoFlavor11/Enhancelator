@@ -13,16 +13,17 @@
 		<div id="info_btn" class="info_btn btn">
 			<p>?</p>
 		</div>
-		<p class="version">v 1.2.1</p>
+		<p class="version">v 1.3.0</p>
 	</div>
 	<div id="info_menu" class="menu info_menu">
 		<div>
 			<p>How to use:<br><br>This Simulator calculates values by running each attempt in real-time loop, hence simulating for +20 will take time, up to a few minutes<br><br>Keep in mind that the nature of enhancing is pure RNG, so every attempt will result in different values. Nevertheless, it's useful to know the range!<br><br>Choose an item from the items list. Once you select an item, some fields will be auto-filled, while others will not<br><br>Set remaining empty fields as needed, such as resource prices, protection price, and enhancing skill level<br><br>Once all fields are filled, click on the "Start" 1 / 10 / 100 iterations buttons to begin the simulation<br><br>You can increase the number of iterations for a more accurate average result by clicking on the 1 / 10 / 100 buttons again<br><br>Changing any fields after running iterations will reset everything<br><br><b>What is iterations counter?</b><br>Number of times the item reached from <i>Start At Level</i> to <i>Stop At Level</i><br><br><b>What is Coins counter?</b><br>How much <i>coins</i> used from the Simulating process</i><br><br><b>What is Item level?</b><br>In Game stat for items that affects multiple calculations, it is auto filled, and advised not to temper it</i><br><br><b>What is RNG?</b><br>Random Number Generators (RNG), a way used to determine random events, such as success rate</i></p>
 		</div>
 		<div class="updates_notes">
-			<p class="updates_titel">Patch: v 1.2.1</p>
+			<p class="updates_titel">Patch: v 1.3.0</p>
 			<ul>
 				<li>Added Use Enchanted Gloves</li>
+				<li>Added Stop button to stop calculation</li>
 				<li>Fixed Tea selection not working in some browsers</li>
 				<li>Probably fixed Simulator won't do anything in some browsers</li>
 			</ul>
@@ -364,6 +365,7 @@
 			<div id="calculating" class="calculating">
 				<p id="cal">Calculating 0%</p>
 				<p id="t_tries">Tries 0</p>
+				<div id="stop" class="stop_btn btn" onclick="stop_calc(true)"><p>Stop</p></div>
 			</div>
 		</div>
 		<div class="btns">

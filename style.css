@@ -65,6 +65,9 @@ ul {
 	-webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
+  background: #4357af;
+	border-radius: 5%;
+	border: 1px solid #98a7e9;
 }
 
 .btn:hover {
@@ -354,6 +357,7 @@ ul {
 	height: 16px;
 	top: 0;
 	right: 0;
+	font-size: 73%;
 }
 
 .selected_teas {
@@ -442,9 +446,7 @@ ul {
 	align-items: center;
 	text-align: center;
 	width: 74px;
-	height: 100%;
-	background: #4357af;
-	border-radius: 5%;
+	height: 38px;
 	margin: 0% 1%;
 }
 
@@ -507,9 +509,6 @@ ul {
 	height: 28px;
 	top: 0;
 	right: -34px;
-	background: #4357af;
-	border-radius: 5%;
-	border: 1px solid #98a7e9;
 }
 
 .info_menu {
@@ -535,6 +534,16 @@ ul {
 	margin-top: 16px;
 	font-size: 120%;
 	font-weight: bold;
+}
+
+.stop_btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 108px;
+	height: 48px;
+	font-size: 95%;
+	margin-top: 8px;
 }
 
 /* mobile / tablets*/

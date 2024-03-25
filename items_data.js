@@ -5118,10 +5118,6 @@ items_data = {
         7
       ],
       [
-        "redwood_log",
-        4
-      ],
-      [
         "coin",
         439
       ]

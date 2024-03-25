@@ -148,15 +148,16 @@ function update_values() {
 	else
 		info_.total_bonus = (1-(0.5*(1-(info_.enhance_skill+info_.enhance_tea)/info_.item_level)))+((0.05*info_.laboratory_level)+info_.enhancer_bonus)/100
 	for(i = 0; i < success_rate.length; i++) {
-		es = Number(success_rate[i]*info_.total_bonus+0.0005).toFixed(2)
+		es = Number(success_rate[i]*info_.total_bonus).toFixed(2)
 		$(".success_rate_list").find("li:eq("+i+")").text("+"+(i+1)+": +"+es+"%")
 	}
 	if(info_.use_gloves)
 		temp = get_enhancing_bonus("enchanted_gloves", "i_gloves_level")
 	else
 		temp = 0
-	$("#i_time").val((12/(1+(info_.enhance_skill>info_.item_level?((info_.enhance_skill+info_.enhance_tea+info_.laboratory_level-info_.item_level)+temp)/100:(info_.laboratory_level+temp)/100))).toFixed(2))
-	
+	temp = (12/(1+(info_.enhance_skill>info_.item_level?((info_.enhance_skill+info_.enhance_tea+info_.laboratory_level-info_.item_level)+temp)/100:(info_.laboratory_level+temp)/100))).toFixed(2)
+	$("#i_time").val(temp)
+	info_.time = Number(temp)
 	reset_results()
 }
 
@@ -319,7 +320,7 @@ function reset_results() {
 function update_result() {
 	for(key in avg_result) {
 		if(key == "time")
-			$("#"+key).text(formatTime(avg_result[key]))
+			$("#"+key).text(formatTime(avg_result.tries*info_.time))
 		else
 			$("#"+key).text(avg_result[key].toLocaleString())
 	}
@@ -480,7 +481,7 @@ function get_enhancing_bonus(id, elm) {
 		temp = items_data[id].baseBonus * 1.78
 		break
 	}
-	
+
 	return Number(temp.toFixed(2))
 }
 
@@ -560,7 +561,6 @@ $(document).ready(function() {
 		}
 		reset_results()
   })
-
 
   $("#i_proto_at").on("input", function() {
   	validate_field($(this)[0].id, "proto_at" , $(this).val(), 0, 19)

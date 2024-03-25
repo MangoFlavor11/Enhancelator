@@ -22,6 +22,7 @@
 		<div class="updates_notes">
 			<p class="updates_titel">Patch: v 1.2.1</p>
 			<ul>
+				<li>Added Use Enchanted Gloves</li>
 				<li>Fixed Tea selection not working in some browsers</li>
 				<li>Probably fixed Simulator won't do anything in some browsers</li>
 			</ul>
@@ -186,11 +187,19 @@
 				</div>
 				<div id="proto_price_cell" class="l_stat_cell" style="display: none;">
 					<p>Protection Price</p>
-					<input type="text" value="10000" id="i_proto_price" placeholder="88,000" class="pric_sel">
+					<input type="text" value="88000" id="i_proto_price" placeholder="88,000" class="pric_sel">
 				</div>
 				<div id="proto_at_cell" class="l_stat_cell" style="display: none;">
 					<p>Protection At Level</p>
-					<input type="text" value="2" id="i_proto_at" placeholder="7">
+					<input type="text" value="7" id="i_proto_at" placeholder="7">
+				</div>
+				<div class="l_stat_cell">
+					<p>Use Enchanted Gloves</p>
+					<input type="checkbox" id="use_gloves">
+				</div>
+				<div id="gloves_level_cell" class="l_stat_cell" style="display: none;">
+					<p>Enchanted Gloves Level</p>
+					<input type="text" value="0" id="i_gloves_level" placeholder="5">
 				</div>
 			</div>
 		</div>

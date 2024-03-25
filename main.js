@@ -11,6 +11,8 @@ info_ = {
 	use_proto: false,
 	proto_at: 0,
 	proto_price: 0,
+	use_gloves: false,
+	gloves_level: 0,
 	enhance_skill: 0,
 	enhancer_bonus: 0,
 	laboratory_level: 0,
@@ -149,7 +151,12 @@ function update_values() {
 		es = Number(success_rate[i]*info_.total_bonus+0.0005).toFixed(2)
 		$(".success_rate_list").find("li:eq("+i+")").text("+"+(i+1)+": +"+es+"%")
 	}
-	$("#i_time").val((12/(1+(info_.enhance_skill>info_.item_level?(info_.enhance_skill+info_.enhance_tea+info_.laboratory_level-info_.item_level)/100:info_.laboratory_level/100))).toFixed(2))
+	if(info_.use_gloves)
+		temp = get_enhancing_bonus("enchanted_gloves", "i_gloves_level")
+	else
+		temp = 0
+	$("#i_time").val((12/(1+(info_.enhance_skill>info_.item_level?((info_.enhance_skill+info_.enhance_tea+info_.laboratory_level-info_.item_level)+temp)/100:(info_.laboratory_level+temp)/100))).toFixed(2))
+	
 	reset_results()
 }
 
@@ -240,8 +247,11 @@ function reset() {
 	$("#use_proto").prop("checked", false)
 	$("#proto_price_cell").css("display", "none")
 	$("#proto_at_cell").css("display", "none")
+	$("#use_gloves").prop("checked", false)
+	$("#gloves_level_cell").css("display", "none")
 	$("#i_proto_price").val("0")
 	$("#i_proto_at").val("2")
+	$("#i_gloves_level").val("0")
 	
 	$("#item_stats").css("display", "none")
 	$(".item_slot_icon > svg > use").attr("xlink:href", "#")
@@ -249,9 +259,9 @@ function reset() {
 
 	$("#i_item_level").val("0")
 	for(i = 1; i <=5; i++) {
-		$("#mat_"+i+"_cell").css("display", "none")
 		$("#i_mat_"+i).val("0")
-		$("#prc_"+i).val("0")
+		$("#i_prc_"+i).val("0")
+		$("#mat_"+i+"_cell").css("display", "none")
 	}
 	$("#iterations").text("0")
 	$("#i_coins").val("0")
@@ -326,6 +336,8 @@ function get_values() {
 		if(key !== "total_bonus" && key !== "em")
 			if(key == "use_proto")
 				info_[key] = $("#"+key).prop('checked')
+			else if(key == "use_gloves")
+				info_[key] = $("#"+key).prop('checked')
 			else if(key == "proto_at") {
 				if(Number($("#i_"+key).val().replace(/,/g, '') <= 1))
 					$("#i_"+key).val("2")
@@ -392,8 +404,8 @@ function filter() {
 		}
 }
 
-function change_enhancer(id) {
-	temp = Number($("#ehnace_level").val())
+function get_enhancing_bonus(id, elm) {
+	temp = Number($("#"+elm).val())
 	switch(temp) {
 	case 0:
 		temp = items_data[id].baseBonus * 1
@@ -459,9 +471,8 @@ function change_enhancer(id) {
 		temp = items_data[id].baseBonus * 1.78
 		break
 	}
-	$("#i_enhancer_bonus").val((temp).toFixed(2))
-	info_.enhancer_bonus = temp
-	close_sel_menus()
+	
+	return Number(temp.toFixed(2))
 }
 
 $(document).ready(function() {
@@ -541,8 +552,23 @@ $(document).ready(function() {
 		reset_results()
   })
 
+
   $("#i_proto_at").on("input", function() {
   	validate_field($(this)[0].id, "proto_at" , $(this).val(), 0, 19)
+  })
+
+  $("#use_gloves").on("input", function() {
+		info_.use_gloves = $("#use_gloves").prop('checked')
+		if(info_.use_gloves)
+			$("#gloves_level_cell").css("display", "flex")
+		else
+			$("#gloves_level_cell").css("display", "none")
+		reset_results()
+		update_values()
+  })
+
+  $("#i_gloves_level").on("input", function() {
+  	validate_field($(this)[0].id, "gloves_level" , $(this).val(), 0, 20)
   })
 
   $(".mat_sel").on("input", function() {
@@ -573,7 +599,10 @@ $(document).ready(function() {
 	})
 
 	$("#enhancer_item").on("click", ".sel_item_div", function() {
-  	change_enhancer($(this).attr("value"))
+  	temp = get_enhancing_bonus($(this).attr("value"), "ehnace_level")
+  	$("#i_enhancer_bonus").val((temp).toFixed(2))
+		info_.enhancer_bonus = temp
+  	close_sel_menus()
   	update_values()
   })
 

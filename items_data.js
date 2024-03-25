@@ -2819,6 +2819,7 @@ items_data = {
   "enchanted_gloves": {
     "name": "Enchanted Gloves",
     "itemLevel": 60,
+    "baseBonus": 10,
     "enhancementCosts": [
       [
         "sorcerer_essence",

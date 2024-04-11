@@ -4,6 +4,30 @@ Obviously i do not own the game nor any art assets in the this projects
 */
 
 var worker = "",
+version = "v 1.3.2",
+enhance_bonus = [
+	1, // +0
+	1.02, // +1
+	1.042, // +2
+	1.066, // +3
+	1.092, // +4
+	1.12, // +5
+	1.15, // +6
+	1.182, // +7
+	1.216, // +8
+	1.252, // +9
+	1.29, // +10
+	1.33, // +11
+	1.372, // +12
+	1.416, // +13
+	1.462, // +14
+	1.51, // +15
+	1.56, // +16
+	1.612, // +17
+	1.666, // +18
+	1.722, // +19
+	1.78 // +20
+],
 info_ = {
 	item_level: 0,
 	start_at: 0,
@@ -83,62 +107,25 @@ avg_result = {
   l_cost: 0,
   h_cost: 0
 },
-sel_item_is_open = false,
-enhancer_item_is_open = false,
 materials = [],
 selected_teas = [],
 temp = 0;
 
-function addLeadingZeros(num, length) {
-  var str = num.toString()
-  while (str.length < length) {
-    str = '0' + str
-  }
-  return str
-}
-
-//tims as seconds, return string "00h:00m:00s"
+//tims as seconds, return string "00y:000d:00h:00m:00s"
 function formatTime(seconds) {
   // Calculate the number of years, days, hours, minutes, and seconds
-  var years = Math.floor(seconds / (365 * 24 * 3600))
-  var days = Math.floor((seconds % (365 * 24 * 3600)) / (24 * 3600))
-  var hours = Math.floor((seconds % (24 * 3600)) / 3600)
-  var minutes = Math.floor((seconds % 3600) / 60)
-  var remainingSeconds = Math.floor(seconds % 60)
+  var years = (Math.floor(seconds / 31536000)).toString()
+  var days = (Math.floor((seconds % 31536000) / 86400)).toString()
+  var hours = (Math.floor((seconds % 86400) / 3600)).toString()
+  var minutes = (Math.floor((seconds % 3600) / 60)).toString()
+  var remainingSeconds = (Math.floor(seconds % 60)).toString()
 
-  // Check if the time is greater than 365 days
-  if (years > 0) {
-    // Check if the number of years is less than 99
-    if (years < 99) {
-      return (
-        addLeadingZeros(years, 2) + 'y:' +
-        addLeadingZeros(days, 2) + 'd:' +
-        addLeadingZeros(hours, 2) + 'h'
-      );
-    } else {
-      return (
-        '000y:' +
-        addLeadingZeros(days, 2) + 'd:' +
-        addLeadingZeros(hours, 2) + 'h'
-      )
-    }
-  }
-
-  // Check if the time is greater than 24 hours
-  if (days > 0) {
-    return (
-      addLeadingZeros(days, 2) + 'd:' +
-      addLeadingZeros(hours, 2) + 'h:' +
-      addLeadingZeros(minutes, 2) + 'm'
-    )
-  }
-
-  // Format the time as a string '00h:00m:00s'
-  return (
-    addLeadingZeros(hours, 2) + 'h:' +
-    addLeadingZeros(minutes, 2) + 'm:' +
-    addLeadingZeros(remainingSeconds, 2) + 's'
-  )
+  if (years > 0)
+    return years.padStart(2, '0')+"y:"+days.padStart(3, '0')+"d:"+hours.padStart(2, '0')+"h:"+minutes.padStart(2, '0')+"m"
+  else if (days > 0)
+    return days.padStart(3, '0')+"d:"+hours.padStart(2, '0')+"h:"+minutes.padStart(2, '0')+"m:"+remainingSeconds.padStart(2, '0')+"s"
+  else
+  	return hours.padStart(2, '0')+"h:"+minutes.padStart(2, '0')+"m:"+remainingSeconds.padStart(2, '0')+"s"
 }
 
 //called after changing anything, because you can't have avg with different sets
@@ -148,11 +135,12 @@ function update_values() {
 	else
 		info_.total_bonus = (1-(0.5*(1-(info_.enhance_skill+info_.enhance_tea)/info_.item_level)))+((0.05*info_.laboratory_level)+info_.enhancer_bonus)/100
 	for(i = 0; i < success_rate.length; i++) {
+
 		es = Number(success_rate[i]*info_.total_bonus).toFixed(2)
 		$(".success_rate_list").find("li:eq("+i+")").text("+"+(i+1)+": +"+es+"%")
 	}
 	if(info_.use_gloves)
-		temp = get_enhancing_bonus("enchanted_gloves", "i_gloves_level")
+		temp = get_enhancing_bonus("i_gloves_level", "171")
 	else
 		temp = 0
 	temp = (12/(1+(info_.enhance_skill>info_.item_level?((info_.enhance_skill+info_.enhance_tea+info_.laboratory_level-info_.item_level)+temp)/100:(info_.laboratory_level+temp)/100))).toFixed(2)
@@ -215,32 +203,29 @@ function remove_tea(id) {
 }
 
 function validate_field(id, key, value, min, max) {
-	if (value === "") {
-		$("#"+id).val("")
+	value = Number(value)
+	min = Number(min)
+	max = Number(max)
+
+	if (value == 0) {
+		$("#"+id).val(0)
 		info_[key] = 0
 		update_values()
 		return
 	}
 
-  temp = value.replace(/[^\d.]/g, '').replace(/^(\d*\.\d*)\..*/, '$1').replace(/^(0)(\d)/, '$2')
-  if(Number(temp) < min) {
-		$("#"+id).val(min.toLocaleString())
-		return
+  if(value < min) {
+		$("#"+id).val()
+		info_[key] = min
 	} 
-  else if(Number(temp) > max) {
-		$("#"+id).val(max.toLocaleString())
-		return
+  else if(value > max) {
+		$("#"+id).val(max)
+		info_[key] = max
 	}
-    	
-	if(temp.includes(".")) {
-		temp = temp.split('.')
-		temp = Number(temp[0]).toLocaleString()+"."+temp[1]
+	else {
+		$("#"+id).val(value)
+		info_[key] = value
 	}
-	else
-		temp = Number(temp).toLocaleString()
-
-	$("#"+id).val(temp)
-	info_[key] = Number(temp.replace(/,/g, ''))
 	update_values()
 }
 
@@ -282,15 +267,15 @@ function stop_calc(stop) {
 
 function close_sel_menus() {
 	$("#item_filter").val("")
-	sel_item_is_open = false
 	$("#sel_item_container").css("display", "none")
 	$("#ehnace_level").val("0")
-	enhancer_item_is_open = false
 	$("#enhancer_item_container").css("display", "none")
 }
 
 //chaning any value will change avg, so it must be reseted
 function reset_results() {
+	$("#reset_result").css("display", "none")
+
 	for(key in all_result) {
 		all_result[key] = 0
 	}
@@ -302,7 +287,7 @@ function reset_results() {
 	for(i = 1; i <=5; i++) {
 		$("#r_mat_"+i+"_cell").css("display", "none")
 	}
-	$("#result_title").text("Total")
+	$("#result_title").text("Result")
 	$("#iterations").text("0")
 	$("#time").text("0")
 	$("#tries").text("0")
@@ -312,9 +297,9 @@ function reset_results() {
 	$("#l_cost").text("0")
 	$("#h_cost").text("0")
 
-	$("#start_1 > p").text("Start 1 time")
-	$("#start_10 > p").text("Start 10 times")
-	$("#start_100 > p").text("Start 100 times")
+	$("#start_1 > p").text("Start 1 itteration")
+	$("#start_10 > p").text("Start 10 itteration")
+	$("#start_100 > p").text("Start 100 itteration")
 }
 
 function update_result() {
@@ -363,10 +348,9 @@ function get_values() {
 	}
 }
 
-function change_item(id) {
+function change_item(value, index) {
 	reset()
-	$(".item_slot_icon > svg > use").attr("xlink:href", "#"+id)
-	sel_item_is_open = false
+	$(".item_slot_icon > svg > use").attr("xlink:href", "#"+value)
 	$("#sel_item_container").css("display", "none")
 	$("#item_slot_text").css("display", "none")
 
@@ -377,8 +361,8 @@ function change_item(id) {
 
 	$("#item_stats").css("display", "flex")
 	materials = []
-	for(i = 0; i < items_data[id].enhancementCosts.length; i++) {
-		elm = items_data[id].enhancementCosts[i]
+	for(i = 0; i < items_data[index].enhancementCosts.length; i++) {
+		elm = items_data[index].enhancementCosts[i]
 		if(elm[0] == "coin") {
 			$("#i_coins").val(elm[1])
 			info_.coins = elm[1]
@@ -391,116 +375,58 @@ function change_item(id) {
 			info_["mat_"+(i+1)] = elm[1]
 		}
 	}
-	$("#i_item_level").val(items_data[id].itemLevel)
-	info_.item_level = items_data[id].itemLevel
-	for(key in items_data) {
+	$("#i_item_level").val(items_data[index].itemLevel)
+	info_.item_level = items_data[index].itemLevel
+	items_data.forEach(function(item, index) {
+		key = item.key
 	  $("#"+key+"_list").css("display", "flex")
-	}
+	})
 	update_values()
 }
 
 function filter() {
 	temp = $("#item_filter").val().toLowerCase()
 	if(temp != "")
-		for(key in items_data) {
+		items_data.forEach(function(item, index) {
+			key = item.key
 			if(key.includes(temp))
 	    	$("#"+key+"_list").css("display", "flex")
 	    else
 	    	$("#"+key+"_list").css("display", "none")
-		}
+		})
 	else
-		for(key in items_data) {
+		items_data.forEach(function(item, index) {
+			key = item.key
 	    $("#"+key+"_list").css("display", "flex")
-		}
+		})
 }
 
-function get_enhancing_bonus(id, elm) {
-	temp = Number($("#"+elm).val())
-	switch(temp) {
-	case 0:
-		temp = items_data[id].baseBonus * 1
-		break
-	case 1:
-		temp = items_data[id].baseBonus * 1.02
-		break
-	case 2:
-		temp = items_data[id].baseBonus * 1.042
-		break
-	case 3:
-		temp = items_data[id].baseBonus * 1.066
-		break
-	case 4:
-		temp = items_data[id].baseBonus * 1.092
-		break
-	case 5:
-		temp = items_data[id].baseBonus * 1.12
-		break
-	case 6:
-		temp = items_data[id].baseBonus * 1.15
-		break
-	case 7:
-		temp = items_data[id].baseBonus * 1.182
-		break
-	case 8:
-		temp = items_data[id].baseBonus * 1.216
-		break
-	case 9:
-		temp = items_data[id].baseBonus * 1.252
-		break
-	case 10:
-		temp = items_data[id].baseBonus * 1.29
-		break
-	case 11:
-		temp = items_data[id].baseBonus * 1.33
-		break
-	case 12:
-		temp = items_data[id].baseBonus * 1.372
-		break
-	case 13:
-		temp = items_data[id].baseBonus * 1.416
-		break
-	case 14:
-		temp = items_data[id].baseBonus * 1.462
-		break
-	case 15:
-		temp = items_data[id].baseBonus * 1.51
-		break
-	case 16:
-		temp = items_data[id].baseBonus * 1.56
-		break
-	case 17:
-		temp = items_data[id].baseBonus * 1.612
-		break
-	case 18:
-		temp = items_data[id].baseBonus * 1.666
-		break
-	case 19:
-		temp = items_data[id].baseBonus * 1.722
-		break
-	case 20:
-		temp = items_data[id].baseBonus * 1.78
-		break
-	}
-
+function get_enhancing_bonus(value, index) {
+	temp = Number($("#"+value).val())
+	temp = items_data[index].baseBonus * enhance_bonus[temp]
 	return Number(temp.toFixed(2))
 }
 
 $(document).ready(function() {
+	window.scrollTo(0, 1)
+	$("#version").text(version)
 	reset()
 	get_values()
 	update_values()
 
 	//generte items list
-	for(key in items_data) {
-    $("#sel_item").append('<div id="'+key+'_list" value="'+key+'" class="sel_item_div"><svg><use xlink:href="#'+key+'"></svg></use></div>')
-	}
+	items_data.forEach(function(item, index) {
+		key = item.key
+    $("#sel_item").append('<div id="'+key+'_list" value="'+key+'" data="'+index+'" class="sel_item_div"><svg><use xlink:href="#'+key+'"></svg></use></div>')
+	})
 
 	//generte ehancers items list
-	temp = Object.keys(items_data)
-	for(i = 296; i < temp.length; i++) {
-		$("#enhancer_item").append('<div id="'+temp[i]+'_enhance" value="'+temp[i]+'" class="sel_item_div"><svg><use xlink:href="#'+temp[i]+'"></svg></use></div>')
+	for(i = 296; i < items_data.length; i++) {
+		key = items_data[i].key
+		$("#enhancer_item").append('<div id="'+key+'_enhance" value="'+key+'" data="'+i+'" class="sel_item_div"><svg><use xlink:href="#'+key+'"></svg></use></div>')
 	}
 
+	//click on transparent background
 	$("#menu_bg").on("click", function() {
     $("#menu_bg").css("display", "none")
 		$("#info_menu").css("display", "none")
@@ -513,14 +439,8 @@ $(document).ready(function() {
   })
 
 	$("#item_slot").on("click", ".item_slot_icon", function() {
-		if(!sel_item_is_open) {
-			sel_item_is_open = true
-			$("#sel_item_container").css("display", "flex")
-		}
-		else {
-			sel_item_is_open = false
-			$("#sel_item_container").css("display", "none")
-		}
+		temp = $("#sel_item_container").css("display")
+		$("#sel_item_container").css("display", temp == "flex" ? "none":"flex")
 	})
 
   $("#info_btn").on("click", function() {
@@ -533,20 +453,8 @@ $(document).ready(function() {
   })
 
   $("#sel_item").on("click", ".sel_item_div", function() {
-  	change_item($(this).attr("value"))
+  	change_item($(this).attr("value"), $(this).attr("data"))
   	update_values()
-  })
-
-	$("#i_item_level").on("input", function(){
-		validate_field($(this)[0].id, "item_level" , $(this).val(), 0, 200)
-	})
-
-	$("#i_start_at").on("input", function() {
-		validate_field($(this)[0].id, "start_at" , $(this).val(), 0, 19)
-   })
-
-  $("#i_stop_at").on("input", function() {
-  	validate_field($(this)[0].id, "stop_at" , $(this).val(), 0, 20)
   })
 
   $("#use_proto").on("input", function() {
@@ -562,10 +470,6 @@ $(document).ready(function() {
 		reset_results()
   })
 
-  $("#i_proto_at").on("input", function() {
-  	validate_field($(this)[0].id, "proto_at" , $(this).val(), 0, 19)
-  })
-
   $("#use_gloves").on("input", function() {
 		info_.use_gloves = $("#use_gloves").prop('checked')
 		if(info_.use_gloves)
@@ -576,52 +480,22 @@ $(document).ready(function() {
 		update_values()
   })
 
-  $("#i_gloves_level").on("input", function() {
-  	validate_field($(this)[0].id, "gloves_level" , $(this).val(), 0, 20)
-  })
-
-  $(".mat_sel").on("input", function() {
-  	validate_field($(this)[0].id, $(this)[0].id.replace("i_",""), $(this).val(), 0, 1000)
-  })
-
-  $(".pric_sel").on("input", function() {
-  	validate_field($(this)[0].id, $(this)[0].id.replace("i_",""), $(this).val(), 0, 10000000)
-  })
-
-  $("#i_enhance_skill").on("input", function() {
-  	validate_field($(this)[0].id, "enhance_skill" , $(this).val(), 0, 200)
+  $("input[type='number']").on("input", function() {
+  	validate_field($(this)[0].id, $(this)[0].id.replace("i_", ""), $(this)[0].value, $(this)[0].min, $(this)[0].max)
 	})
 
-	$("#i_enhancer_bonus").on("input", function() {
-		validate_field($(this)[0].id, "enhancer_bonus" , $(this).val(), 0, 100)
-  })
-
   $("#i_enhancer_bonus").on("click", function() {
-		if(!enhancer_item_is_open) {
-			enhancer_item_is_open = true
-			$("#enhancer_item_container").css("display", "flex")
-		}
-		else {
-			enhancer_item_is_open = false
-			$("#enhancer_item_container").css("display", "none")
-		}
+  	temp = $("#enhancer_item_container").css("display")
+		$("#enhancer_item_container").css("display", temp == "flex" ? "none":"flex")
 	})
 
 	$("#enhancer_item").on("click", ".sel_item_div", function() {
-  	temp = get_enhancing_bonus($(this).attr("value"), "ehnace_level")
+  	temp = get_enhancing_bonus("ehnace_level", $(this).attr("data"))
   	$("#i_enhancer_bonus").val((temp).toFixed(2))
 		info_.enhancer_bonus = temp
   	close_sel_menus()
   	update_values()
   })
-
-	$("#i_laboratory_level").on("input", function() {
-		validate_field($(this)[0].id, "laboratory_level" , $(this).val(), 0, 8)
-  })
-
-  $("#i_time").on("input", function(){
-		validate_field($(this)[0].id, "time" , $(this).val(), 1, 12)
-	})
 
 	$("#tea_sel").change(function() {
 		add_tea()
@@ -660,16 +534,18 @@ function on_click_btn(id) {
 		worker = new Worker('enhance_worker.js')
 		all_result.em += info_.em
 		close_sel_menus()
-		worker.postMessage({"info_": info_, "avg": avg_result, "all": all_result})
+		worker.postMessage({"Enhancelator": 0, "info_": info_, "avg": avg_result, "all": all_result})
 
 		worker.onmessage = function(e) {
+			if(!e.data.hasOwnProperty('Enhancelator'))
+    		return
 			if(e.data.type == 0) {
 				if(info_.em == 1)
-					$("#t_tries").text("Tries "+(e.data.data).toLocaleString())
+					$("#t_tries").text("Attempts "+(e.data.data).toLocaleString())
 				else if(info_.em == 10)
-					$("#t_tries").text("Tries "+(e.data.data/10).toLocaleString())
+					$("#t_tries").text("Attempts "+(e.data.data/10).toLocaleString())
 				else
-					$("#t_tries").text("Tries "+(e.data.data/100).toLocaleString())				
+					$("#t_tries").text("Attempts "+(e.data.data/100).toLocaleString())				
 			}
 			else if(e.data.type == 1) {
 				if(info_.em == 1)
@@ -681,15 +557,16 @@ function on_click_btn(id) {
 			}
 			else {
 				if(info_.em == 1) {
-					$("#result_title").text("Total")
+					$("#result_title").text("Result")
 				}
 				else {
-					$("#result_title").text("AVG Total")
+					$("#result_title").text("AVG Result")
 				}
 
-				$("#start_1 > p").text("Add 1 time")
-				$("#start_10 > p").text("Add 10 times")
-				$("#start_100 > p").text("Add 100 times")
+				$("#reset_result").css("display", "flex")
+				$("#start_1 > p").text("Add 1 itteration")
+				$("#start_10 > p").text("Add 10 itteration")
+				$("#start_100 > p").text("Add 100 itteration")
 				all_result = e.data.all
 				avg_result = e.data.avg
 	    	update_result()

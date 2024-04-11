@@ -1,5 +1,5 @@
-items_data = {
-  "gobo_stabber": {
+items_data = [
+  {
     "name": "Gobo Stabber",
     "itemLevel": 40,
     "enhancementCosts": [
@@ -12,9 +12,10 @@ items_data = {
         120
       ]
     ],
-    "sortIndex": 121
+    "sortIndex": 121,
+    "key": "gobo_stabber"
   },
-  "gobo_slasher": {
+  {
     "name": "Gobo Slasher",
     "itemLevel": 40,
     "enhancementCosts": [
@@ -27,9 +28,10 @@ items_data = {
         120
       ]
     ],
-    "sortIndex": 122
+    "sortIndex": 122,
+    "key": "gobo_slasher"
   },
-  "gobo_smasher": {
+  {
     "name": "Gobo Smasher",
     "itemLevel": 40,
     "enhancementCosts": [
@@ -42,9 +44,10 @@ items_data = {
         120
       ]
     ],
-    "sortIndex": 123
+    "sortIndex": 123,
+    "key": "gobo_smasher"
   },
-  "spiked_bulwark": {
+  {
     "name": "Spiked Bulwark",
     "itemLevel": 85,
     "enhancementCosts": [
@@ -61,9 +64,10 @@ items_data = {
         2034
       ]
     ],
-    "sortIndex": 124
+    "sortIndex": 124,
+    "key": "spiked_bulwark"
   },
-  "werewolf_slasher": {
+  {
     "name": "Werewolf Slasher",
     "itemLevel": 85,
     "enhancementCosts": [
@@ -80,9 +84,10 @@ items_data = {
         2034
       ]
     ],
-    "sortIndex": 125
+    "sortIndex": 125,
+    "key": "werewolf_slasher"
   },
-  "gobo_shooter": {
+  {
     "name": "Gobo Shooter",
     "itemLevel": 40,
     "enhancementCosts": [
@@ -95,9 +100,10 @@ items_data = {
         120
       ]
     ],
-    "sortIndex": 126
+    "sortIndex": 126,
+    "key": "gobo_shooter"
   },
-  "vampiric_bow": {
+  {
     "name": "Vampiric Bow",
     "itemLevel": 85,
     "enhancementCosts": [
@@ -114,9 +120,10 @@ items_data = {
         2034
       ]
     ],
-    "sortIndex": 127
+    "sortIndex": 127,
+    "key": "vampiric_bow"
   },
-  "gobo_boomstick": {
+  {
     "name": "Gobo Boomstick",
     "itemLevel": 40,
     "enhancementCosts": [
@@ -129,9 +136,10 @@ items_data = {
         120
       ]
     ],
-    "sortIndex": 128
+    "sortIndex": 128,
+    "key": "gobo_boomstick"
   },
-  "cheese_bulwark": {
+  {
     "name": "Cheese Bulwark",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -144,9 +152,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 129
+    "sortIndex": 129,
+    "key": "cheese_bulwark"
   },
-  "verdant_bulwark": {
+  {
     "name": "Verdant Bulwark",
     "itemLevel": 10,
     "enhancementCosts": [
@@ -159,9 +168,10 @@ items_data = {
         31
       ]
     ],
-    "sortIndex": 130
+    "sortIndex": 130,
+    "key": "verdant_bulwark"
   },
-  "azure_bulwark": {
+  {
     "name": "Azure Bulwark",
     "itemLevel": 20,
     "enhancementCosts": [
@@ -174,9 +184,10 @@ items_data = {
         54
       ]
     ],
-    "sortIndex": 131
+    "sortIndex": 131,
+    "key": "azure_bulwark"
   },
-  "burble_bulwark": {
+  {
     "name": "Burble Bulwark",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -189,9 +200,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 132
+    "sortIndex": 132,
+    "key": "burble_bulwark"
   },
-  "crimson_bulwark": {
+  {
     "name": "Crimson Bulwark",
     "itemLevel": 50,
     "enhancementCosts": [
@@ -204,9 +216,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 133
+    "sortIndex": 133,
+    "key": "crimson_bulwark"
   },
-  "rainbow_bulwark": {
+  {
     "name": "Rainbow Bulwark",
     "itemLevel": 65,
     "enhancementCosts": [
@@ -219,9 +232,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 134
+    "sortIndex": 134,
+    "key": "rainbow_bulwark"
   },
-  "holy_bulwark": {
+  {
     "name": "Holy Bulwark",
     "itemLevel": 80,
     "enhancementCosts": [
@@ -234,9 +248,10 @@ items_data = {
         1345
       ]
     ],
-    "sortIndex": 135
+    "sortIndex": 135,
+    "key": "holy_bulwark"
   },
-  "wooden_bow": {
+  {
     "name": "Wooden Bow",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -249,9 +264,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 136
+    "sortIndex": 136,
+    "key": "wooden_bow"
   },
-  "birch_bow": {
+  {
     "name": "Birch Bow",
     "itemLevel": 10,
     "enhancementCosts": [
@@ -264,9 +280,10 @@ items_data = {
         31
       ]
     ],
-    "sortIndex": 137
+    "sortIndex": 137,
+    "key": "birch_bow"
   },
-  "cedar_bow": {
+  {
     "name": "Cedar Bow",
     "itemLevel": 20,
     "enhancementCosts": [
@@ -279,9 +296,10 @@ items_data = {
         54
       ]
     ],
-    "sortIndex": 138
+    "sortIndex": 138,
+    "key": "cedar_bow"
   },
-  "purpleheart_bow": {
+  {
     "name": "Purpleheart Bow",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -294,9 +312,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 139
+    "sortIndex": 139,
+    "key": "purpleheart_bow"
   },
-  "ginkgo_bow": {
+  {
     "name": "Ginkgo Bow",
     "itemLevel": 50,
     "enhancementCosts": [
@@ -309,9 +328,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 140
+    "sortIndex": 140,
+    "key": "ginkgo_bow"
   },
-  "redwood_bow": {
+  {
     "name": "Redwood Bow",
     "itemLevel": 65,
     "enhancementCosts": [
@@ -324,9 +344,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 141
+    "sortIndex": 141,
+    "key": "redwood_bow"
   },
-  "arcane_bow": {
+  {
     "name": "Arcane Bow",
     "itemLevel": 80,
     "enhancementCosts": [
@@ -339,9 +360,10 @@ items_data = {
         1345
       ]
     ],
-    "sortIndex": 142
+    "sortIndex": 142,
+    "key": "arcane_bow"
   },
-  "stalactite_spear": {
+  {
     "name": "Stalactite Spear",
     "itemLevel": 85,
     "enhancementCosts": [
@@ -362,9 +384,10 @@ items_data = {
         2034
       ]
     ],
-    "sortIndex": 143
+    "sortIndex": 143,
+    "key": "stalactite_spear"
   },
-  "granite_bludgeon": {
+  {
     "name": "Granite Bludgeon",
     "itemLevel": 85,
     "enhancementCosts": [
@@ -385,9 +408,10 @@ items_data = {
         2034
       ]
     ],
-    "sortIndex": 144
+    "sortIndex": 144,
+    "key": "granite_bludgeon"
   },
-  "soul_hunter_crossbow": {
+  {
     "name": "Soul Hunter Crossbow",
     "itemLevel": 85,
     "enhancementCosts": [
@@ -404,9 +428,10 @@ items_data = {
         2034
       ]
     ],
-    "sortIndex": 145
+    "sortIndex": 145,
+    "key": "soul_hunter_crossbow"
   },
-  "frost_staff": {
+  {
     "name": "Frost Staff",
     "itemLevel": 85,
     "enhancementCosts": [
@@ -423,9 +448,10 @@ items_data = {
         2034
       ]
     ],
-    "sortIndex": 146
+    "sortIndex": 146,
+    "key": "frost_staff"
   },
-  "infernal_battlestaff": {
+  {
     "name": "Infernal Battlestaff",
     "itemLevel": 85,
     "enhancementCosts": [
@@ -442,9 +468,10 @@ items_data = {
         2034
       ]
     ],
-    "sortIndex": 147
+    "sortIndex": 147,
+    "key": "infernal_battlestaff"
   },
-  "cheese_sword": {
+  {
     "name": "Cheese Sword",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -457,9 +484,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 148
+    "sortIndex": 148,
+    "key": "cheese_sword"
   },
-  "verdant_sword": {
+  {
     "name": "Verdant Sword",
     "itemLevel": 10,
     "enhancementCosts": [
@@ -472,9 +500,10 @@ items_data = {
         31
       ]
     ],
-    "sortIndex": 149
+    "sortIndex": 149,
+    "key": "verdant_sword"
   },
-  "azure_sword": {
+  {
     "name": "Azure Sword",
     "itemLevel": 20,
     "enhancementCosts": [
@@ -487,9 +516,10 @@ items_data = {
         54
       ]
     ],
-    "sortIndex": 150
+    "sortIndex": 150,
+    "key": "azure_sword"
   },
-  "burble_sword": {
+  {
     "name": "Burble Sword",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -502,9 +532,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 151
+    "sortIndex": 151,
+    "key": "burble_sword"
   },
-  "crimson_sword": {
+  {
     "name": "Crimson Sword",
     "itemLevel": 50,
     "enhancementCosts": [
@@ -517,9 +548,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 152
+    "sortIndex": 152,
+    "key": "crimson_sword"
   },
-  "rainbow_sword": {
+  {
     "name": "Rainbow Sword",
     "itemLevel": 65,
     "enhancementCosts": [
@@ -532,9 +564,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 153
+    "sortIndex": 153,
+    "key": "rainbow_sword"
   },
-  "holy_sword": {
+  {
     "name": "Holy Sword",
     "itemLevel": 80,
     "enhancementCosts": [
@@ -547,9 +580,10 @@ items_data = {
         1345
       ]
     ],
-    "sortIndex": 154
+    "sortIndex": 154,
+    "key": "holy_sword"
   },
-  "cheese_spear": {
+  {
     "name": "Cheese Spear",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -566,9 +600,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 155
+    "sortIndex": 155,
+    "key": "cheese_spear"
   },
-  "verdant_spear": {
+  {
     "name": "Verdant Spear",
     "itemLevel": 10,
     "enhancementCosts": [
@@ -585,9 +620,10 @@ items_data = {
         31
       ]
     ],
-    "sortIndex": 156
+    "sortIndex": 156,
+    "key": "verdant_spear"
   },
-  "azure_spear": {
+  {
     "name": "Azure Spear",
     "itemLevel": 20,
     "enhancementCosts": [
@@ -604,9 +640,10 @@ items_data = {
         54
       ]
     ],
-    "sortIndex": 157
+    "sortIndex": 157,
+    "key": "azure_spear"
   },
-  "burble_spear": {
+  {
     "name": "Burble Spear",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -623,9 +660,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 158
+    "sortIndex": 158,
+    "key": "burble_spear"
   },
-  "crimson_spear": {
+  {
     "name": "Crimson Spear",
     "itemLevel": 50,
     "enhancementCosts": [
@@ -642,9 +680,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 159
+    "sortIndex": 159,
+    "key": "crimson_spear"
   },
-  "rainbow_spear": {
+  {
     "name": "Rainbow Spear",
     "itemLevel": 65,
     "enhancementCosts": [
@@ -661,9 +700,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 160
+    "sortIndex": 160,
+    "key": "rainbow_spear"
   },
-  "holy_spear": {
+  {
     "name": "Holy Spear",
     "itemLevel": 80,
     "enhancementCosts": [
@@ -680,9 +720,10 @@ items_data = {
         1345
       ]
     ],
-    "sortIndex": 161
+    "sortIndex": 161,
+    "key": "holy_spear"
   },
-  "cheese_mace": {
+  {
     "name": "Cheese Mace",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -699,9 +740,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 162
+    "sortIndex": 162,
+    "key": "cheese_mace"
   },
-  "verdant_mace": {
+  {
     "name": "Verdant Mace",
     "itemLevel": 10,
     "enhancementCosts": [
@@ -718,9 +760,10 @@ items_data = {
         31
       ]
     ],
-    "sortIndex": 163
+    "sortIndex": 163,
+    "key": "verdant_mace"
   },
-  "azure_mace": {
+  {
     "name": "Azure Mace",
     "itemLevel": 20,
     "enhancementCosts": [
@@ -737,9 +780,10 @@ items_data = {
         54
       ]
     ],
-    "sortIndex": 164
+    "sortIndex": 164,
+    "key": "azure_mace"
   },
-  "burble_mace": {
+  {
     "name": "Burble Mace",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -756,9 +800,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 165
+    "sortIndex": 165,
+    "key": "burble_mace"
   },
-  "crimson_mace": {
+  {
     "name": "Crimson Mace",
     "itemLevel": 50,
     "enhancementCosts": [
@@ -775,9 +820,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 166
+    "sortIndex": 166,
+    "key": "crimson_mace"
   },
-  "rainbow_mace": {
+  {
     "name": "Rainbow Mace",
     "itemLevel": 65,
     "enhancementCosts": [
@@ -794,9 +840,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 167
+    "sortIndex": 167,
+    "key": "rainbow_mace"
   },
-  "holy_mace": {
+  {
     "name": "Holy Mace",
     "itemLevel": 80,
     "enhancementCosts": [
@@ -813,9 +860,10 @@ items_data = {
         1345
       ]
     ],
-    "sortIndex": 168
+    "sortIndex": 168,
+    "key": "holy_mace"
   },
-  "wooden_crossbow": {
+  {
     "name": "Wooden Crossbow",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -828,9 +876,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 169
+    "sortIndex": 169,
+    "key": "wooden_crossbow"
   },
-  "birch_crossbow": {
+  {
     "name": "Birch Crossbow",
     "itemLevel": 10,
     "enhancementCosts": [
@@ -843,9 +892,10 @@ items_data = {
         31
       ]
     ],
-    "sortIndex": 170
+    "sortIndex": 170,
+    "key": "birch_crossbow"
   },
-  "cedar_crossbow": {
+  {
     "name": "Cedar Crossbow",
     "itemLevel": 20,
     "enhancementCosts": [
@@ -858,9 +908,10 @@ items_data = {
         54
       ]
     ],
-    "sortIndex": 171
+    "sortIndex": 171,
+    "key": "cedar_crossbow"
   },
-  "purpleheart_crossbow": {
+  {
     "name": "Purpleheart Crossbow",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -873,9 +924,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 172
+    "sortIndex": 172,
+    "key": "purpleheart_crossbow"
   },
-  "ginkgo_crossbow": {
+  {
     "name": "Ginkgo Crossbow",
     "itemLevel": 50,
     "enhancementCosts": [
@@ -888,9 +940,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 173
+    "sortIndex": 173,
+    "key": "ginkgo_crossbow"
   },
-  "redwood_crossbow": {
+  {
     "name": "Redwood Crossbow",
     "itemLevel": 65,
     "enhancementCosts": [
@@ -903,9 +956,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 174
+    "sortIndex": 174,
+    "key": "redwood_crossbow"
   },
-  "arcane_crossbow": {
+  {
     "name": "Arcane Crossbow",
     "itemLevel": 80,
     "enhancementCosts": [
@@ -918,9 +972,10 @@ items_data = {
         1345
       ]
     ],
-    "sortIndex": 175
+    "sortIndex": 175,
+    "key": "arcane_crossbow"
   },
-  "wooden_water_staff": {
+  {
     "name": "Wooden Water Staff",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -933,9 +988,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 176
+    "sortIndex": 176,
+    "key": "wooden_water_staff"
   },
-  "birch_water_staff": {
+  {
     "name": "Birch Water Staff",
     "itemLevel": 10,
     "enhancementCosts": [
@@ -948,9 +1004,10 @@ items_data = {
         31
       ]
     ],
-    "sortIndex": 177
+    "sortIndex": 177,
+    "key": "birch_water_staff"
   },
-  "cedar_water_staff": {
+  {
     "name": "Cedar Water Staff",
     "itemLevel": 20,
     "enhancementCosts": [
@@ -963,9 +1020,10 @@ items_data = {
         54
       ]
     ],
-    "sortIndex": 178
+    "sortIndex": 178,
+    "key": "cedar_water_staff"
   },
-  "purpleheart_water_staff": {
+  {
     "name": "Purpleheart Water Staff",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -978,9 +1036,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 179
+    "sortIndex": 179,
+    "key": "purpleheart_water_staff"
   },
-  "ginkgo_water_staff": {
+  {
     "name": "Ginkgo Water Staff",
     "itemLevel": 50,
     "enhancementCosts": [
@@ -993,9 +1052,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 180
+    "sortIndex": 180,
+    "key": "ginkgo_water_staff"
   },
-  "redwood_water_staff": {
+  {
     "name": "Redwood Water Staff",
     "itemLevel": 65,
     "enhancementCosts": [
@@ -1008,9 +1068,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 181
+    "sortIndex": 181,
+    "key": "redwood_water_staff"
   },
-  "arcane_water_staff": {
+  {
     "name": "Arcane Water Staff",
     "itemLevel": 80,
     "enhancementCosts": [
@@ -1023,9 +1084,10 @@ items_data = {
         1345
       ]
     ],
-    "sortIndex": 182
+    "sortIndex": 182,
+    "key": "arcane_water_staff"
   },
-  "wooden_nature_staff": {
+  {
     "name": "Wooden Nature Staff",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -1038,9 +1100,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 183
+    "sortIndex": 183,
+    "key": "wooden_nature_staff"
   },
-  "birch_nature_staff": {
+  {
     "name": "Birch Nature Staff",
     "itemLevel": 10,
     "enhancementCosts": [
@@ -1053,9 +1116,10 @@ items_data = {
         31
       ]
     ],
-    "sortIndex": 184
+    "sortIndex": 184,
+    "key": "birch_nature_staff"
   },
-  "cedar_nature_staff": {
+  {
     "name": "Cedar Nature Staff",
     "itemLevel": 20,
     "enhancementCosts": [
@@ -1068,9 +1132,10 @@ items_data = {
         54
       ]
     ],
-    "sortIndex": 185
+    "sortIndex": 185,
+    "key": "cedar_nature_staff"
   },
-  "purpleheart_nature_staff": {
+  {
     "name": "Purpleheart Nature Staff",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -1083,9 +1148,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 186
+    "sortIndex": 186,
+    "key": "purpleheart_nature_staff"
   },
-  "ginkgo_nature_staff": {
+  {
     "name": "Ginkgo Nature Staff",
     "itemLevel": 50,
     "enhancementCosts": [
@@ -1098,9 +1164,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 187
+    "sortIndex": 187,
+    "key": "ginkgo_nature_staff"
   },
-  "redwood_nature_staff": {
+  {
     "name": "Redwood Nature Staff",
     "itemLevel": 65,
     "enhancementCosts": [
@@ -1113,9 +1180,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 188
+    "sortIndex": 188,
+    "key": "redwood_nature_staff"
   },
-  "arcane_nature_staff": {
+  {
     "name": "Arcane Nature Staff",
     "itemLevel": 80,
     "enhancementCosts": [
@@ -1128,9 +1196,10 @@ items_data = {
         1345
       ]
     ],
-    "sortIndex": 189
+    "sortIndex": 189,
+    "key": "arcane_nature_staff"
   },
-  "wooden_fire_staff": {
+  {
     "name": "Wooden Fire Staff",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -1143,9 +1212,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 190
+    "sortIndex": 190,
+    "key": "wooden_fire_staff"
   },
-  "birch_fire_staff": {
+  {
     "name": "Birch Fire Staff",
     "itemLevel": 10,
     "enhancementCosts": [
@@ -1158,9 +1228,10 @@ items_data = {
         31
       ]
     ],
-    "sortIndex": 191
+    "sortIndex": 191,
+    "key": "birch_fire_staff"
   },
-  "cedar_fire_staff": {
+  {
     "name": "Cedar Fire Staff",
     "itemLevel": 20,
     "enhancementCosts": [
@@ -1173,9 +1244,10 @@ items_data = {
         54
       ]
     ],
-    "sortIndex": 192
+    "sortIndex": 192,
+    "key": "cedar_fire_staff"
   },
-  "purpleheart_fire_staff": {
+  {
     "name": "Purpleheart Fire Staff",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -1188,9 +1260,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 193
+    "sortIndex": 193,
+    "key": "purpleheart_fire_staff"
   },
-  "ginkgo_fire_staff": {
+  {
     "name": "Ginkgo Fire Staff",
     "itemLevel": 50,
     "enhancementCosts": [
@@ -1203,9 +1276,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 194
+    "sortIndex": 194,
+    "key": "ginkgo_fire_staff"
   },
-  "redwood_fire_staff": {
+  {
     "name": "Redwood Fire Staff",
     "itemLevel": 65,
     "enhancementCosts": [
@@ -1218,9 +1292,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 195
+    "sortIndex": 195,
+    "key": "redwood_fire_staff"
   },
-  "arcane_fire_staff": {
+  {
     "name": "Arcane Fire Staff",
     "itemLevel": 80,
     "enhancementCosts": [
@@ -1233,9 +1308,10 @@ items_data = {
         1345
       ]
     ],
-    "sortIndex": 196
+    "sortIndex": 196,
+    "key": "arcane_fire_staff"
   },
-  "eye_watch": {
+  {
     "name": "Eye Watch",
     "itemLevel": 60,
     "enhancementCosts": [
@@ -1264,9 +1340,10 @@ items_data = {
         319
       ]
     ],
-    "sortIndex": 197
+    "sortIndex": 197,
+    "key": "eye_watch"
   },
-  "snake_fang_dirk": {
+  {
     "name": "Snake Fang Dirk",
     "itemLevel": 15,
     "enhancementCosts": [
@@ -1283,9 +1360,10 @@ items_data = {
         43
       ]
     ],
-    "sortIndex": 198
+    "sortIndex": 198,
+    "key": "snake_fang_dirk"
   },
-  "vision_shield": {
+  {
     "name": "Vision Shield",
     "itemLevel": 55,
     "enhancementCosts": [
@@ -1302,9 +1380,10 @@ items_data = {
         240
       ]
     ],
-    "sortIndex": 199
+    "sortIndex": 199,
+    "key": "vision_shield"
   },
-  "gobo_defender": {
+  {
     "name": "Gobo Defender",
     "itemLevel": 60,
     "enhancementCosts": [
@@ -1317,9 +1396,10 @@ items_data = {
         319
       ]
     ],
-    "sortIndex": 200
+    "sortIndex": 200,
+    "key": "gobo_defender"
   },
-  "vampire_fang_dirk": {
+  {
     "name": "Vampire Fang Dirk",
     "itemLevel": 85,
     "enhancementCosts": [
@@ -1336,9 +1416,10 @@ items_data = {
         2034
       ]
     ],
-    "sortIndex": 201
+    "sortIndex": 201,
+    "key": "vampire_fang_dirk"
   },
-  "treant_shield": {
+  {
     "name": "Treant Shield",
     "itemLevel": 40,
     "enhancementCosts": [
@@ -1355,9 +1436,10 @@ items_data = {
         120
       ]
     ],
-    "sortIndex": 202
+    "sortIndex": 202,
+    "key": "treant_shield"
   },
-  "tome_of_healing": {
+  {
     "name": "Tome Of Healing",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -1370,9 +1452,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 203
+    "sortIndex": 203,
+    "key": "tome_of_healing"
   },
-  "tome_of_the_elements": {
+  {
     "name": "Tome Of The Elements",
     "itemLevel": 70,
     "enhancementCosts": [
@@ -1385,9 +1468,10 @@ items_data = {
         622
       ]
     ],
-    "sortIndex": 204
+    "sortIndex": 204,
+    "key": "tome_of_the_elements"
   },
-  "watchful_relic": {
+  {
     "name": "Watchful Relic",
     "itemLevel": 70,
     "enhancementCosts": [
@@ -1416,9 +1500,10 @@ items_data = {
         622
       ]
     ],
-    "sortIndex": 205
+    "sortIndex": 205,
+    "key": "watchful_relic"
   },
-  "cheese_buckler": {
+  {
     "name": "Cheese Buckler",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -1431,9 +1516,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 206
+    "sortIndex": 206,
+    "key": "cheese_buckler"
   },
-  "verdant_buckler": {
+  {
     "name": "Verdant Buckler",
     "itemLevel": 10,
     "enhancementCosts": [
@@ -1446,9 +1532,10 @@ items_data = {
         31
       ]
     ],
-    "sortIndex": 207
+    "sortIndex": 207,
+    "key": "verdant_buckler"
   },
-  "azure_buckler": {
+  {
     "name": "Azure Buckler",
     "itemLevel": 20,
     "enhancementCosts": [
@@ -1461,9 +1548,10 @@ items_data = {
         54
       ]
     ],
-    "sortIndex": 208
+    "sortIndex": 208,
+    "key": "azure_buckler"
   },
-  "burble_buckler": {
+  {
     "name": "Burble Buckler",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -1476,9 +1564,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 209
+    "sortIndex": 209,
+    "key": "burble_buckler"
   },
-  "crimson_buckler": {
+  {
     "name": "Crimson Buckler",
     "itemLevel": 50,
     "enhancementCosts": [
@@ -1491,9 +1580,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 210
+    "sortIndex": 210,
+    "key": "crimson_buckler"
   },
-  "rainbow_buckler": {
+  {
     "name": "Rainbow Buckler",
     "itemLevel": 65,
     "enhancementCosts": [
@@ -1506,9 +1596,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 211
+    "sortIndex": 211,
+    "key": "rainbow_buckler"
   },
-  "holy_buckler": {
+  {
     "name": "Holy Buckler",
     "itemLevel": 80,
     "enhancementCosts": [
@@ -1521,9 +1612,10 @@ items_data = {
         1345
       ]
     ],
-    "sortIndex": 212
+    "sortIndex": 212,
+    "key": "holy_buckler"
   },
-  "wooden_shield": {
+  {
     "name": "Wooden Shield",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -1536,9 +1628,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 213
+    "sortIndex": 213,
+    "key": "wooden_shield"
   },
-  "birch_shield": {
+  {
     "name": "Birch Shield",
     "itemLevel": 10,
     "enhancementCosts": [
@@ -1551,9 +1644,10 @@ items_data = {
         31
       ]
     ],
-    "sortIndex": 214
+    "sortIndex": 214,
+    "key": "birch_shield"
   },
-  "cedar_shield": {
+  {
     "name": "Cedar Shield",
     "itemLevel": 20,
     "enhancementCosts": [
@@ -1566,9 +1660,10 @@ items_data = {
         54
       ]
     ],
-    "sortIndex": 215
+    "sortIndex": 215,
+    "key": "cedar_shield"
   },
-  "purpleheart_shield": {
+  {
     "name": "Purpleheart Shield",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -1581,9 +1676,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 216
+    "sortIndex": 216,
+    "key": "purpleheart_shield"
   },
-  "ginkgo_shield": {
+  {
     "name": "Ginkgo Shield",
     "itemLevel": 50,
     "enhancementCosts": [
@@ -1596,9 +1692,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 217
+    "sortIndex": 217,
+    "key": "ginkgo_shield"
   },
-  "redwood_shield": {
+  {
     "name": "Redwood Shield",
     "itemLevel": 65,
     "enhancementCosts": [
@@ -1611,9 +1708,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 218
+    "sortIndex": 218,
+    "key": "redwood_shield"
   },
-  "arcane_shield": {
+  {
     "name": "Arcane Shield",
     "itemLevel": 80,
     "enhancementCosts": [
@@ -1626,9 +1724,10 @@ items_data = {
         1345
       ]
     ],
-    "sortIndex": 219
+    "sortIndex": 219,
+    "key": "arcane_shield"
   },
-  "red_chefs_hat": {
+  {
     "name": "Red Chef's Hat",
     "itemLevel": 60,
     "enhancementCosts": [
@@ -1657,9 +1756,10 @@ items_data = {
         319
       ]
     ],
-    "sortIndex": 220
+    "sortIndex": 220,
+    "key": "red_chefs_hat"
   },
-  "snail_shell_helmet": {
+  {
     "name": "Snail Shell Helmet",
     "itemLevel": 25,
     "enhancementCosts": [
@@ -1676,9 +1776,10 @@ items_data = {
         67
       ]
     ],
-    "sortIndex": 221
+    "sortIndex": 221,
+    "key": "snail_shell_helmet"
   },
-  "vision_helmet": {
+  {
     "name": "Vision Helmet",
     "itemLevel": 55,
     "enhancementCosts": [
@@ -1695,9 +1796,10 @@ items_data = {
         240
       ]
     ],
-    "sortIndex": 222
+    "sortIndex": 222,
+    "key": "vision_helmet"
   },
-  "fluffy_red_hat": {
+  {
     "name": "Fluffy Red Hat",
     "itemLevel": 80,
     "enhancementCosts": [
@@ -1726,9 +1828,10 @@ items_data = {
         1345
       ]
     ],
-    "sortIndex": 223
+    "sortIndex": 223,
+    "key": "fluffy_red_hat"
   },
-  "cheese_helmet": {
+  {
     "name": "Cheese Helmet",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -1741,9 +1844,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 224
+    "sortIndex": 224,
+    "key": "cheese_helmet"
   },
-  "verdant_helmet": {
+  {
     "name": "Verdant Helmet",
     "itemLevel": 10,
     "enhancementCosts": [
@@ -1756,9 +1860,10 @@ items_data = {
         31
       ]
     ],
-    "sortIndex": 225
+    "sortIndex": 225,
+    "key": "verdant_helmet"
   },
-  "azure_helmet": {
+  {
     "name": "Azure Helmet",
     "itemLevel": 20,
     "enhancementCosts": [
@@ -1771,9 +1876,10 @@ items_data = {
         54
       ]
     ],
-    "sortIndex": 226
+    "sortIndex": 226,
+    "key": "azure_helmet"
   },
-  "burble_helmet": {
+  {
     "name": "Burble Helmet",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -1786,9 +1892,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 227
+    "sortIndex": 227,
+    "key": "burble_helmet"
   },
-  "crimson_helmet": {
+  {
     "name": "Crimson Helmet",
     "itemLevel": 50,
     "enhancementCosts": [
@@ -1801,9 +1908,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 228
+    "sortIndex": 228,
+    "key": "crimson_helmet"
   },
-  "rainbow_helmet": {
+  {
     "name": "Rainbow Helmet",
     "itemLevel": 65,
     "enhancementCosts": [
@@ -1816,9 +1924,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 229
+    "sortIndex": 229,
+    "key": "rainbow_helmet"
   },
-  "holy_helmet": {
+  {
     "name": "Holy Helmet",
     "itemLevel": 80,
     "enhancementCosts": [
@@ -1831,9 +1940,10 @@ items_data = {
         1345
       ]
     ],
-    "sortIndex": 230
+    "sortIndex": 230,
+    "key": "holy_helmet"
   },
-  "rough_hood": {
+  {
     "name": "Rough Hood",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -1846,9 +1956,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 231
+    "sortIndex": 231,
+    "key": "rough_hood"
   },
-  "reptile_hood": {
+  {
     "name": "Reptile Hood",
     "itemLevel": 15,
     "enhancementCosts": [
@@ -1861,9 +1972,10 @@ items_data = {
         43
       ]
     ],
-    "sortIndex": 232
+    "sortIndex": 232,
+    "key": "reptile_hood"
   },
-  "gobo_hood": {
+  {
     "name": "Gobo Hood",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -1876,9 +1988,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 233
+    "sortIndex": 233,
+    "key": "gobo_hood"
   },
-  "beast_hood": {
+  {
     "name": "Beast Hood",
     "itemLevel": 55,
     "enhancementCosts": [
@@ -1891,9 +2004,10 @@ items_data = {
         240
       ]
     ],
-    "sortIndex": 234
+    "sortIndex": 234,
+    "key": "beast_hood"
   },
-  "umbral_hood": {
+  {
     "name": "Umbral Hood",
     "itemLevel": 75,
     "enhancementCosts": [
@@ -1906,9 +2020,10 @@ items_data = {
         905
       ]
     ],
-    "sortIndex": 235
+    "sortIndex": 235,
+    "key": "umbral_hood"
   },
-  "cotton_hat": {
+  {
     "name": "Cotton Hat",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -1921,9 +2036,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 236
+    "sortIndex": 236,
+    "key": "cotton_hat"
   },
-  "linen_hat": {
+  {
     "name": "Linen Hat",
     "itemLevel": 15,
     "enhancementCosts": [
@@ -1936,9 +2052,10 @@ items_data = {
         43
       ]
     ],
-    "sortIndex": 237
+    "sortIndex": 237,
+    "key": "linen_hat"
   },
-  "bamboo_hat": {
+  {
     "name": "Bamboo Hat",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -1951,9 +2068,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 238
+    "sortIndex": 238,
+    "key": "bamboo_hat"
   },
-  "silk_hat": {
+  {
     "name": "Silk Hat",
     "itemLevel": 55,
     "enhancementCosts": [
@@ -1966,9 +2084,10 @@ items_data = {
         240
       ]
     ],
-    "sortIndex": 239
+    "sortIndex": 239,
+    "key": "silk_hat"
   },
-  "radiant_hat": {
+  {
     "name": "Radiant Hat",
     "itemLevel": 75,
     "enhancementCosts": [
@@ -1981,9 +2100,10 @@ items_data = {
         905
       ]
     ],
-    "sortIndex": 240
+    "sortIndex": 240,
+    "key": "radiant_hat"
   },
-  "gator_vest": {
+  {
     "name": "Gator Vest",
     "itemLevel": 20,
     "enhancementCosts": [
@@ -1996,9 +2116,10 @@ items_data = {
         54
       ]
     ],
-    "sortIndex": 241
+    "sortIndex": 241,
+    "key": "gator_vest"
   },
-  "turtle_shell_body": {
+  {
     "name": "Turtle Shell Body",
     "itemLevel": 30,
     "enhancementCosts": [
@@ -2015,9 +2136,10 @@ items_data = {
         82
       ]
     ],
-    "sortIndex": 242
+    "sortIndex": 242,
+    "key": "turtle_shell_body"
   },
-  "colossus_plate_body": {
+  {
     "name": "Colossus Plate Body",
     "itemLevel": 85,
     "enhancementCosts": [
@@ -2034,9 +2156,10 @@ items_data = {
         2034
       ]
     ],
-    "sortIndex": 243
+    "sortIndex": 243,
+    "key": "colossus_plate_body"
   },
-  "demonic_plate_body": {
+  {
     "name": "Demonic Plate Body",
     "itemLevel": 85,
     "enhancementCosts": [
@@ -2053,9 +2176,10 @@ items_data = {
         2034
       ]
     ],
-    "sortIndex": 244
+    "sortIndex": 244,
+    "key": "demonic_plate_body"
   },
-  "marine_tunic": {
+  {
     "name": "Marine Tunic",
     "itemLevel": 50,
     "enhancementCosts": [
@@ -2072,9 +2196,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 245
+    "sortIndex": 245,
+    "key": "marine_tunic"
   },
-  "revenant_tunic": {
+  {
     "name": "Revenant Tunic",
     "itemLevel": 85,
     "enhancementCosts": [
@@ -2091,9 +2216,10 @@ items_data = {
         2034
       ]
     ],
-    "sortIndex": 246
+    "sortIndex": 246,
+    "key": "revenant_tunic"
   },
-  "icy_robe_top": {
+  {
     "name": "Icy Robe Top",
     "itemLevel": 50,
     "enhancementCosts": [
@@ -2110,9 +2236,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 247
+    "sortIndex": 247,
+    "key": "icy_robe_top"
   },
-  "flaming_robe_top": {
+  {
     "name": "Flaming Robe Top",
     "itemLevel": 50,
     "enhancementCosts": [
@@ -2129,9 +2256,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 248
+    "sortIndex": 248,
+    "key": "flaming_robe_top"
   },
-  "luna_robe_top": {
+  {
     "name": "Luna Robe Top",
     "itemLevel": 70,
     "enhancementCosts": [
@@ -2148,9 +2276,10 @@ items_data = {
         622
       ]
     ],
-    "sortIndex": 249
+    "sortIndex": 249,
+    "key": "luna_robe_top"
   },
-  "cheese_plate_body": {
+  {
     "name": "Cheese Plate Body",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -2163,9 +2292,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 250
+    "sortIndex": 250,
+    "key": "cheese_plate_body"
   },
-  "verdant_plate_body": {
+  {
     "name": "Verdant Plate Body",
     "itemLevel": 10,
     "enhancementCosts": [
@@ -2178,9 +2308,10 @@ items_data = {
         31
       ]
     ],
-    "sortIndex": 251
+    "sortIndex": 251,
+    "key": "verdant_plate_body"
   },
-  "azure_plate_body": {
+  {
     "name": "Azure Plate Body",
     "itemLevel": 20,
     "enhancementCosts": [
@@ -2193,9 +2324,10 @@ items_data = {
         54
       ]
     ],
-    "sortIndex": 252
+    "sortIndex": 252,
+    "key": "azure_plate_body"
   },
-  "burble_plate_body": {
+  {
     "name": "Burble Plate Body",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -2208,9 +2340,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 253
+    "sortIndex": 253,
+    "key": "burble_plate_body"
   },
-  "crimson_plate_body": {
+  {
     "name": "Crimson Plate Body",
     "itemLevel": 50,
     "enhancementCosts": [
@@ -2223,9 +2356,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 254
+    "sortIndex": 254,
+    "key": "crimson_plate_body"
   },
-  "rainbow_plate_body": {
+  {
     "name": "Rainbow Plate Body",
     "itemLevel": 65,
     "enhancementCosts": [
@@ -2238,9 +2372,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 255
+    "sortIndex": 255,
+    "key": "rainbow_plate_body"
   },
-  "holy_plate_body": {
+  {
     "name": "Holy Plate Body",
     "itemLevel": 80,
     "enhancementCosts": [
@@ -2253,9 +2388,10 @@ items_data = {
         1345
       ]
     ],
-    "sortIndex": 256
+    "sortIndex": 256,
+    "key": "holy_plate_body"
   },
-  "rough_tunic": {
+  {
     "name": "Rough Tunic",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -2268,9 +2404,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 257
+    "sortIndex": 257,
+    "key": "rough_tunic"
   },
-  "reptile_tunic": {
+  {
     "name": "Reptile Tunic",
     "itemLevel": 15,
     "enhancementCosts": [
@@ -2283,9 +2420,10 @@ items_data = {
         43
       ]
     ],
-    "sortIndex": 258
+    "sortIndex": 258,
+    "key": "reptile_tunic"
   },
-  "gobo_tunic": {
+  {
     "name": "Gobo Tunic",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -2298,9 +2436,10 @@ items_data = {
         120
       ]
     ],
-    "sortIndex": 259
+    "sortIndex": 259,
+    "key": "gobo_tunic"
   },
-  "beast_tunic": {
+  {
     "name": "Beast Tunic",
     "itemLevel": 55,
     "enhancementCosts": [
@@ -2313,9 +2452,10 @@ items_data = {
         240
       ]
     ],
-    "sortIndex": 260
+    "sortIndex": 260,
+    "key": "beast_tunic"
   },
-  "umbral_tunic": {
+  {
     "name": "Umbral Tunic",
     "itemLevel": 75,
     "enhancementCosts": [
@@ -2328,9 +2468,10 @@ items_data = {
         905
       ]
     ],
-    "sortIndex": 261
+    "sortIndex": 261,
+    "key": "umbral_tunic"
   },
-  "cotton_robe_top": {
+  {
     "name": "Cotton Robe Top",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -2343,9 +2484,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 262
+    "sortIndex": 262,
+    "key": "cotton_robe_top"
   },
-  "linen_robe_top": {
+  {
     "name": "Linen Robe Top",
     "itemLevel": 15,
     "enhancementCosts": [
@@ -2358,9 +2500,10 @@ items_data = {
         43
       ]
     ],
-    "sortIndex": 263
+    "sortIndex": 263,
+    "key": "linen_robe_top"
   },
-  "bamboo_robe_top": {
+  {
     "name": "Bamboo Robe Top",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -2373,9 +2516,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 264
+    "sortIndex": 264,
+    "key": "bamboo_robe_top"
   },
-  "silk_robe_top": {
+  {
     "name": "Silk Robe Top",
     "itemLevel": 55,
     "enhancementCosts": [
@@ -2388,9 +2532,10 @@ items_data = {
         240
       ]
     ],
-    "sortIndex": 265
+    "sortIndex": 265,
+    "key": "silk_robe_top"
   },
-  "radiant_robe_top": {
+  {
     "name": "Radiant Robe Top",
     "itemLevel": 75,
     "enhancementCosts": [
@@ -2403,9 +2548,10 @@ items_data = {
         905
       ]
     ],
-    "sortIndex": 266
+    "sortIndex": 266,
+    "key": "radiant_robe_top"
   },
-  "turtle_shell_legs": {
+  {
     "name": "Turtle Shell Legs",
     "itemLevel": 30,
     "enhancementCosts": [
@@ -2422,9 +2568,10 @@ items_data = {
         82
       ]
     ],
-    "sortIndex": 267
+    "sortIndex": 267,
+    "key": "turtle_shell_legs"
   },
-  "colossus_plate_legs": {
+  {
     "name": "Colossus Plate Legs",
     "itemLevel": 85,
     "enhancementCosts": [
@@ -2441,9 +2588,10 @@ items_data = {
         2034
       ]
     ],
-    "sortIndex": 268
+    "sortIndex": 268,
+    "key": "colossus_plate_legs"
   },
-  "demonic_plate_legs": {
+  {
     "name": "Demonic Plate Legs",
     "itemLevel": 85,
     "enhancementCosts": [
@@ -2460,9 +2608,10 @@ items_data = {
         2034
       ]
     ],
-    "sortIndex": 269
+    "sortIndex": 269,
+    "key": "demonic_plate_legs"
   },
-  "marine_chaps": {
+  {
     "name": "Marine Chaps",
     "itemLevel": 50,
     "enhancementCosts": [
@@ -2479,9 +2628,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 270
+    "sortIndex": 270,
+    "key": "marine_chaps"
   },
-  "revenant_chaps": {
+  {
     "name": "Revenant Chaps",
     "itemLevel": 85,
     "enhancementCosts": [
@@ -2498,9 +2648,10 @@ items_data = {
         2034
       ]
     ],
-    "sortIndex": 271
+    "sortIndex": 271,
+    "key": "revenant_chaps"
   },
-  "icy_robe_bottoms": {
+  {
     "name": "Icy Robe Bottoms",
     "itemLevel": 50,
     "enhancementCosts": [
@@ -2517,9 +2668,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 272
+    "sortIndex": 272,
+    "key": "icy_robe_bottoms"
   },
-  "flaming_robe_bottoms": {
+  {
     "name": "Flaming Robe Bottoms",
     "itemLevel": 50,
     "enhancementCosts": [
@@ -2536,9 +2688,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 273
+    "sortIndex": 273,
+    "key": "flaming_robe_bottoms"
   },
-  "luna_robe_bottoms": {
+  {
     "name": "Luna Robe Bottoms",
     "itemLevel": 70,
     "enhancementCosts": [
@@ -2555,9 +2708,10 @@ items_data = {
         622
       ]
     ],
-    "sortIndex": 274
+    "sortIndex": 274,
+    "key": "luna_robe_bottoms"
   },
-  "cheese_plate_legs": {
+  {
     "name": "Cheese Plate Legs",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -2570,9 +2724,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 275
+    "sortIndex": 275,
+    "key": "cheese_plate_legs"
   },
-  "verdant_plate_legs": {
+  {
     "name": "Verdant Plate Legs",
     "itemLevel": 10,
     "enhancementCosts": [
@@ -2585,9 +2740,10 @@ items_data = {
         31
       ]
     ],
-    "sortIndex": 276
+    "sortIndex": 276,
+    "key": "verdant_plate_legs"
   },
-  "azure_plate_legs": {
+  {
     "name": "Azure Plate Legs",
     "itemLevel": 20,
     "enhancementCosts": [
@@ -2600,9 +2756,10 @@ items_data = {
         54
       ]
     ],
-    "sortIndex": 277
+    "sortIndex": 277,
+    "key": "azure_plate_legs"
   },
-  "burble_plate_legs": {
+  {
     "name": "Burble Plate Legs",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -2615,9 +2772,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 278
+    "sortIndex": 278,
+    "key": "burble_plate_legs"
   },
-  "crimson_plate_legs": {
+  {
     "name": "Crimson Plate Legs",
     "itemLevel": 50,
     "enhancementCosts": [
@@ -2634,9 +2792,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 279
+    "sortIndex": 279,
+    "key": "crimson_plate_legs"
   },
-  "rainbow_plate_legs": {
+  {
     "name": "Rainbow Plate Legs",
     "itemLevel": 65,
     "enhancementCosts": [
@@ -2649,9 +2808,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 280
+    "sortIndex": 280,
+    "key": "rainbow_plate_legs"
   },
-  "holy_plate_legs": {
+  {
     "name": "Holy Plate Legs",
     "itemLevel": 80,
     "enhancementCosts": [
@@ -2664,9 +2824,10 @@ items_data = {
         1345
       ]
     ],
-    "sortIndex": 281
+    "sortIndex": 281,
+    "key": "holy_plate_legs"
   },
-  "rough_chaps": {
+  {
     "name": "Rough Chaps",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -2679,9 +2840,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 282
+    "sortIndex": 282,
+    "key": "rough_chaps"
   },
-  "reptile_chaps": {
+  {
     "name": "Reptile Chaps",
     "itemLevel": 15,
     "enhancementCosts": [
@@ -2694,9 +2856,10 @@ items_data = {
         43
       ]
     ],
-    "sortIndex": 283
+    "sortIndex": 283,
+    "key": "reptile_chaps"
   },
-  "gobo_chaps": {
+  {
     "name": "Gobo Chaps",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -2709,9 +2872,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 284
+    "sortIndex": 284,
+    "key": "gobo_chaps"
   },
-  "beast_chaps": {
+  {
     "name": "Beast Chaps",
     "itemLevel": 55,
     "enhancementCosts": [
@@ -2724,9 +2888,10 @@ items_data = {
         240
       ]
     ],
-    "sortIndex": 285
+    "sortIndex": 285,
+    "key": "beast_chaps"
   },
-  "umbral_chaps": {
+  {
     "name": "Umbral Chaps",
     "itemLevel": 75,
     "enhancementCosts": [
@@ -2739,9 +2904,10 @@ items_data = {
         905
       ]
     ],
-    "sortIndex": 286
+    "sortIndex": 286,
+    "key": "umbral_chaps"
   },
-  "cotton_robe_bottoms": {
+  {
     "name": "Cotton Robe Bottoms",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -2754,9 +2920,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 287
+    "sortIndex": 287,
+    "key": "cotton_robe_bottoms"
   },
-  "linen_robe_bottoms": {
+  {
     "name": "Linen Robe Bottoms",
     "itemLevel": 15,
     "enhancementCosts": [
@@ -2769,9 +2936,10 @@ items_data = {
         43
       ]
     ],
-    "sortIndex": 288
+    "sortIndex": 288,
+    "key": "linen_robe_bottoms"
   },
-  "bamboo_robe_bottoms": {
+  {
     "name": "Bamboo Robe Bottoms",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -2784,9 +2952,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 289
+    "sortIndex": 289,
+    "key": "bamboo_robe_bottoms"
   },
-  "silk_robe_bottoms": {
+  {
     "name": "Silk Robe Bottoms",
     "itemLevel": 55,
     "enhancementCosts": [
@@ -2799,9 +2968,10 @@ items_data = {
         240
       ]
     ],
-    "sortIndex": 290
+    "sortIndex": 290,
+    "key": "silk_robe_bottoms"
   },
-  "radiant_robe_bottoms": {
+  {
     "name": "Radiant Robe Bottoms",
     "itemLevel": 75,
     "enhancementCosts": [
@@ -2814,9 +2984,10 @@ items_data = {
         905
       ]
     ],
-    "sortIndex": 291
+    "sortIndex": 291,
+    "key": "radiant_robe_bottoms"
   },
-  "enchanted_gloves": {
+  {
     "name": "Enchanted Gloves",
     "itemLevel": 60,
     "baseBonus": 10,
@@ -2846,9 +3017,10 @@ items_data = {
         319
       ]
     ],
-    "sortIndex": 292
+    "sortIndex": 292,
+    "key": "enchanted_gloves"
   },
-  "pincer_gloves": {
+  {
     "name": "Pincer Gloves",
     "itemLevel": 25,
     "enhancementCosts": [
@@ -2865,9 +3037,10 @@ items_data = {
         67
       ]
     ],
-    "sortIndex": 293
+    "sortIndex": 293,
+    "key": "pincer_gloves"
   },
-  "panda_gloves": {
+  {
     "name": "Panda Gloves",
     "itemLevel": 65,
     "enhancementCosts": [
@@ -2884,9 +3057,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 294
+    "sortIndex": 294,
+    "key": "panda_gloves"
   },
-  "magnetic_gloves": {
+  {
     "name": "Magnetic Gloves",
     "itemLevel": 85,
     "enhancementCosts": [
@@ -2903,9 +3077,10 @@ items_data = {
         2034
       ]
     ],
-    "sortIndex": 295
+    "sortIndex": 295,
+    "key": "magnetic_gloves"
   },
-  "sighted_bracers": {
+  {
     "name": "Sighted Bracers",
     "itemLevel": 60,
     "enhancementCosts": [
@@ -2922,9 +3097,10 @@ items_data = {
         319
       ]
     ],
-    "sortIndex": 296
+    "sortIndex": 296,
+    "key": "sighted_bracers"
   },
-  "chrono_gloves": {
+  {
     "name": "Chrono Gloves",
     "itemLevel": 80,
     "enhancementCosts": [
@@ -2941,9 +3117,10 @@ items_data = {
         1345
       ]
     ],
-    "sortIndex": 297
+    "sortIndex": 297,
+    "key": "chrono_gloves"
   },
-  "cheese_gauntlets": {
+  {
     "name": "Cheese Gauntlets",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -2956,9 +3133,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 298
+    "sortIndex": 298,
+    "key": "cheese_gauntlets"
   },
-  "verdant_gauntlets": {
+  {
     "name": "Verdant Gauntlets",
     "itemLevel": 10,
     "enhancementCosts": [
@@ -2971,9 +3149,10 @@ items_data = {
         31
       ]
     ],
-    "sortIndex": 299
+    "sortIndex": 299,
+    "key": "verdant_gauntlets"
   },
-  "azure_gauntlets": {
+  {
     "name": "Azure Gauntlets",
     "itemLevel": 20,
     "enhancementCosts": [
@@ -2986,9 +3165,10 @@ items_data = {
         54
       ]
     ],
-    "sortIndex": 300
+    "sortIndex": 300,
+    "key": "azure_gauntlets"
   },
-  "burble_gauntlets": {
+  {
     "name": "Burble Gauntlets",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -3001,9 +3181,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 301
+    "sortIndex": 301,
+    "key": "burble_gauntlets"
   },
-  "crimson_gauntlets": {
+  {
     "name": "Crimson Gauntlets",
     "itemLevel": 50,
     "enhancementCosts": [
@@ -3016,9 +3197,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 302
+    "sortIndex": 302,
+    "key": "crimson_gauntlets"
   },
-  "rainbow_gauntlets": {
+  {
     "name": "Rainbow Gauntlets",
     "itemLevel": 65,
     "enhancementCosts": [
@@ -3031,9 +3213,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 303
+    "sortIndex": 303,
+    "key": "rainbow_gauntlets"
   },
-  "holy_gauntlets": {
+  {
     "name": "Holy Gauntlets",
     "itemLevel": 80,
     "enhancementCosts": [
@@ -3046,9 +3229,10 @@ items_data = {
         1345
       ]
     ],
-    "sortIndex": 304
+    "sortIndex": 304,
+    "key": "holy_gauntlets"
   },
-  "rough_bracers": {
+  {
     "name": "Rough Bracers",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -3061,9 +3245,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 305
+    "sortIndex": 305,
+    "key": "rough_bracers"
   },
-  "reptile_bracers": {
+  {
     "name": "Reptile Bracers",
     "itemLevel": 15,
     "enhancementCosts": [
@@ -3076,9 +3261,10 @@ items_data = {
         43
       ]
     ],
-    "sortIndex": 306
+    "sortIndex": 306,
+    "key": "reptile_bracers"
   },
-  "gobo_bracers": {
+  {
     "name": "Gobo Bracers",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -3091,9 +3277,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 307
+    "sortIndex": 307,
+    "key": "gobo_bracers"
   },
-  "beast_bracers": {
+  {
     "name": "Beast Bracers",
     "itemLevel": 55,
     "enhancementCosts": [
@@ -3106,9 +3293,10 @@ items_data = {
         240
       ]
     ],
-    "sortIndex": 308
+    "sortIndex": 308,
+    "key": "beast_bracers"
   },
-  "umbral_bracers": {
+  {
     "name": "Umbral Bracers",
     "itemLevel": 75,
     "enhancementCosts": [
@@ -3121,9 +3309,10 @@ items_data = {
         905
       ]
     ],
-    "sortIndex": 309
+    "sortIndex": 309,
+    "key": "umbral_bracers"
   },
-  "cotton_gloves": {
+  {
     "name": "Cotton Gloves",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -3136,9 +3325,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 310
+    "sortIndex": 310,
+    "key": "cotton_gloves"
   },
-  "linen_gloves": {
+  {
     "name": "Linen Gloves",
     "itemLevel": 15,
     "enhancementCosts": [
@@ -3151,9 +3341,10 @@ items_data = {
         43
       ]
     ],
-    "sortIndex": 311
+    "sortIndex": 311,
+    "key": "linen_gloves"
   },
-  "bamboo_gloves": {
+  {
     "name": "Bamboo Gloves",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -3166,9 +3357,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 312
+    "sortIndex": 312,
+    "key": "bamboo_gloves"
   },
-  "silk_gloves": {
+  {
     "name": "Silk Gloves",
     "itemLevel": 55,
     "enhancementCosts": [
@@ -3181,9 +3373,10 @@ items_data = {
         240
       ]
     ],
-    "sortIndex": 313
+    "sortIndex": 313,
+    "key": "silk_gloves"
   },
-  "radiant_gloves": {
+  {
     "name": "Radiant Gloves",
     "itemLevel": 75,
     "enhancementCosts": [
@@ -3196,9 +3389,10 @@ items_data = {
         905
       ]
     ],
-    "sortIndex": 314
+    "sortIndex": 314,
+    "key": "radiant_gloves"
   },
-  "collectors_boots": {
+  {
     "name": "Collector's Boots",
     "itemLevel": 60,
     "enhancementCosts": [
@@ -3227,9 +3421,10 @@ items_data = {
         319
       ]
     ],
-    "sortIndex": 315
+    "sortIndex": 315,
+    "key": "collectors_boots"
   },
-  "shoebill_shoes": {
+  {
     "name": "Shoebill Shoes",
     "itemLevel": 30,
     "enhancementCosts": [
@@ -3258,9 +3453,10 @@ items_data = {
         82
       ]
     ],
-    "sortIndex": 316
+    "sortIndex": 316,
+    "key": "shoebill_shoes"
   },
-  "black_bear_shoes": {
+  {
     "name": "Black Bear Shoes",
     "itemLevel": 65,
     "enhancementCosts": [
@@ -3277,9 +3473,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 317
+    "sortIndex": 317,
+    "key": "black_bear_shoes"
   },
-  "grizzly_bear_shoes": {
+  {
     "name": "Grizzly Bear Shoes",
     "itemLevel": 65,
     "enhancementCosts": [
@@ -3296,9 +3493,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 318
+    "sortIndex": 318,
+    "key": "grizzly_bear_shoes"
   },
-  "polar_bear_shoes": {
+  {
     "name": "Polar Bear Shoes",
     "itemLevel": 65,
     "enhancementCosts": [
@@ -3315,9 +3513,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 319
+    "sortIndex": 319,
+    "key": "polar_bear_shoes"
   },
-  "centaur_boots": {
+  {
     "name": "Centaur Boots",
     "itemLevel": 65,
     "enhancementCosts": [
@@ -3334,9 +3533,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 320
+    "sortIndex": 320,
+    "key": "centaur_boots"
   },
-  "sorcerer_boots": {
+  {
     "name": "Sorcerer Boots",
     "itemLevel": 65,
     "enhancementCosts": [
@@ -3353,9 +3553,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 321
+    "sortIndex": 321,
+    "key": "sorcerer_boots"
   },
-  "cheese_boots": {
+  {
     "name": "Cheese Boots",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -3368,9 +3569,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 322
+    "sortIndex": 322,
+    "key": "cheese_boots"
   },
-  "verdant_boots": {
+  {
     "name": "Verdant Boots",
     "itemLevel": 10,
     "enhancementCosts": [
@@ -3383,9 +3585,10 @@ items_data = {
         31
       ]
     ],
-    "sortIndex": 323
+    "sortIndex": 323,
+    "key": "verdant_boots"
   },
-  "azure_boots": {
+  {
     "name": "Azure Boots",
     "itemLevel": 20,
     "enhancementCosts": [
@@ -3398,9 +3601,10 @@ items_data = {
         54
       ]
     ],
-    "sortIndex": 324
+    "sortIndex": 324,
+    "key": "azure_boots"
   },
-  "burble_boots": {
+  {
     "name": "Burble Boots",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -3413,9 +3617,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 325
+    "sortIndex": 325,
+    "key": "burble_boots"
   },
-  "crimson_boots": {
+  {
     "name": "Crimson Boots",
     "itemLevel": 50,
     "enhancementCosts": [
@@ -3428,9 +3633,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 326
+    "sortIndex": 326,
+    "key": "crimson_boots"
   },
-  "rainbow_boots": {
+  {
     "name": "Rainbow Boots",
     "itemLevel": 65,
     "enhancementCosts": [
@@ -3443,9 +3649,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 327
+    "sortIndex": 327,
+    "key": "rainbow_boots"
   },
-  "holy_boots": {
+  {
     "name": "Holy Boots",
     "itemLevel": 80,
     "enhancementCosts": [
@@ -3458,9 +3665,10 @@ items_data = {
         1345
       ]
     ],
-    "sortIndex": 328
+    "sortIndex": 328,
+    "key": "holy_boots"
   },
-  "rough_boots": {
+  {
     "name": "Rough Boots",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -3473,9 +3681,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 329
+    "sortIndex": 329,
+    "key": "rough_boots"
   },
-  "reptile_boots": {
+  {
     "name": "Reptile Boots",
     "itemLevel": 15,
     "enhancementCosts": [
@@ -3488,9 +3697,10 @@ items_data = {
         43
       ]
     ],
-    "sortIndex": 330
+    "sortIndex": 330,
+    "key": "reptile_boots"
   },
-  "gobo_boots": {
+  {
     "name": "Gobo Boots",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -3503,9 +3713,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 331
+    "sortIndex": 331,
+    "key": "gobo_boots"
   },
-  "beast_boots": {
+  {
     "name": "Beast Boots",
     "itemLevel": 55,
     "enhancementCosts": [
@@ -3518,9 +3729,10 @@ items_data = {
         240
       ]
     ],
-    "sortIndex": 332
+    "sortIndex": 332,
+    "key": "beast_boots"
   },
-  "umbral_boots": {
+  {
     "name": "Umbral Boots",
     "itemLevel": 75,
     "enhancementCosts": [
@@ -3533,9 +3745,10 @@ items_data = {
         905
       ]
     ],
-    "sortIndex": 333
+    "sortIndex": 333,
+    "key": "umbral_boots"
   },
-  "cotton_boots": {
+  {
     "name": "Cotton Boots",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -3548,9 +3761,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 334
+    "sortIndex": 334,
+    "key": "cotton_boots"
   },
-  "linen_boots": {
+  {
     "name": "Linen Boots",
     "itemLevel": 15,
     "enhancementCosts": [
@@ -3563,9 +3777,10 @@ items_data = {
         43
       ]
     ],
-    "sortIndex": 335
+    "sortIndex": 335,
+    "key": "linen_boots"
   },
-  "bamboo_boots": {
+  {
     "name": "Bamboo Boots",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -3578,9 +3793,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 336
+    "sortIndex": 336,
+    "key": "bamboo_boots"
   },
-  "silk_boots": {
+  {
     "name": "Silk Boots",
     "itemLevel": 55,
     "enhancementCosts": [
@@ -3593,9 +3809,10 @@ items_data = {
         240
       ]
     ],
-    "sortIndex": 337
+    "sortIndex": 337,
+    "key": "silk_boots"
   },
-  "radiant_boots": {
+  {
     "name": "Radiant Boots",
     "itemLevel": 75,
     "enhancementCosts": [
@@ -3608,9 +3825,10 @@ items_data = {
         905
       ]
     ],
-    "sortIndex": 338
+    "sortIndex": 338,
+    "key": "radiant_boots"
   },
-  "necklace_of_efficiency": {
+  {
     "name": "Necklace Of Efficiency",
     "itemLevel": 30,
     "enhancementCosts": [
@@ -3631,9 +3849,10 @@ items_data = {
         82
       ]
     ],
-    "sortIndex": 339
+    "sortIndex": 339,
+    "key": "necklace_of_efficiency"
   },
-  "fighter_necklace": {
+  {
     "name": "Fighter Necklace",
     "itemLevel": 45,
     "enhancementCosts": [
@@ -3650,9 +3869,10 @@ items_data = {
         148
       ]
     ],
-    "sortIndex": 340
+    "sortIndex": 340,
+    "key": "fighter_necklace"
   },
-  "ranger_necklace": {
+  {
     "name": "Ranger Necklace",
     "itemLevel": 45,
     "enhancementCosts": [
@@ -3669,9 +3889,10 @@ items_data = {
         148
       ]
     ],
-    "sortIndex": 341
+    "sortIndex": 341,
+    "key": "ranger_necklace"
   },
-  "wizard_necklace": {
+  {
     "name": "Wizard Necklace",
     "itemLevel": 45,
     "enhancementCosts": [
@@ -3688,9 +3909,10 @@ items_data = {
         148
       ]
     ],
-    "sortIndex": 342
+    "sortIndex": 342,
+    "key": "wizard_necklace"
   },
-  "necklace_of_wisdom": {
+  {
     "name": "Necklace Of Wisdom",
     "itemLevel": 60,
     "enhancementCosts": [
@@ -3711,9 +3933,10 @@ items_data = {
         319
       ]
     ],
-    "sortIndex": 343
+    "sortIndex": 343,
+    "key": "necklace_of_wisdom"
   },
-  "earrings_of_gathering": {
+  {
     "name": "Earrings Of Gathering",
     "itemLevel": 15,
     "enhancementCosts": [
@@ -3730,9 +3953,10 @@ items_data = {
         44
       ]
     ],
-    "sortIndex": 344
+    "sortIndex": 344,
+    "key": "earrings_of_gathering"
   },
-  "earrings_of_armor": {
+  {
     "name": "Earrings Of Armor",
     "itemLevel": 45,
     "enhancementCosts": [
@@ -3753,9 +3977,10 @@ items_data = {
         148
       ]
     ],
-    "sortIndex": 345
+    "sortIndex": 345,
+    "key": "earrings_of_armor"
   },
-  "earrings_of_regeneration": {
+  {
     "name": "Earrings Of Regeneration",
     "itemLevel": 45,
     "enhancementCosts": [
@@ -3776,9 +4001,10 @@ items_data = {
         148
       ]
     ],
-    "sortIndex": 346
+    "sortIndex": 346,
+    "key": "earrings_of_regeneration"
   },
-  "earrings_of_resistance": {
+  {
     "name": "Earrings Of Resistance",
     "itemLevel": 45,
     "enhancementCosts": [
@@ -3799,9 +4025,10 @@ items_data = {
         148
       ]
     ],
-    "sortIndex": 347
+    "sortIndex": 347,
+    "key": "earrings_of_resistance"
   },
-  "earrings_of_rare_find": {
+  {
     "name": "Earrings Of Rare Find",
     "itemLevel": 60,
     "enhancementCosts": [
@@ -3818,9 +4045,10 @@ items_data = {
         319
       ]
     ],
-    "sortIndex": 348
+    "sortIndex": 348,
+    "key": "earrings_of_rare_find"
   },
-  "basic_task_ring": {
+  {
     "name": "Basic Task Ring",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -3833,9 +4061,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 349
+    "sortIndex": 349,
+    "key": "basic_task_ring"
   },
-  "advanced_task_ring": {
+  {
     "name": "Advanced Task Ring",
     "itemLevel": 30,
     "enhancementCosts": [
@@ -3848,9 +4077,10 @@ items_data = {
         82
       ]
     ],
-    "sortIndex": 350
+    "sortIndex": 350,
+    "key": "advanced_task_ring"
   },
-  "expert_task_ring": {
+  {
     "name": "Expert Task Ring",
     "itemLevel": 60,
     "enhancementCosts": [
@@ -3863,9 +4093,10 @@ items_data = {
         319
       ]
     ],
-    "sortIndex": 351
+    "sortIndex": 351,
+    "key": "expert_task_ring"
   },
-  "ring_of_gathering": {
+  {
     "name": "Ring Of Gathering",
     "itemLevel": 15,
     "enhancementCosts": [
@@ -3882,9 +4113,10 @@ items_data = {
         43
       ]
     ],
-    "sortIndex": 352
+    "sortIndex": 352,
+    "key": "ring_of_gathering"
   },
-  "ring_of_armor": {
+  {
     "name": "Ring Of Armor",
     "itemLevel": 45,
     "enhancementCosts": [
@@ -3905,9 +4137,10 @@ items_data = {
         148
       ]
     ],
-    "sortIndex": 353
+    "sortIndex": 353,
+    "key": "ring_of_armor"
   },
-  "ring_of_regeneration": {
+  {
     "name": "Ring Of Regeneration",
     "itemLevel": 45,
     "enhancementCosts": [
@@ -3928,9 +4161,10 @@ items_data = {
         148
       ]
     ],
-    "sortIndex": 354
+    "sortIndex": 354,
+    "key": "ring_of_regeneration"
   },
-  "ring_of_resistance": {
+  {
     "name": "Ring Of Resistance",
     "itemLevel": 45,
     "enhancementCosts": [
@@ -3951,9 +4185,10 @@ items_data = {
         148
       ]
     ],
-    "sortIndex": 355
+    "sortIndex": 355,
+    "key": "ring_of_resistance"
   },
-  "ring_of_rare_find": {
+  {
     "name": "Ring Of Rare Find",
     "itemLevel": 60,
     "enhancementCosts": [
@@ -3970,9 +4205,10 @@ items_data = {
         319
       ]
     ],
-    "sortIndex": 356
+    "sortIndex": 356,
+    "key": "ring_of_rare_find"
   },
-  "small_pouch": {
+  {
     "name": "Small Pouch",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -3989,9 +4225,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 357
+    "sortIndex": 357,
+    "key": "small_pouch"
   },
-  "medium_pouch": {
+  {
     "name": "Medium Pouch",
     "itemLevel": 20,
     "enhancementCosts": [
@@ -4008,9 +4245,10 @@ items_data = {
         54
       ]
     ],
-    "sortIndex": 358
+    "sortIndex": 358,
+    "key": "medium_pouch"
   },
-  "large_pouch": {
+  {
     "name": "Large Pouch",
     "itemLevel": 40,
     "enhancementCosts": [
@@ -4027,9 +4265,10 @@ items_data = {
         120
       ]
     ],
-    "sortIndex": 359
+    "sortIndex": 359,
+    "key": "large_pouch"
   },
-  "giant_pouch": {
+  {
     "name": "Giant Pouch",
     "itemLevel": 60,
     "enhancementCosts": [
@@ -4046,9 +4285,10 @@ items_data = {
         319
       ]
     ],
-    "sortIndex": 360
+    "sortIndex": 360,
+    "key": "giant_pouch"
   },
-  "cheese_brush": {
+  {
     "name": "Cheese Brush",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -4065,9 +4305,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 361
+    "sortIndex": 361,
+    "key": "cheese_brush"
   },
-  "verdant_brush": {
+  {
     "name": "Verdant Brush",
     "itemLevel": 10,
     "enhancementCosts": [
@@ -4084,9 +4325,10 @@ items_data = {
         31
       ]
     ],
-    "sortIndex": 362
+    "sortIndex": 362,
+    "key": "verdant_brush"
   },
-  "azure_brush": {
+  {
     "name": "Azure Brush",
     "itemLevel": 20,
     "enhancementCosts": [
@@ -4103,9 +4345,10 @@ items_data = {
         54
       ]
     ],
-    "sortIndex": 363
+    "sortIndex": 363,
+    "key": "azure_brush"
   },
-  "burble_brush": {
+  {
     "name": "Burble Brush",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -4122,9 +4365,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 364
+    "sortIndex": 364,
+    "key": "burble_brush"
   },
-  "crimson_brush": {
+  {
     "name": "Crimson Brush",
     "itemLevel": 50,
     "enhancementCosts": [
@@ -4141,9 +4385,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 365
+    "sortIndex": 365,
+    "key": "crimson_brush"
   },
-  "rainbow_brush": {
+  {
     "name": "Rainbow Brush",
     "itemLevel": 65,
     "enhancementCosts": [
@@ -4160,9 +4405,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 366
+    "sortIndex": 366,
+    "key": "rainbow_brush"
   },
-  "holy_brush": {
+  {
     "name": "Holy Brush",
     "itemLevel": 80,
     "enhancementCosts": [
@@ -4179,9 +4425,10 @@ items_data = {
         1345
       ]
     ],
-    "sortIndex": 367
+    "sortIndex": 367,
+    "key": "holy_brush"
   },
-  "cheese_shears": {
+  {
     "name": "Cheese Shears",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -4198,9 +4445,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 368
+    "sortIndex": 368,
+    "key": "cheese_shears"
   },
-  "verdant_shears": {
+  {
     "name": "Verdant Shears",
     "itemLevel": 10,
     "enhancementCosts": [
@@ -4217,9 +4465,10 @@ items_data = {
         31
       ]
     ],
-    "sortIndex": 369
+    "sortIndex": 369,
+    "key": "verdant_shears"
   },
-  "azure_shears": {
+  {
     "name": "Azure Shears",
     "itemLevel": 20,
     "enhancementCosts": [
@@ -4236,9 +4485,10 @@ items_data = {
         54
       ]
     ],
-    "sortIndex": 370
+    "sortIndex": 370,
+    "key": "azure_shears"
   },
-  "burble_shears": {
+  {
     "name": "Burble Shears",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -4255,9 +4505,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 371
+    "sortIndex": 371,
+    "key": "burble_shears"
   },
-  "crimson_shears": {
+  {
     "name": "Crimson Shears",
     "itemLevel": 50,
     "enhancementCosts": [
@@ -4274,9 +4525,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 372
+    "sortIndex": 372,
+    "key": "crimson_shears"
   },
-  "rainbow_shears": {
+  {
     "name": "Rainbow Shears",
     "itemLevel": 65,
     "enhancementCosts": [
@@ -4293,9 +4545,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 373
+    "sortIndex": 373,
+    "key": "rainbow_shears"
   },
-  "holy_shears": {
+  {
     "name": "Holy Shears",
     "itemLevel": 80,
     "enhancementCosts": [
@@ -4312,9 +4565,10 @@ items_data = {
         1345
       ]
     ],
-    "sortIndex": 374
+    "sortIndex": 374,
+    "key": "holy_shears"
   },
-  "cheese_hatchet": {
+  {
     "name": "Cheese Hatchet",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -4331,9 +4585,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 375
+    "sortIndex": 375,
+    "key": "cheese_hatchet"
   },
-  "verdant_hatchet": {
+  {
     "name": "Verdant Hatchet",
     "itemLevel": 10,
     "enhancementCosts": [
@@ -4350,9 +4605,10 @@ items_data = {
         31
       ]
     ],
-    "sortIndex": 376
+    "sortIndex": 376,
+    "key": "verdant_hatchet"
   },
-  "azure_hatchet": {
+  {
     "name": "Azure Hatchet",
     "itemLevel": 20,
     "enhancementCosts": [
@@ -4369,9 +4625,10 @@ items_data = {
         54
       ]
     ],
-    "sortIndex": 377
+    "sortIndex": 377,
+    "key": "azure_hatchet"
   },
-  "burble_hatchet": {
+  {
     "name": "Burble Hatchet",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -4388,9 +4645,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 378
+    "sortIndex": 378,
+    "key": "burble_hatchet"
   },
-  "crimson_hatchet": {
+  {
     "name": "Crimson Hatchet",
     "itemLevel": 50,
     "enhancementCosts": [
@@ -4407,9 +4665,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 379
+    "sortIndex": 379,
+    "key": "crimson_hatchet"
   },
-  "rainbow_hatchet": {
+  {
     "name": "Rainbow Hatchet",
     "itemLevel": 65,
     "enhancementCosts": [
@@ -4426,9 +4685,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 380
+    "sortIndex": 380,
+    "key": "rainbow_hatchet"
   },
-  "holy_hatchet": {
+  {
     "name": "Holy Hatchet",
     "itemLevel": 80,
     "enhancementCosts": [
@@ -4445,9 +4705,10 @@ items_data = {
         1345
       ]
     ],
-    "sortIndex": 381
+    "sortIndex": 381,
+    "key": "holy_hatchet"
   },
-  "cheese_hammer": {
+  {
     "name": "Cheese Hammer",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -4464,9 +4725,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 382
+    "sortIndex": 382,
+    "key": "cheese_hammer"
   },
-  "verdant_hammer": {
+  {
     "name": "Verdant Hammer",
     "itemLevel": 10,
     "enhancementCosts": [
@@ -4483,9 +4745,10 @@ items_data = {
         31
       ]
     ],
-    "sortIndex": 383
+    "sortIndex": 383,
+    "key": "verdant_hammer"
   },
-  "azure_hammer": {
+  {
     "name": "Azure Hammer",
     "itemLevel": 20,
     "enhancementCosts": [
@@ -4502,9 +4765,10 @@ items_data = {
         54
       ]
     ],
-    "sortIndex": 384
+    "sortIndex": 384,
+    "key": "azure_hammer"
   },
-  "burble_hammer": {
+  {
     "name": "Burble Hammer",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -4521,9 +4785,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 385
+    "sortIndex": 385,
+    "key": "burble_hammer"
   },
-  "crimson_hammer": {
+  {
     "name": "Crimson Hammer",
     "itemLevel": 50,
     "enhancementCosts": [
@@ -4540,9 +4805,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 386
+    "sortIndex": 386,
+    "key": "crimson_hammer"
   },
-  "rainbow_hammer": {
+  {
     "name": "Rainbow Hammer",
     "itemLevel": 65,
     "enhancementCosts": [
@@ -4559,9 +4825,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 387
+    "sortIndex": 387,
+    "key": "rainbow_hammer"
   },
-  "holy_hammer": {
+  {
     "name": "Holy Hammer",
     "itemLevel": 80,
     "enhancementCosts": [
@@ -4578,9 +4845,10 @@ items_data = {
         1345
       ]
     ],
-    "sortIndex": 388
+    "sortIndex": 388,
+    "key": "holy_hammer"
   },
-  "cheese_chisel": {
+  {
     "name": "Cheese Chisel",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -4597,9 +4865,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 389
+    "sortIndex": 389,
+    "key": "cheese_chisel"
   },
-  "verdant_chisel": {
+  {
     "name": "Verdant Chisel",
     "itemLevel": 10,
     "enhancementCosts": [
@@ -4616,9 +4885,10 @@ items_data = {
         31
       ]
     ],
-    "sortIndex": 390
+    "sortIndex": 390,
+    "key": "verdant_chisel"
   },
-  "azure_chisel": {
+  {
     "name": "Azure Chisel",
     "itemLevel": 20,
     "enhancementCosts": [
@@ -4635,9 +4905,10 @@ items_data = {
         54
       ]
     ],
-    "sortIndex": 391
+    "sortIndex": 391,
+    "key": "azure_chisel"
   },
-  "burble_chisel": {
+  {
     "name": "Burble Chisel",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -4654,9 +4925,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 392
+    "sortIndex": 392,
+    "key": "burble_chisel"
   },
-  "crimson_chisel": {
+  {
     "name": "Crimson Chisel",
     "itemLevel": 50,
     "enhancementCosts": [
@@ -4673,9 +4945,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 393
+    "sortIndex": 393,
+    "key": "crimson_chisel"
   },
-  "rainbow_chisel": {
+  {
     "name": "Rainbow Chisel",
     "itemLevel": 65,
     "enhancementCosts": [
@@ -4692,9 +4965,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 394
+    "sortIndex": 394,
+    "key": "rainbow_chisel"
   },
-  "holy_chisel": {
+  {
     "name": "Holy Chisel",
     "itemLevel": 80,
     "enhancementCosts": [
@@ -4711,9 +4985,10 @@ items_data = {
         1345
       ]
     ],
-    "sortIndex": 395
+    "sortIndex": 395,
+    "key": "holy_chisel"
   },
-  "cheese_needle": {
+  {
     "name": "Cheese Needle",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -4726,9 +5001,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 396
+    "sortIndex": 396,
+    "key": "cheese_needle"
   },
-  "verdant_needle": {
+  {
     "name": "Verdant Needle",
     "itemLevel": 10,
     "enhancementCosts": [
@@ -4741,9 +5017,10 @@ items_data = {
         31
       ]
     ],
-    "sortIndex": 397
+    "sortIndex": 397,
+    "key": "verdant_needle"
   },
-  "azure_needle": {
+  {
     "name": "Azure Needle",
     "itemLevel": 20,
     "enhancementCosts": [
@@ -4756,9 +5033,10 @@ items_data = {
         54
       ]
     ],
-    "sortIndex": 398
+    "sortIndex": 398,
+    "key": "azure_needle"
   },
-  "burble_needle": {
+  {
     "name": "Burble Needle",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -4771,9 +5049,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 399
+    "sortIndex": 399,
+    "key": "burble_needle"
   },
-  "crimson_needle": {
+  {
     "name": "Crimson Needle",
     "itemLevel": 50,
     "enhancementCosts": [
@@ -4786,9 +5065,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 400
+    "sortIndex": 400,
+    "key": "crimson_needle"
   },
-  "rainbow_needle": {
+  {
     "name": "Rainbow Needle",
     "itemLevel": 65,
     "enhancementCosts": [
@@ -4801,9 +5081,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 401
+    "sortIndex": 401,
+    "key": "rainbow_needle"
   },
-  "holy_needle": {
+  {
     "name": "Holy Needle",
     "itemLevel": 80,
     "enhancementCosts": [
@@ -4816,9 +5097,10 @@ items_data = {
         1345
       ]
     ],
-    "sortIndex": 402
+    "sortIndex": 402,
+    "key": "holy_needle"
   },
-  "cheese_spatula": {
+  {
     "name": "Cheese Spatula",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -4831,9 +5113,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 403
+    "sortIndex": 403,
+    "key": "cheese_spatula"
   },
-  "verdant_spatula": {
+  {
     "name": "Verdant Spatula",
     "itemLevel": 10,
     "enhancementCosts": [
@@ -4846,9 +5129,10 @@ items_data = {
         31
       ]
     ],
-    "sortIndex": 404
+    "sortIndex": 404,
+    "key": "verdant_spatula"
   },
-  "azure_spatula": {
+  {
     "name": "Azure Spatula",
     "itemLevel": 20,
     "enhancementCosts": [
@@ -4861,9 +5145,10 @@ items_data = {
         54
       ]
     ],
-    "sortIndex": 405
+    "sortIndex": 405,
+    "key": "azure_spatula"
   },
-  "burble_spatula": {
+  {
     "name": "Burble Spatula",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -4876,9 +5161,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 406
+    "sortIndex": 406,
+    "key": "burble_spatula"
   },
-  "crimson_spatula": {
+  {
     "name": "Crimson Spatula",
     "itemLevel": 50,
     "enhancementCosts": [
@@ -4891,9 +5177,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 407
+    "sortIndex": 407,
+    "key": "crimson_spatula"
   },
-  "rainbow_spatula": {
+  {
     "name": "Rainbow Spatula",
     "itemLevel": 65,
     "enhancementCosts": [
@@ -4906,9 +5193,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 408
+    "sortIndex": 408,
+    "key": "rainbow_spatula"
   },
-  "holy_spatula": {
+  {
     "name": "Holy Spatula",
     "itemLevel": 80,
     "enhancementCosts": [
@@ -4921,9 +5209,10 @@ items_data = {
         1345
       ]
     ],
-    "sortIndex": 409
+    "sortIndex": 409,
+    "key": "holy_spatula"
   },
-  "cheese_pot": {
+  {
     "name": "Cheese Pot",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -4936,9 +5225,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 410
+    "sortIndex": 410,
+    "key": "cheese_pot"
   },
-  "verdant_pot": {
+  {
     "name": "Verdant Pot",
     "itemLevel": 10,
     "enhancementCosts": [
@@ -4951,9 +5241,10 @@ items_data = {
         31
       ]
     ],
-    "sortIndex": 411
+    "sortIndex": 411,
+    "key": "verdant_pot"
   },
-  "azure_pot": {
+  {
     "name": "Azure Pot",
     "itemLevel": 20,
     "enhancementCosts": [
@@ -4966,9 +5257,10 @@ items_data = {
         54
       ]
     ],
-    "sortIndex": 412
+    "sortIndex": 412,
+    "key": "azure_pot"
   },
-  "burble_pot": {
+  {
     "name": "Burble Pot",
     "itemLevel": 35,
     "enhancementCosts": [
@@ -4981,9 +5273,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 413
+    "sortIndex": 413,
+    "key": "burble_pot"
   },
-  "crimson_pot": {
+  {
     "name": "Crimson Pot",
     "itemLevel": 50,
     "enhancementCosts": [
@@ -4996,9 +5289,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 414
+    "sortIndex": 414,
+    "key": "crimson_pot"
   },
-  "rainbow_pot": {
+  {
     "name": "Rainbow Pot",
     "itemLevel": 65,
     "enhancementCosts": [
@@ -5011,9 +5305,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 415
+    "sortIndex": 415,
+    "key": "rainbow_pot"
   },
-  "holy_pot": {
+  {
     "name": "Holy Pot",
     "itemLevel": 80,
     "enhancementCosts": [
@@ -5026,9 +5321,10 @@ items_data = {
         1345
       ]
     ],
-    "sortIndex": 416
+    "sortIndex": 416,
+    "key": "holy_pot"
   },
-  "cheese_enhancer": {
+  {
     "name": "Cheese Enhancer",
     "itemLevel": 1,
     "baseBonus": 0.6,
@@ -5042,9 +5338,10 @@ items_data = {
         12
       ]
     ],
-    "sortIndex": 417
+    "sortIndex": 417,
+    "key": "cheese_enhancer"
   },
-  "verdant_enhancer": {
+  {
     "name": "Verdant Enhancer",
     "itemLevel": 10,
     "baseBonus": 0.9,
@@ -5058,9 +5355,10 @@ items_data = {
         31
       ]
     ],
-    "sortIndex": 418
+    "sortIndex": 418,
+    "key": "verdant_enhancer"
   },
-  "azure_enhancer": {
+  {
     "name": "Azure Enhancer",
     "itemLevel": 20,
     "baseBonus": 1.2,
@@ -5074,9 +5372,10 @@ items_data = {
         54
       ]
     ],
-    "sortIndex": 419
+    "sortIndex": 419,
+    "key": "azure_enhancer"
   },
-  "burble_enhancer": {
+  {
     "name": "Burble Enhancer",
     "itemLevel": 35,
     "baseBonus": 1.8,
@@ -5090,9 +5389,10 @@ items_data = {
         99
       ]
     ],
-    "sortIndex": 420
+    "sortIndex": 420,
+    "key": "burble_enhancer"
   },
-  "crimson_enhancer": {
+  {
     "name": "Crimson Enhancer",
     "itemLevel": 50,
     "baseBonus": 2.4,
@@ -5106,9 +5406,10 @@ items_data = {
         186
       ]
     ],
-    "sortIndex": 421
+    "sortIndex": 421,
+    "key": "crimson_enhancer"
   },
-  "rainbow_enhancer": {
+  {
     "name": "Rainbow Enhancer",
     "itemLevel": 65,
     "baseBonus": 3,
@@ -5122,9 +5423,10 @@ items_data = {
         439
       ]
     ],
-    "sortIndex": 422
+    "sortIndex": 422,
+    "key": "rainbow_enhancer"
   },
-  "holy_enhancer": {
+  {
     "name": "Holy Enhancer",
     "itemLevel": 80,
     "baseBonus": 3.6,
@@ -5138,6 +5440,7 @@ items_data = {
         1345
       ]
     ],
-    "sortIndex": 423
+    "sortIndex": 423,
+    "key": "holy_enhancer"
   }
-}
+]

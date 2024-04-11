@@ -19,34 +19,15 @@ let success_rate = [
   30, //+18
   30, //+19
   30 //+20
-  ];
+]
 
 function cal_exp(il, el) {
-  //return 14 + 1.4*il*(1+el)
   return 1.4*(1+el)*(10+il)
 }
 
-function find_lowest_Highest(arr) {
-  if (arr.length === 0) {
-      return { lowest: null, highest: null }
-  }
-
-  let lowest = arr[0]
-  let highest = arr[arr.length - 1]
-
-  for (let i = 1; i < arr.length; i++) {
-      if (arr[i] < lowest) {
-          lowest = arr[i]
-      }
-      if (arr[i] > highest) {
-          highest = arr[i]
-      }
-  }
-
-  return { lowest, highest }
-}
-
 self.onmessage = function(e) {
+  if(!e.data.hasOwnProperty('Enhancelator'))
+    return
   info_ = e.data.info_
   total_tries = 0
   curr_tries = 0
@@ -112,7 +93,7 @@ self.onmessage = function(e) {
       }
 
       if(total_tries % s_tries == 0)
-        self.postMessage({"type": 0, "data": total_tries.toString()})
+        self.postMessage({"Enhancelator": 0, "type": 0, "data": total_tries.toString()})
     }
 
     all_result.tries += curr_tries
@@ -153,7 +134,7 @@ self.onmessage = function(e) {
       all_result.h_cost_div++
     }
 
-    self.postMessage({"type": 1, "data": curr_em})
+    self.postMessage({"Enhancelator": 0, "type": 1, "data": curr_em})
   }
 
   //get average by dividing by all_result.em
@@ -163,6 +144,6 @@ self.onmessage = function(e) {
 
   avg_result.l_cost = all_result.total_l_cost / all_result.l_cost_div
   avg_result.h_cost = all_result.total_h_cost / all_result.h_cost_div
-
-  self.postMessage({"type": 2, "avg": avg_result, "all": all_result})
+  
+  self.postMessage({"Enhancelator": 0, "type": 2, "avg": avg_result, "all": all_result})
 }

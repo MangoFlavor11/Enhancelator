@@ -4,7 +4,7 @@ Obviously i do not own the game nor any art assets in the this projects
 */
 
 var worker = "",
-version = "v 1.3.2",
+version = "v 1.4.0",
 enhance_bonus = [
 	1, // +0
 	1.02, // +1
@@ -29,6 +29,7 @@ enhance_bonus = [
 	1.78 // +20
 ],
 info_ = {
+	selected_teas: [],
 	item_level: 0,
 	start_at: 0,
 	stop_at: 10,
@@ -108,7 +109,8 @@ avg_result = {
   h_cost: 0
 },
 materials = [],
-selected_teas = [],
+tea_slot = "",
+tea_pos = 0,
 temp = 0;
 
 //tims as seconds, return string "00y:000d:00h:00m:00s"
@@ -146,28 +148,55 @@ function update_values() {
 	temp = (12/(1+(info_.enhance_skill>info_.item_level?((info_.enhance_skill+info_.enhance_tea+info_.laboratory_level-info_.item_level)+temp)/100:(info_.laboratory_level+temp)/100))).toFixed(2)
 	$("#i_time").val(temp)
 	info_.time = Number(temp)
+
+	localStorage.setItem("Enhancelator", JSON.stringify(info_))
 	reset_results()
 }
 
-function add_tea() {
-	selected = $("#tea_sel").val()
-
-	//=====Make sure only one enhance tea present=====
-	if(selected == "enhancing_tea" || selected == "super_enhancing_tea") {
-		if(!selected_teas.includes(selected)) {
-			$("#enhancing_tea_tea").remove()
-			$("#super_enhancing_tea_tea").remove()
-			selected_teas.splice(selected_teas.indexOf(selected == "enhancing_tea" ? "super_enhancing_tea":"enhancing_tea"), 1)
-			info_.enhance_tea = 0
+//mode is whether add (true) or init (false)
+function add_tea(value, mode) {
+	if(mode) {
+		//=====Make sure only one enhance tea present=====
+		if(value == "enhancing_tea" || value == "super_enhancing_tea") {
+			for(i = 1; i < 4; i++) {
+				temp = $("#tea_slot_"+i+" > svg > use").attr("xlink:href")
+				if(temp == "#enhancing_tea" || temp == "#super_enhancing_tea") {
+					info_.selected_teas.forEach(function(item, index) {
+						if(item[0] == "enhancing_tea" || item[0] == "super_enhancing_tea")
+							temp = index
+					})
+					remove_tea("tea_slot_"+i, temp)
+				}
+			}
 		}
-	}
-	//================================================
+		//================================================
 
-	if(!selected_teas.includes(selected)) {
-		$("#selected_teas").append('<div id="'+selected+'_tea" class="selected_tea"><div id="'+selected+'/remove" class="selected_tea_x btn"><p>&#10005;</p></div><svg><use xlink:href="#'+selected+'"></use></svg></div>')
-		selected_teas.push(selected)
+		//remove current selected spot
+		info_.selected_teas.forEach(function(item, index) {
+			if(item[1] == tea_pos) {
+				temp = index
+				remove_tea("tea_slot_"+info_.selected_teas[index][1], temp, info_.selected_teas[index][0])
+				return
+			}
+		})
+
+		//remove duplicate in any slot
+		info_.selected_teas.forEach(function(item, index) {
+			if(item[0] == value) {
+				temp = index
+				remove_tea("tea_slot_"+info_.selected_teas[index][1], temp, info_.selected_teas[index][0])
+				return
+			}
+		})
+
+		if(!info_.selected_teas.includes(value))
+			info_.selected_teas.push([value, tea_pos])
 	}
-	switch(selected) {
+
+	$("#"+tea_slot+"_text").css("display", "none")
+	$("#"+tea_slot+" > svg > use").attr("xlink:href", "#"+value)
+
+	switch(value) {
 	case "enhancing_tea":
 		info_.enhance_tea = 3
 		break
@@ -183,10 +212,12 @@ function add_tea() {
 	}
 }
 
-function remove_tea(id) {
-	$("#"+id+"_tea").remove()
-	selected_teas.splice(selected_teas.indexOf(id), 1)
-	switch(id) {
+function remove_tea(slot, index, type) {
+	$("#"+slot+"_text").css("display", "block")
+	$("#"+slot+" > svg > use").attr("xlink:href", "#")
+	
+	info_.selected_teas.splice(index, 1)
+	switch(type) {
 	case "enhancing_tea":
 		info_.enhance_tea = 0
 		break
@@ -203,15 +234,12 @@ function remove_tea(id) {
 }
 
 function validate_field(id, key, value, min, max) {
-	value = Number(value)
 	min = Number(min)
-	max = Number(max)
+	max	= Number(max)
 
-	if (value == 0) {
-		$("#"+id).val(0)
-		info_[key] = 0
-		update_values()
-		return
+	if(value.includes('.') && value.split(".")[1].length > 2) {
+    value = Number(value).toFixed(2)
+    $("#"+id).val(value)
 	}
 
   if(value < min) {
@@ -222,10 +250,8 @@ function validate_field(id, key, value, min, max) {
 		$("#"+id).val(max)
 		info_[key] = max
 	}
-	else {
-		$("#"+id).val(value)
-		info_[key] = value
-	}
+	else 
+		info_[key] = Number(value)
 	update_values()
 }
 
@@ -268,7 +294,7 @@ function stop_calc(stop) {
 function close_sel_menus() {
 	$("#item_filter").val("")
 	$("#sel_item_container").css("display", "none")
-	$("#ehnace_level").val("0")
+	$("#enhace_level").val("0")
 	$("#enhancer_item_container").css("display", "none")
 }
 
@@ -287,19 +313,20 @@ function reset_results() {
 	for(i = 1; i <=5; i++) {
 		$("#r_mat_"+i+"_cell").css("display", "none")
 	}
-	$("#result_title").text("Result")
 	$("#iterations").text("0")
 	$("#time").text("0")
 	$("#tries").text("0")
 	$("#exp").text("0")
 	$("#coins").text("0")
 	$("#cost").text("0")
+	$("#exp_h").text("0")
+	$("#c_x").text("0")
 	$("#l_cost").text("0")
 	$("#h_cost").text("0")
 
-	$("#start_1 > p").text("Start 1 itteration")
-	$("#start_10 > p").text("Start 10 itteration")
-	$("#start_100 > p").text("Start 100 itteration")
+	$("#start_100 > p").text("100 itteration")
+	$("#start_1000 > p").text("1000 itteration")
+	$("#start_5000 > p").text("5000 itteration")
 }
 
 function update_result() {
@@ -309,6 +336,8 @@ function update_result() {
 		else
 			$("#"+key).text(avg_result[key].toLocaleString())
 	}
+	$("#exp_h").text(Number((avg_result.exp / (avg_result.tries * info_.time / 3600)).toFixed(2)).toLocaleString())
+	$("#c_x").text(Number((avg_result.cost / avg_result.exp).toFixed(2)).toLocaleString())
 	$("#iterations").text(all_result.em)
 
 	$("#used_proto_cell").css("display", "none")
@@ -343,7 +372,7 @@ function get_values() {
 					$("#i_"+key).val("1")
 				info_[key] = Number($("#i_"+key).val().replace(/,/g, ''))
 			}
-			else if(key != "wisdom" && key != "use_blessing" && key != "enhance_tea")
+			else if(key != "wisdom" && key != "use_blessing" && key != "enhance_tea" && key != "selected_teas"&& key != "enhace_level")
 				info_[key] = Number($("#i_"+key).val().replace(/,/g, ''))
 	}
 }
@@ -407,9 +436,27 @@ function get_enhancing_bonus(value, index) {
 	return Number(temp.toFixed(2))
 }
 
+function init_user_data() {
+	if(localStorage.getItem("Enhancelator")) {
+		info_ = JSON.parse(localStorage.getItem("Enhancelator"))
+		$("#i_enhance_skill").val(info_.enhance_skill)
+		$("#i_enhancer_bonus").val(info_.enhancer_bonus)
+		$("#i_laboratory_level").val(info_.laboratory_level)
+		$("#i_laboratory_level").val(info_.laboratory_level)
+		$("#use_gloves").prop("checked", info_.use_gloves)
+		$("#i_gloves_level").val(info_.gloves_level)
+		info_.selected_teas.forEach(function(item, index) {
+			tea_slot = "tea_slot_"+item[1]
+			tea_pos = item[1]
+			add_tea(item[0], false)
+		})
+	}
+}
+
 $(document).ready(function() {
 	window.scrollTo(0, 1)
 	$("#version").text(version)
+	init_user_data()
 	reset()
 	get_values()
 	update_values()
@@ -490,21 +537,32 @@ $(document).ready(function() {
 	})
 
 	$("#enhancer_item").on("click", ".sel_item_div", function() {
-  	temp = get_enhancing_bonus("ehnace_level", $(this).attr("data"))
+  	temp = get_enhancing_bonus("enhace_level", $(this).attr("data"))
   	$("#i_enhancer_bonus").val((temp).toFixed(2))
 		info_.enhancer_bonus = temp
   	close_sel_menus()
   	update_values()
   })
 
-	$("#tea_sel").change(function() {
-		add_tea()
+
+	$(".tea_slot").on("click", function() {
+		tea_slot = $(this).attr("id")
+		tea_pos = $(this).attr("value")
+  	temp = $("#tea_item_container").css("display")
+		$("#tea_item_container").css("display", temp == "flex" ? "none":"flex")
+	})
+
+	$(".tea_sel").on("click",function() {
+		add_tea($(this).attr("value"), true)
+		temp = $("#tea_item_container").css("display")
+		$("#tea_item_container").css("display", temp == "flex" ? "none":"flex")
 		update_values()
   })
 
-  $(".selected_teas").on("click", ".selected_tea_x", function() {
-		id = $(this)[0].id.split("/")[0]
-		remove_tea(id)
+  $("#remove_tea").on("click", function() {
+		remove_tea(tea_slot, tea_pos)
+		temp = $("#tea_item_container").css("display")
+		$("#tea_item_container").css("display", temp == "flex" ? "none":"flex")
 		update_values()
   })
 
@@ -520,12 +578,12 @@ function on_click_btn(id) {
 		$(".button").off("click")
 		$(".button").css("opacity", 0.5)
 
-		if(id == "start_1")
-			info_.em = 1
-		else if(id == "start_10")
-			info_.em = 10
-		else
+		if(id == "start_100")
 			info_.em = 100
+		else if(id == "start_1000")
+			info_.em = 1000
+		else
+			info_.em = 5000
 
 		$("#cal").text("Calculating 0%")
 		$("#t_tries").text("Tries 0")
@@ -540,33 +598,26 @@ function on_click_btn(id) {
 			if(!e.data.hasOwnProperty('Enhancelator'))
     		return
 			if(e.data.type == 0) {
-				if(info_.em == 1)
-					$("#t_tries").text("Attempts "+(e.data.data).toLocaleString())
-				else if(info_.em == 10)
-					$("#t_tries").text("Attempts "+(e.data.data/10).toLocaleString())
+				if(info_.em == 100)
+					$("#t_tries").text("Attempts "+(e.data.data/100).toLocaleString())
+				else if(info_.em == 1000)
+					$("#t_tries").text("Attempts "+(e.data.data/1000).toLocaleString())
 				else
-					$("#t_tries").text("Attempts "+(e.data.data/100).toLocaleString())				
+					$("#t_tries").text("Attempts "+(e.data.data/5000).toLocaleString())				
 			}
 			else if(e.data.type == 1) {
-				if(info_.em == 1)
-					$("#cal").text("Calculating "+e.data.data*100+"%")
-				else if(info_.em == 10)
-					$("#cal").text("Calculating "+e.data.data*10+"%")
-				else
+				if(info_.em == 100)
 					$("#cal").text("Calculating "+e.data.data+"%")
+				else if(info_.em == 1000)
+					$("#cal").text("Calculating "+e.data.data/10+"%")
+				else
+					$("#cal").text("Calculating "+e.data.data/50+"%")
 			}
 			else {
-				if(info_.em == 1) {
-					$("#result_title").text("Result")
-				}
-				else {
-					$("#result_title").text("AVG Result")
-				}
-
 				$("#reset_result").css("display", "flex")
-				$("#start_1 > p").text("Add 1 itteration")
-				$("#start_10 > p").text("Add 10 itteration")
 				$("#start_100 > p").text("Add 100 itteration")
+				$("#start_1000 > p").text("Add 1000 itteration")
+				$("#start_5000 > p").text("Add 5000 itteration")
 				all_result = e.data.all
 				avg_result = e.data.avg
 	    	update_result()

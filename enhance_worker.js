@@ -141,7 +141,6 @@ self.onmessage = function(e) {
   for(key in avg_result) {
     avg_result[key] = all_result[key] / all_result.em
   }
-
   avg_result.l_cost = all_result.total_l_cost / all_result.l_cost_div
   avg_result.h_cost = all_result.total_h_cost / all_result.h_cost_div
   

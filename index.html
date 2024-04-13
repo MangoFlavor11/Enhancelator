@@ -17,9 +17,18 @@
 	</div>
 	<div id="info_menu" class="menu info_menu">
 		<div>
-			<p>How to use:<br><br>This Simulator calculates values by running each attempt in real-time loop, hence simulating for +20 will take time, up to a few minutes<br><br>Keep in mind that the nature of enhancing is pure RNG, so every attempt will result in different values. Nevertheless, it's useful to know the range!<br><br>Choose an item from the items list. Once you select an item, some fields will be auto-filled, while others will not<br><br>Set remaining empty fields as needed, such as resource prices, protection price, and enhancing skill level<br><br>Once all fields are filled, click on the "Start" 1 / 10 / 100 iterations buttons to begin the simulation<br><br>You can increase the number of iterations for a more accurate average result by clicking on the 1 / 10 / 100 buttons again<br><br>Changing any fields after running iterations will reset everything<br><br><b>What is iterations counter?</b><br>Number of times the item reached from <i>Start At Level</i> to <i>Stop At Level</i><br><br><b>What is Coins counter?</b><br>How much <i>coins</i> used from the enhancing process</i><br><br><b>What is Item level?</b><br>In Game stat for items that affects multiple calculations, it is auto filled, and advised not to temper it</i><br><br><b>What is RNG?</b><br>Random Number Generators (RNG), a way used to determine random events, such as success rate</i></p>
+			<p>How to use:<br><br>This Simulator calculates values by running each attempt in real-time loop, hence simulating for +20 will take time, up to a few minutes<br><br>Keep in mind that the nature of enhancing is pure RNG, so every attempt will result in different values. Nevertheless, it's useful to know the range!<br><br>Choose an item from the items list. Once you select an item, some fields will be auto-filled, while others will not<br><br>Set remaining empty fields as needed, such as resource prices, protection price, and enhancing skill level<br><br>Once all fields are filled, click on the "Start" 100 / 1000 / 10,000 iterations buttons to begin the simulation<br><br>You can increase the number of iterations for a more accurate average result by clicking on the 100 / 1000 / 10,000 buttons again<br><br>Changing any fields after running iterations will reset everything<br><br><b>What is iterations counter?</b><br>Number of times the item reached from <i>Start At Level</i> to <i>Stop At Level</i><br><br><b>What is Coins counter?</b><br>How much <i>coins</i> used from the enhancing process</i><br><br><b>What is Item level?</b><br>In Game stat for items that affects multiple calculations, it is auto filled, and advised not to temper it</i><br><br><b>What is RNG?</b><br>Random Number Generators (RNG), a way used to determine random events, such as success rate</i></p>
 		</div>
 		<div class="updates_notes">
+			<p class="updates_titel">Patch: v 1.4.0</p>
+			<ul>
+				<li>Changed iteration buttons to 100 / 1000 / 5000</li>
+				<li>Changed Tea selection dropdown list to a Tea selection menu that is identical to the game</li>
+				<li>Some fields now will be stored in local storage and auto filled when opening the page again</li>
+				<li><i>Start at Level</i> is now a readonly field</li>
+				<li>Added EXP/h and Coins/EXP counters</li>
+				<li>Fixed unable to input decimal numbers</li>
+			</ul>
 			<p class="updates_titel">Patch: v 1.3.2</p>
 			<ul>
 				<li>Added Reset Result button</li>
@@ -119,7 +128,7 @@
 			</div>
 			<div id="sel_item_container" class="sel_item_container">
 				<p class="sel_item_text">Select item</p>
-				<div class="close btn" onclick="$('#sel_item_container').css('display','none'); sel_item_is_open = false"><p>&#10005;</p></div>
+				<div class="close btn" onclick="$('#sel_item_container').css('display','none')"><p>&#10005;</p></div>
 				<input id="item_filter" type="text" class="sel_item_filter" placeholder="Item Filter">
 				<div id="sel_item" class="sel_item_icons"></div>
 			</div>
@@ -178,11 +187,11 @@
 			<div class="side l_side">
 				<div class="l_stat_cell">
 					<p>Item Level</p>
-					<input type="text" readonly value="0" id="i_item_level" placeholder="10">
+					<input type="text" readonly value="0" id="i_item_level" placeholder="10" title="Read only field">
 				</div>
 				<div class="l_stat_cell">
 					<p>Start At Level</p>
-					<input type="number" min="0" max="19" value="0" id="i_start_at"  placeholder="0">
+					<input type="text" readonly min="0" max="19" value="0" id="i_start_at"  placeholder="0" title="Read only field">
 				</div>
 				<div class="l_stat_cell">
 					<p>Stop At Level</p>
@@ -219,9 +228,9 @@
 				<p>Enhancer Bonus %</p>
 				<input type="number" min="0" max="6.41" step="0.01" value="0" id="i_enhancer_bonus" placeholder="0.00">
 				<div id="enhancer_item_container" class="sel_item_container" style="z-index: 1;">
-					<div class="close btn" onclick="$('#enhancer_item_container').css('display','none'); enhancer_item_is_open = false"><p>&#10005;</p></div>
+					<div class="close btn" onclick="$('#enhancer_item_container').css('display','none')"><p>&#10005;</p></div>
 					<p class="sel_item_text">Enhance Level</p>
-					<input id="ehnace_level" type="number" step="1" value="0" min="0" max="20" class="sel_item_filter" placeholder="+10">
+					<input id="enhace_level" type="number" step="1" value="0" min="0" max="20" class="sel_item_filter" placeholder="+10">
 					<div id="enhancer_item" class="sel_item_icons" style="height: 116px;"></div>
 				</div>
 			</div>
@@ -233,26 +242,52 @@
 				<p>Enhancing Speed /s</p>
 				<input type="number" min="3" max="12" value="0" id="i_time" placeholder="7.82">
 			</div>
-			<div class="bonuses_cell">
-				<p>Tea</p>
-				<select id="tea_sel">
-					<option value="enhancing_tea">Enhnace Tea</option>
-					<option value="super_enhancing_tea">Super Enhnace Tea</option>
-					<option value="blessed_tea">Blessed Tea</option>
-					<option value="wisdom_tea">Wisdom Tea</option>
-				</select>
+			<div class="bonuses_cell" style="flex-direction: row; justify-content: center;">
+				<div id="tea_slot_0" value="0" class="select_tea_slot tea_slot">
+					<p id="tea_slot_0_text" class="slot_text">Tea</p>
+					<svg><use xlink:href="#"></use></svg>
+				</div>
+				<div id="tea_slot_1" value="1" class="select_tea_slot tea_slot">
+					<p id="tea_slot_1_text" class="slot_text">Tea</p>
+					<svg><use xlink:href="#"></use></svg>
+				</div>
+				<div id="tea_slot_2" value="2" class="select_tea_slot tea_slot">
+					<p id="tea_slot_2_text" class="slot_text">Tea</p>
+					<svg><use xlink:href="#"></use></svg>
+				</div>
+				<div id="tea_item_container" class="sel_item_container">
+					<div class="close btn" onclick="$('#tea_item_container').css('display','none')"><p>&#10005;</p></div>
+					<div class="sel_item_icons" style="height: 116px; width: 228px; margin-top: 25px;">
+						<div id="remove_tea" class="sel_item_div tea_sel">
+							<p class="tea_sel_text">Remove</p>
+							<svg><use xlink:href="#"></use></svg>
+						</div>
+						<div value="enhancing_tea" class="sel_item_div tea_sel">
+							<svg><use xlink:href="#enhancing_tea"></use></svg>
+						</div>
+						<div value="super_enhancing_tea" class="sel_item_div tea_sel">
+							<svg><use xlink:href="#super_enhancing_tea"></use></svg>
+						</div>
+						<div value="blessed_tea" class="sel_item_div tea_sel">
+							<svg><use xlink:href="#blessed_tea"></use></svg>
+						</div>
+						<div value="wisdom_tea" class="sel_item_div tea_sel">
+							<svg><use xlink:href="#wisdom_tea"></use></svg>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div id="selected_teas" class="bonuses_cell selected_teas"></div>
 		</div>
 		<div class="result">
 			<div class="result_cell result_title">
 				<div class="result_cell_inner">
-					<p id="result_title">Result</p>
+					<p id="result_title">AVG Result</p>
 				</div>
 			</div>
 			<div class="result_cell">
 				<div class="result_cell_inner">
-					<p>Iterations</p>
+					<p>Iterations:</p>
 					<p id="iterations">0</p>
 				</div>
 			</div>
@@ -358,6 +393,16 @@
 			</div>
 			<div class="result_cell">
 				<div class="result_cell_inner">
+					<p>EXP/h:</p>
+					<p id="exp_h"></p>
+				</div>
+				<div class="result_cell_inner">
+					<p>Coins/EXP:</p>
+					<p id="c_x"></p>
+				</div>
+			</div>
+			<div class="result_cell">
+				<div class="result_cell_inner">
 					<p>Lowest cost:</p>
 					<p id="l_cost">0</p>
 				</div>
@@ -376,9 +421,9 @@
 			</div>
 		</div>
 		<div class="btns">
-			<div id="start_1" class="button btn"><p>Start 1 itteration</p></div>
-			<div id="start_10" class="button btn"><p>Start 10 itteration</p></div>
-			<div id="start_100" class="button btn"><p>Start 100 itteration</p></div>
+			<div id="start_100" class="button btn"><p>100 itteration</p></div>
+			<div id="start_1000" class="button btn"><p>1000 itteration</p></div>
+			<div id="start_5000" class="button btn"><p>5000 itteration</p></div>
 			<div id="reset" class="button btn"><p>Reset</p></div>
 		</div>
 	</div>

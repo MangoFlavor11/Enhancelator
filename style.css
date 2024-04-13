@@ -336,9 +336,9 @@ ul {
 
 .tea_sel_text {
 	position: absolute;
-	top: 0%;
+	top: 5%;
 	left: 50%;
-	transform: translate(-50%, 0%);
+	transform: translate(-50%, 5%);
 	text-align: center;
 	opacity: 0.5;
 	pointer-events: none;

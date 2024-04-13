@@ -157,37 +157,16 @@ function update_values() {
 function add_tea(value, mode) {
 	if(mode) {
 		//=====Make sure only one enhance tea present=====
-		if(value == "enhancing_tea" || value == "super_enhancing_tea") {
-			for(i = 1; i < 4; i++) {
-				temp = $("#tea_slot_"+i+" > svg > use").attr("xlink:href")
-				if(temp == "#enhancing_tea" || temp == "#super_enhancing_tea") {
-					info_.selected_teas.forEach(function(item, index) {
-						if(item[0] == "enhancing_tea" || item[0] == "super_enhancing_tea")
-							temp = index
-					})
-					remove_tea("tea_slot_"+i, temp)
-				}
-			}
-		}
+		if(value == "enhancing_tea" || value == "super_enhancing_tea")
+			//remove enhancing_tea or super_enhancing_tea in any slot
+			check_selected_tea(0, value == "enhancing_tea" ? "super_enhancing_tea":"enhancing_tea")
 		//================================================
 
 		//remove current selected spot
-		info_.selected_teas.forEach(function(item, index) {
-			if(item[1] == tea_pos) {
-				temp = index
-				remove_tea("tea_slot_"+info_.selected_teas[index][1], temp, info_.selected_teas[index][0])
-				return
-			}
-		})
+		check_selected_tea(1, tea_pos)
 
 		//remove duplicate in any slot
-		info_.selected_teas.forEach(function(item, index) {
-			if(item[0] == value) {
-				temp = index
-				remove_tea("tea_slot_"+info_.selected_teas[index][1], temp, info_.selected_teas[index][0])
-				return
-			}
-		})
+		check_selected_tea(0, value)
 
 		if(!info_.selected_teas.includes(value))
 			info_.selected_teas.push([value, tea_pos])
@@ -231,6 +210,16 @@ function remove_tea(slot, index, type) {
 		info_.wisdom = 1
 		break
 	}
+}
+
+function check_selected_tea(type, checkFor) {
+	info_.selected_teas.forEach(function(item, index) {
+		if(item[type] == checkFor) {
+			temp = index
+			remove_tea("tea_slot_"+info_.selected_teas[index][1], temp, info_.selected_teas[index][0])
+			return
+		}
+	})
 }
 
 function validate_field(id, key, value, min, max) {
@@ -548,21 +537,18 @@ $(document).ready(function() {
 	$(".tea_slot").on("click", function() {
 		tea_slot = $(this).attr("id")
 		tea_pos = $(this).attr("value")
-  	temp = $("#tea_item_container").css("display")
-		$("#tea_item_container").css("display", temp == "flex" ? "none":"flex")
+		$("#tea_item_container").css("display", "flex")
 	})
 
 	$(".tea_sel").on("click",function() {
 		add_tea($(this).attr("value"), true)
-		temp = $("#tea_item_container").css("display")
-		$("#tea_item_container").css("display", temp == "flex" ? "none":"flex")
+		$("#tea_item_container").css("display", "none")
 		update_values()
   })
 
   $("#remove_tea").on("click", function() {
-		remove_tea(tea_slot, tea_pos)
-		temp = $("#tea_item_container").css("display")
-		$("#tea_item_container").css("display", temp == "flex" ? "none":"flex")
+  	check_selected_tea(1, tea_pos)
+		$("#tea_item_container").css("display", "none")
 		update_values()
   })
 

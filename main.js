@@ -142,7 +142,7 @@ function update_values() {
 		$(".success_rate_list").find("li:eq(" + i + ")").text("+" + (i + 1) + ": +" + es + "%")
 	}
 	if (info_.use_gloves)
-		temp = get_enhancing_bonus("i_gloves_level", "171")
+		temp = get_enhancing_bonus("i_gloves_level", 192)
 	else
 		temp = 0
 	temp = (12 / (1 + (info_.enhance_skill > info_.item_level ? ((info_.enhance_skill + info_.enhance_tea + info_.laboratory_level - info_.item_level) + temp) / 100 : (info_.laboratory_level + temp) / 100))).toFixed(2)

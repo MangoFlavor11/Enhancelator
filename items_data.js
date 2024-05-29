@@ -5928,15 +5928,3 @@ items_data = [
     "key": "holy_enhancer"
   }
 ]
-
-function test() {
-  index = items_data[0].sortIndex
-  for(i = 0; i < items_data.length; i++) {
-    if(items_data[i].sortIndex <= index)
-      index = items_data[i].sortIndex
-    else {
-      index = items_data[i-1].sortIndex+1
-      items_data[i].sortIndex = index
-    }
-  }
-}

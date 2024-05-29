@@ -9,7 +9,7 @@
 /* width */
 ::-webkit-scrollbar {
   width: 8px; /* for Chrome, Safari, and Opera */
-}}
+}
 
 /* Track */
 ::-webkit-scrollbar-track {
@@ -199,11 +199,11 @@ ul {
 
 .sel_item_icons {
 	display: grid;
-	grid-template-columns: repeat(4, 54px);
+	grid-template-columns: repeat(6, 54px);
 	grid-auto-rows: 54px;
 	grid-gap: 4px;
-	width: 242px;
-	height: 300px;
+	width: 356px;
+	height: 362px;
 	overflow-y:auto;
 }
 
@@ -546,10 +546,10 @@ ul {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 28px;
-	height: 28px;
+	width: 24px;
+	height: 24px;
 	top: 0;
-	right: -34px;
+	right: -28px;
 }
 
 .info_menu {

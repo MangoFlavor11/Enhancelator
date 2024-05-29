@@ -124,6 +124,30 @@ items_data = [
     "key": "vampiric_bow"
   },
   {
+    "name": "Cursed Bow",
+    "itemLevel": 85,
+    "enhancementCosts": [
+      [
+        "sinister_essence",
+        24
+      ],
+      [
+        "arcane_lumber",
+        12
+      ],
+      [
+        "crushed_jade",
+        1
+      ],
+      [
+        "coin",
+        4815
+      ]
+    ],
+    "sortIndex": 128,
+    "key": "cursed_bow"
+  },
+  {
     "name": "Gobo Boomstick",
     "itemLevel": 40,
     "enhancementCosts": [
@@ -412,6 +436,62 @@ items_data = [
     "key": "granite_bludgeon"
   },
   {
+    "name": "Regal Sword",
+    "itemLevel": 95,
+    "enhancementCosts": [
+      [
+        "enchanted_essence",
+        18
+      ],
+      [
+        "holy_cheese",
+        8
+      ],
+      [
+        "arcane_log",
+        8
+      ],
+      [
+        "crushed_garnet",
+        1
+      ],
+      [
+        "coin",
+        4815
+      ]
+    ],
+    "sortIndex": 145,
+    "key": "regal_sword"
+  },
+  {
+    "name": "Chaotic Flail",
+    "itemLevel": 95,
+    "enhancementCosts": [
+      [
+        "sinister_essence",
+        18
+      ],
+      [
+        "holy_cheese",
+        8
+      ],
+      [
+        "arcane_log",
+        8
+      ],
+      [
+        "crushed_garnet",
+        1
+      ],
+      [
+        "coin",
+        4815
+      ]
+    ],
+    "sortIndex": 146,
+    "key": "chaotic_flail"
+  },
+  {
     "name": "Soul Hunter Crossbow",
     "itemLevel": 85,
     "enhancementCosts": [
@@ -432,6 +512,30 @@ items_data = [
     "key": "soul_hunter_crossbow"
   },
   {
+    "name": "Sundering Crossbow",
+    "itemLevel": 95,
+    "enhancementCosts": [
+      [
+        "enchanted_essence",
+        18
+      ],
+      [
+        "arcane_lumber",
+        8
+      ],
+      [
+        "crushed_jade",
+        1
+      ],
+      [
+        "coin",
+        4815
+      ]
+    ],
+    "sortIndex": 146,
+    "key": "sundering_crossbow"
+  },
+  {
     "name": "Frost Staff",
     "itemLevel": 85,
     "enhancementCosts": [
@@ -448,7 +552,7 @@ items_data = [
         2034
       ]
     ],
-    "sortIndex": 146,
+    "sortIndex": 147,
     "key": "frost_staff"
   },
   {
@@ -468,8 +572,28 @@ items_data = [
         2034
       ]
     ],
-    "sortIndex": 147,
+    "sortIndex": 148,
     "key": "infernal_battlestaff"
+  },
+  {
+    "name": "Jackalope Staff",
+    "itemLevel": 85,
+    "enhancementCosts": [
+      [
+        "chimerical_essence",
+        18
+      ],
+      [
+        "arcane_lumber",
+        4
+      ],
+      [
+        "coin",
+        2034
+      ]
+    ],
+    "sortIndex": 149,
+    "key": "jackalope_staff"
   },
   {
     "name": "Cheese Sword",
@@ -1420,6 +1544,26 @@ items_data = [
     "key": "vampire_fang_dirk"
   },
   {
+    "name": "Knights Aegis",
+    "itemLevel": 95,
+    "enhancementCosts": [
+      [
+        "enchanted_essence",
+        12
+      ],
+      [
+        "holy_cheese",
+        6
+      ],
+      [
+        "coin",
+        4815
+      ]
+    ],
+    "sortIndex": 202,
+    "key": "knights_aegis"
+  },
+  {
     "name": "Treant Shield",
     "itemLevel": 40,
     "enhancementCosts": [
@@ -1436,8 +1580,28 @@ items_data = [
         120
       ]
     ],
-    "sortIndex": 202,
+    "sortIndex": 203,
     "key": "treant_shield"
+  },
+  {
+    "name": "Manticore Shield",
+    "itemLevel": 85,
+    "enhancementCosts": [
+      [
+        "chimerical_essence",
+        12
+      ],
+      [
+        "arcane_lumber",
+        3
+      ],
+      [
+        "coin",
+        2034
+      ]
+    ],
+    "sortIndex": 204,
+    "key": "manticore_shield"
   },
   {
     "name": "Tome Of Healing",
@@ -1452,7 +1616,7 @@ items_data = [
         99
       ]
     ],
-    "sortIndex": 203,
+    "sortIndex": 205,
     "key": "tome_of_healing"
   },
   {
@@ -1468,7 +1632,7 @@ items_data = [
         622
       ]
     ],
-    "sortIndex": 204,
+    "sortIndex": 206,
     "key": "tome_of_the_elements"
   },
   {
@@ -1500,8 +1664,32 @@ items_data = [
         622
       ]
     ],
-    "sortIndex": 205,
+    "sortIndex": 207,
     "key": "watchful_relic"
+  },
+  {
+    "name": "Bishops Codex",
+    "itemLevel": 95,
+    "enhancementCosts": [
+      [
+        "enchanted_essence",
+        12
+      ],
+      [
+        "crushed_moonstone",
+        2
+      ],
+      [
+        "crushed_amethyst",
+        2
+      ],
+      [
+        "coin",
+        4815
+      ]
+    ],
+    "sortIndex": 208,
+    "key": "bishops_codex"
   },
   {
     "name": "Cheese Buckler",
@@ -1728,6 +1916,74 @@ items_data = [
     "key": "arcane_shield"
   },
   {
+    "name": "Sinister Cape",
+    "itemLevel": 80,
+    "enhancementCosts": [
+      [
+        "sinister_essence",
+        8
+      ],
+      [
+        "holy_cheese",
+        2
+      ],
+      [
+        "umbral_leather",
+        2
+      ],
+      [
+        "coin",
+        1345
+      ]
+    ],
+    "sortIndex": 220,
+    "key": "sinister_cape"
+  },
+  {
+    "name": "Chimerical Quiver",
+    "itemLevel": 80,
+    "enhancementCosts": [
+      [
+        "chimerical_essence",
+        8
+      ],
+      [
+        "arcane_lumber",
+        2
+      ],
+      [
+        "umbral_leather",
+        2
+      ],
+      [
+        "coin",
+        1345
+      ]
+    ],
+    "sortIndex": 221,
+    "key": "chimerical_quiver"
+  },
+  {
+    "name": "Enchanted Cloak",
+    "itemLevel": 80,
+    "enhancementCosts": [
+      [
+        "enchanted_essence",
+        8
+      ],
+      [
+        "radiant_fabric",
+        4
+      ],
+      [
+        "coin",
+        1345
+      ]
+    ],
+    "sortIndex": 222,
+    "key": "enchanted_cloak"
+  },
+  {
     "name": "Red Chef's Hat",
     "itemLevel": 60,
     "enhancementCosts": [
@@ -1832,6 +2088,46 @@ items_data = [
     "key": "fluffy_red_hat"
   },
   {
+    "name": "Acrobatic Hood",
+    "itemLevel": 95,
+    "enhancementCosts": [
+      [
+        "sinister_essence",
+        10
+      ],
+      [
+        "umbral_leather",
+        6
+      ],
+      [
+        "coin",
+        4815
+      ]
+    ],
+    "sortIndex": 222,
+    "key": "acrobatic_hood"
+  },
+  {
+    "name": "Magicians Hat",
+    "itemLevel": 95,
+    "enhancementCosts": [
+      [
+        "sinister_essence",
+        10
+      ],
+      [
+        "radiant_fabric",
+        6
+      ],
+      [
+        "coin",
+        4815
+      ]
+    ],
+    "sortIndex": 222,
+    "key": "magicians_hat"
+  },
+  {
     "name": "Cheese Helmet",
     "itemLevel": 1,
     "enhancementCosts": [
@@ -1844,7 +2140,7 @@ items_data = [
         12
       ]
     ],
-    "sortIndex": 224,
+    "sortIndex": 223,
     "key": "cheese_helmet"
   },
   {
@@ -1860,7 +2156,7 @@ items_data = [
         31
       ]
     ],
-    "sortIndex": 225,
+    "sortIndex": 224,
     "key": "verdant_helmet"
   },
   {
@@ -1876,7 +2172,7 @@ items_data = [
         54
       ]
     ],
-    "sortIndex": 226,
+    "sortIndex": 225,
     "key": "azure_helmet"
   },
   {
@@ -1892,7 +2188,7 @@ items_data = [
         99
       ]
     ],
-    "sortIndex": 227,
+    "sortIndex": 226,
     "key": "burble_helmet"
   },
   {
@@ -1908,7 +2204,7 @@ items_data = [
         186
       ]
     ],
-    "sortIndex": 228,
+    "sortIndex": 227,
     "key": "crimson_helmet"
   },
   {
@@ -1924,7 +2220,7 @@ items_data = [
         439
       ]
     ],
-    "sortIndex": 229,
+    "sortIndex": 228,
     "key": "rainbow_helmet"
   },
   {
@@ -1940,7 +2236,7 @@ items_data = [
         1345
       ]
     ],
-    "sortIndex": 230,
+    "sortIndex": 229,
     "key": "holy_helmet"
   },
   {
@@ -1956,7 +2252,7 @@ items_data = [
         12
       ]
     ],
-    "sortIndex": 231,
+    "sortIndex": 230,
     "key": "rough_hood"
   },
   {
@@ -1972,7 +2268,7 @@ items_data = [
         43
       ]
     ],
-    "sortIndex": 232,
+    "sortIndex": 231,
     "key": "reptile_hood"
   },
   {
@@ -1988,7 +2284,7 @@ items_data = [
         99
       ]
     ],
-    "sortIndex": 233,
+    "sortIndex": 232,
     "key": "gobo_hood"
   },
   {
@@ -2004,7 +2300,7 @@ items_data = [
         240
       ]
     ],
-    "sortIndex": 234,
+    "sortIndex": 233,
     "key": "beast_hood"
   },
   {
@@ -2020,7 +2316,7 @@ items_data = [
         905
       ]
     ],
-    "sortIndex": 235,
+    "sortIndex": 234,
     "key": "umbral_hood"
   },
   {
@@ -2036,7 +2332,7 @@ items_data = [
         12
       ]
     ],
-    "sortIndex": 236,
+    "sortIndex": 235,
     "key": "cotton_hat"
   },
   {
@@ -2052,7 +2348,7 @@ items_data = [
         43
       ]
     ],
-    "sortIndex": 237,
+    "sortIndex": 236,
     "key": "linen_hat"
   },
   {
@@ -2068,7 +2364,7 @@ items_data = [
         99
       ]
     ],
-    "sortIndex": 238,
+    "sortIndex": 237,
     "key": "bamboo_hat"
   },
   {
@@ -2084,7 +2380,7 @@ items_data = [
         240
       ]
     ],
-    "sortIndex": 239,
+    "sortIndex": 238,
     "key": "silk_hat"
   },
   {
@@ -2100,7 +2396,7 @@ items_data = [
         905
       ]
     ],
-    "sortIndex": 240,
+    "sortIndex": 239,
     "key": "radiant_hat"
   },
   {
@@ -2116,7 +2412,7 @@ items_data = [
         54
       ]
     ],
-    "sortIndex": 241,
+    "sortIndex": 240,
     "key": "gator_vest"
   },
   {
@@ -2136,7 +2432,7 @@ items_data = [
         82
       ]
     ],
-    "sortIndex": 242,
+    "sortIndex": 241,
     "key": "turtle_shell_body"
   },
   {
@@ -2156,7 +2452,7 @@ items_data = [
         2034
       ]
     ],
-    "sortIndex": 243,
+    "sortIndex": 242,
     "key": "colossus_plate_body"
   },
   {
@@ -2176,7 +2472,7 @@ items_data = [
         2034
       ]
     ],
-    "sortIndex": 244,
+    "sortIndex": 243,
     "key": "demonic_plate_body"
   },
   {
@@ -2196,7 +2492,7 @@ items_data = [
         186
       ]
     ],
-    "sortIndex": 245,
+    "sortIndex": 244,
     "key": "marine_tunic"
   },
   {
@@ -2216,8 +2512,32 @@ items_data = [
         2034
       ]
     ],
-    "sortIndex": 246,
+    "sortIndex": 245,
     "key": "revenant_tunic"
+  },
+  {
+    "name": "Griffin Tunic",
+    "itemLevel": 85,
+    "enhancementCosts": [
+      [
+        "chimerical_essence",
+        16
+      ],
+      [
+        "umbral_leather",
+        3
+      ],
+      [
+        "holy_cheese",
+        2
+      ],
+      [
+        "coin",
+        2034
+      ]
+    ],
+    "sortIndex": 222,
+    "key": "griffin_tunic"
   },
   {
     "name": "Icy Robe Top",
@@ -2236,7 +2556,7 @@ items_data = [
         186
       ]
     ],
-    "sortIndex": 247,
+    "sortIndex": 223,
     "key": "icy_robe_top"
   },
   {
@@ -2256,7 +2576,7 @@ items_data = [
         186
       ]
     ],
-    "sortIndex": 248,
+    "sortIndex": 224,
     "key": "flaming_robe_top"
   },
   {
@@ -2276,8 +2596,68 @@ items_data = [
         622
       ]
     ],
-    "sortIndex": 249,
+    "sortIndex": 225,
     "key": "luna_robe_top"
+  },
+  {
+    "name": "Royal Water Robe Top",
+    "itemLevel": 95,
+    "enhancementCosts": [
+      [
+        "enchanted_essence",
+        16
+      ],
+      [
+        "radiant_fabric",
+        8
+      ],
+      [
+        "coin",
+        4815
+      ]
+    ],
+    "sortIndex": 222,
+    "key": "royal_water_robe_top"
+  },
+  {
+    "name": "Royal Nature Robe Top",
+    "itemLevel": 95,
+    "enhancementCosts": [
+      [
+        "enchanted_essence",
+        16
+      ],
+      [
+        "radiant_fabric",
+        8
+      ],
+      [
+        "coin",
+        4815
+      ]
+    ],
+    "sortIndex": 222,
+    "key": "royal_nature_robe_top"
+  },
+  {
+    "name": "Royal Fire Robe Top",
+    "itemLevel": 95,
+    "enhancementCosts": [
+      [
+        "enchanted_essence",
+        16
+      ],
+      [
+        "radiant_fabric",
+        8
+      ],
+      [
+        "coin",
+        4815
+      ]
+    ],
+    "sortIndex": 222,
+    "key": "royal_fire_robe_top"
   },
   {
     "name": "Cheese Plate Body",
@@ -2292,7 +2672,7 @@ items_data = [
         12
       ]
     ],
-    "sortIndex": 250,
+    "sortIndex": 223,
     "key": "cheese_plate_body"
   },
   {
@@ -2308,7 +2688,7 @@ items_data = [
         31
       ]
     ],
-    "sortIndex": 251,
+    "sortIndex": 224,
     "key": "verdant_plate_body"
   },
   {
@@ -2324,7 +2704,7 @@ items_data = [
         54
       ]
     ],
-    "sortIndex": 252,
+    "sortIndex": 225,
     "key": "azure_plate_body"
   },
   {
@@ -2340,7 +2720,7 @@ items_data = [
         99
       ]
     ],
-    "sortIndex": 253,
+    "sortIndex": 226,
     "key": "burble_plate_body"
   },
   {
@@ -2356,7 +2736,7 @@ items_data = [
         186
       ]
     ],
-    "sortIndex": 254,
+    "sortIndex": 227,
     "key": "crimson_plate_body"
   },
   {
@@ -2372,7 +2752,7 @@ items_data = [
         439
       ]
     ],
-    "sortIndex": 255,
+    "sortIndex": 228,
     "key": "rainbow_plate_body"
   },
   {
@@ -2388,7 +2768,7 @@ items_data = [
         1345
       ]
     ],
-    "sortIndex": 256,
+    "sortIndex": 229,
     "key": "holy_plate_body"
   },
   {
@@ -2404,7 +2784,7 @@ items_data = [
         12
       ]
     ],
-    "sortIndex": 257,
+    "sortIndex": 230,
     "key": "rough_tunic"
   },
   {
@@ -2420,7 +2800,7 @@ items_data = [
         43
       ]
     ],
-    "sortIndex": 258,
+    "sortIndex": 231,
     "key": "reptile_tunic"
   },
   {
@@ -2436,7 +2816,7 @@ items_data = [
         120
       ]
     ],
-    "sortIndex": 259,
+    "sortIndex": 232,
     "key": "gobo_tunic"
   },
   {
@@ -2452,7 +2832,7 @@ items_data = [
         240
       ]
     ],
-    "sortIndex": 260,
+    "sortIndex": 233,
     "key": "beast_tunic"
   },
   {
@@ -2468,7 +2848,7 @@ items_data = [
         905
       ]
     ],
-    "sortIndex": 261,
+    "sortIndex": 234,
     "key": "umbral_tunic"
   },
   {
@@ -2484,7 +2864,7 @@ items_data = [
         12
       ]
     ],
-    "sortIndex": 262,
+    "sortIndex": 235,
     "key": "cotton_robe_top"
   },
   {
@@ -2500,7 +2880,7 @@ items_data = [
         43
       ]
     ],
-    "sortIndex": 263,
+    "sortIndex": 236,
     "key": "linen_robe_top"
   },
   {
@@ -2516,7 +2896,7 @@ items_data = [
         99
       ]
     ],
-    "sortIndex": 264,
+    "sortIndex": 237,
     "key": "bamboo_robe_top"
   },
   {
@@ -2532,7 +2912,7 @@ items_data = [
         240
       ]
     ],
-    "sortIndex": 265,
+    "sortIndex": 238,
     "key": "silk_robe_top"
   },
   {
@@ -2548,7 +2928,7 @@ items_data = [
         905
       ]
     ],
-    "sortIndex": 266,
+    "sortIndex": 239,
     "key": "radiant_robe_top"
   },
   {
@@ -2568,7 +2948,7 @@ items_data = [
         82
       ]
     ],
-    "sortIndex": 267,
+    "sortIndex": 240,
     "key": "turtle_shell_legs"
   },
   {
@@ -2588,7 +2968,7 @@ items_data = [
         2034
       ]
     ],
-    "sortIndex": 268,
+    "sortIndex": 241,
     "key": "colossus_plate_legs"
   },
   {
@@ -2608,7 +2988,7 @@ items_data = [
         2034
       ]
     ],
-    "sortIndex": 269,
+    "sortIndex": 242,
     "key": "demonic_plate_legs"
   },
   {
@@ -2628,7 +3008,7 @@ items_data = [
         186
       ]
     ],
-    "sortIndex": 270,
+    "sortIndex": 243,
     "key": "marine_chaps"
   },
   {
@@ -2648,8 +3028,32 @@ items_data = [
         2034
       ]
     ],
-    "sortIndex": 271,
+    "sortIndex": 244,
     "key": "revenant_chaps"
+  },
+  {
+    "name": "Giffin Chaps",
+    "itemLevel": 85,
+    "enhancementCosts": [
+      [
+        "chimerical_essence",
+        14
+      ],
+      [
+        "umbral_leather",
+        4
+      ],
+      [
+        "holy_cheese",
+        2
+      ],
+      [
+        "coin",
+        2034
+      ]
+    ],
+    "sortIndex": 222,
+    "key": "griffin_chaps"
   },
   {
     "name": "Icy Robe Bottoms",
@@ -2668,7 +3072,7 @@ items_data = [
         186
       ]
     ],
-    "sortIndex": 272,
+    "sortIndex": 223,
     "key": "icy_robe_bottoms"
   },
   {
@@ -2688,7 +3092,7 @@ items_data = [
         186
       ]
     ],
-    "sortIndex": 273,
+    "sortIndex": 224,
     "key": "flaming_robe_bottoms"
   },
   {
@@ -2708,8 +3112,68 @@ items_data = [
         622
       ]
     ],
-    "sortIndex": 274,
+    "sortIndex": 225,
     "key": "luna_robe_bottoms"
+  },
+  {
+    "name": "Royal Water Robe Bottoms",
+    "itemLevel": 95,
+    "enhancementCosts": [
+      [
+        "enchanted_essence",
+        14
+      ],
+      [
+        "radiant_fabric",
+        6
+      ],
+      [
+        "coin",
+        4815
+      ]
+    ],
+    "sortIndex": 222,
+    "key": "royal_water_robe_bottoms"
+  },
+  {
+    "name": "Royal Nature Robe Bottoms",
+    "itemLevel": 95,
+    "enhancementCosts": [
+      [
+        "enchanted_essence",
+        14
+      ],
+      [
+        "radiant_fabric",
+        6
+      ],
+      [
+        "coin",
+        4815
+      ]
+    ],
+    "sortIndex": 222,
+    "key": "royal_nature_robe_bottoms"
+  },
+  {
+    "name": "Royal Fire Robe Bottoms",
+    "itemLevel": 95,
+    "enhancementCosts": [
+      [
+        "enchanted_essence",
+        14
+      ],
+      [
+        "radiant_fabric",
+        6
+      ],
+      [
+        "coin",
+        4815
+      ]
+    ],
+    "sortIndex": 222,
+    "key": "royal_fire_robe_bottoms"
   },
   {
     "name": "Cheese Plate Legs",
@@ -2724,7 +3188,7 @@ items_data = [
         12
       ]
     ],
-    "sortIndex": 275,
+    "sortIndex": 223,
     "key": "cheese_plate_legs"
   },
   {
@@ -2740,7 +3204,7 @@ items_data = [
         31
       ]
     ],
-    "sortIndex": 276,
+    "sortIndex": 224,
     "key": "verdant_plate_legs"
   },
   {
@@ -2756,7 +3220,7 @@ items_data = [
         54
       ]
     ],
-    "sortIndex": 277,
+    "sortIndex": 225,
     "key": "azure_plate_legs"
   },
   {
@@ -2772,7 +3236,7 @@ items_data = [
         99
       ]
     ],
-    "sortIndex": 278,
+    "sortIndex": 226,
     "key": "burble_plate_legs"
   },
   {
@@ -2792,7 +3256,7 @@ items_data = [
         186
       ]
     ],
-    "sortIndex": 279,
+    "sortIndex": 227,
     "key": "crimson_plate_legs"
   },
   {
@@ -2808,7 +3272,7 @@ items_data = [
         439
       ]
     ],
-    "sortIndex": 280,
+    "sortIndex": 228,
     "key": "rainbow_plate_legs"
   },
   {
@@ -2824,7 +3288,7 @@ items_data = [
         1345
       ]
     ],
-    "sortIndex": 281,
+    "sortIndex": 229,
     "key": "holy_plate_legs"
   },
   {
@@ -2840,7 +3304,7 @@ items_data = [
         12
       ]
     ],
-    "sortIndex": 282,
+    "sortIndex": 230,
     "key": "rough_chaps"
   },
   {
@@ -2856,7 +3320,7 @@ items_data = [
         43
       ]
     ],
-    "sortIndex": 283,
+    "sortIndex": 231,
     "key": "reptile_chaps"
   },
   {
@@ -2872,7 +3336,7 @@ items_data = [
         99
       ]
     ],
-    "sortIndex": 284,
+    "sortIndex": 232,
     "key": "gobo_chaps"
   },
   {
@@ -2888,7 +3352,7 @@ items_data = [
         240
       ]
     ],
-    "sortIndex": 285,
+    "sortIndex": 233,
     "key": "beast_chaps"
   },
   {
@@ -2904,7 +3368,7 @@ items_data = [
         905
       ]
     ],
-    "sortIndex": 286,
+    "sortIndex": 234,
     "key": "umbral_chaps"
   },
   {
@@ -2920,7 +3384,7 @@ items_data = [
         12
       ]
     ],
-    "sortIndex": 287,
+    "sortIndex": 235,
     "key": "cotton_robe_bottoms"
   },
   {
@@ -2936,7 +3400,7 @@ items_data = [
         43
       ]
     ],
-    "sortIndex": 288,
+    "sortIndex": 236,
     "key": "linen_robe_bottoms"
   },
   {
@@ -2952,7 +3416,7 @@ items_data = [
         99
       ]
     ],
-    "sortIndex": 289,
+    "sortIndex": 237,
     "key": "bamboo_robe_bottoms"
   },
   {
@@ -2968,7 +3432,7 @@ items_data = [
         240
       ]
     ],
-    "sortIndex": 290,
+    "sortIndex": 238,
     "key": "silk_robe_bottoms"
   },
   {
@@ -2984,7 +3448,7 @@ items_data = [
         905
       ]
     ],
-    "sortIndex": 291,
+    "sortIndex": 239,
     "key": "radiant_robe_bottoms"
   },
   {
@@ -3017,7 +3481,7 @@ items_data = [
         319
       ]
     ],
-    "sortIndex": 292,
+    "sortIndex": 240,
     "key": "enchanted_gloves"
   },
   {
@@ -3037,7 +3501,7 @@ items_data = [
         67
       ]
     ],
-    "sortIndex": 293,
+    "sortIndex": 241,
     "key": "pincer_gloves"
   },
   {
@@ -3057,7 +3521,7 @@ items_data = [
         439
       ]
     ],
-    "sortIndex": 294,
+    "sortIndex": 242,
     "key": "panda_gloves"
   },
   {
@@ -3077,8 +3541,28 @@ items_data = [
         2034
       ]
     ],
-    "sortIndex": 295,
+    "sortIndex": 243,
     "key": "magnetic_gloves"
+  },
+  {
+    "name": "Ddocamel Gauntlets",
+    "itemLevel": 95,
+    "enhancementCosts": [
+      [
+        "chimerical_essence",
+        16
+      ],
+      [
+        "holy_cheese",
+        4
+      ],
+      [
+        "coin",
+        4815
+      ]
+    ],
+    "sortIndex": 222,
+    "key": "dodocamel_gauntlets"
   },
   {
     "name": "Sighted Bracers",
@@ -3097,7 +3581,7 @@ items_data = [
         319
       ]
     ],
-    "sortIndex": 296,
+    "sortIndex": 223,
     "key": "sighted_bracers"
   },
   {
@@ -3117,7 +3601,7 @@ items_data = [
         1345
       ]
     ],
-    "sortIndex": 297,
+    "sortIndex": 224,
     "key": "chrono_gloves"
   },
   {
@@ -3133,7 +3617,7 @@ items_data = [
         12
       ]
     ],
-    "sortIndex": 298,
+    "sortIndex": 225,
     "key": "cheese_gauntlets"
   },
   {
@@ -3149,7 +3633,7 @@ items_data = [
         31
       ]
     ],
-    "sortIndex": 299,
+    "sortIndex": 226,
     "key": "verdant_gauntlets"
   },
   {
@@ -3165,7 +3649,7 @@ items_data = [
         54
       ]
     ],
-    "sortIndex": 300,
+    "sortIndex": 227,
     "key": "azure_gauntlets"
   },
   {
@@ -3181,7 +3665,7 @@ items_data = [
         99
       ]
     ],
-    "sortIndex": 301,
+    "sortIndex": 228,
     "key": "burble_gauntlets"
   },
   {
@@ -3197,7 +3681,7 @@ items_data = [
         186
       ]
     ],
-    "sortIndex": 302,
+    "sortIndex": 229,
     "key": "crimson_gauntlets"
   },
   {
@@ -3213,7 +3697,7 @@ items_data = [
         439
       ]
     ],
-    "sortIndex": 303,
+    "sortIndex": 230,
     "key": "rainbow_gauntlets"
   },
   {
@@ -3229,7 +3713,7 @@ items_data = [
         1345
       ]
     ],
-    "sortIndex": 304,
+    "sortIndex": 231,
     "key": "holy_gauntlets"
   },
   {
@@ -3245,7 +3729,7 @@ items_data = [
         12
       ]
     ],
-    "sortIndex": 305,
+    "sortIndex": 232,
     "key": "rough_bracers"
   },
   {
@@ -3261,7 +3745,7 @@ items_data = [
         43
       ]
     ],
-    "sortIndex": 306,
+    "sortIndex": 233,
     "key": "reptile_bracers"
   },
   {
@@ -3277,7 +3761,7 @@ items_data = [
         99
       ]
     ],
-    "sortIndex": 307,
+    "sortIndex": 234,
     "key": "gobo_bracers"
   },
   {
@@ -3293,7 +3777,7 @@ items_data = [
         240
       ]
     ],
-    "sortIndex": 308,
+    "sortIndex": 235,
     "key": "beast_bracers"
   },
   {
@@ -3309,7 +3793,7 @@ items_data = [
         905
       ]
     ],
-    "sortIndex": 309,
+    "sortIndex": 236,
     "key": "umbral_bracers"
   },
   {
@@ -3325,7 +3809,7 @@ items_data = [
         12
       ]
     ],
-    "sortIndex": 310,
+    "sortIndex": 237,
     "key": "cotton_gloves"
   },
   {
@@ -3341,7 +3825,7 @@ items_data = [
         43
       ]
     ],
-    "sortIndex": 311,
+    "sortIndex": 238,
     "key": "linen_gloves"
   },
   {
@@ -3357,7 +3841,7 @@ items_data = [
         99
       ]
     ],
-    "sortIndex": 312,
+    "sortIndex": 239,
     "key": "bamboo_gloves"
   },
   {
@@ -3373,7 +3857,7 @@ items_data = [
         240
       ]
     ],
-    "sortIndex": 313,
+    "sortIndex": 240,
     "key": "silk_gloves"
   },
   {
@@ -3389,7 +3873,7 @@ items_data = [
         905
       ]
     ],
-    "sortIndex": 314,
+    "sortIndex": 241,
     "key": "radiant_gloves"
   },
   {
@@ -3421,7 +3905,7 @@ items_data = [
         319
       ]
     ],
-    "sortIndex": 315,
+    "sortIndex": 242,
     "key": "collectors_boots"
   },
   {
@@ -3453,7 +3937,7 @@ items_data = [
         82
       ]
     ],
-    "sortIndex": 316,
+    "sortIndex": 243,
     "key": "shoebill_shoes"
   },
   {
@@ -3473,7 +3957,7 @@ items_data = [
         439
       ]
     ],
-    "sortIndex": 317,
+    "sortIndex": 244,
     "key": "black_bear_shoes"
   },
   {
@@ -3493,7 +3977,7 @@ items_data = [
         439
       ]
     ],
-    "sortIndex": 318,
+    "sortIndex": 245,
     "key": "grizzly_bear_shoes"
   },
   {
@@ -3513,7 +3997,7 @@ items_data = [
         439
       ]
     ],
-    "sortIndex": 319,
+    "sortIndex": 246,
     "key": "polar_bear_shoes"
   },
   {
@@ -3533,7 +4017,7 @@ items_data = [
         439
       ]
     ],
-    "sortIndex": 320,
+    "sortIndex": 247,
     "key": "centaur_boots"
   },
   {
@@ -3553,7 +4037,7 @@ items_data = [
         439
       ]
     ],
-    "sortIndex": 321,
+    "sortIndex": 248,
     "key": "sorcerer_boots"
   },
   {
@@ -3569,7 +4053,7 @@ items_data = [
         12
       ]
     ],
-    "sortIndex": 322,
+    "sortIndex": 249,
     "key": "cheese_boots"
   },
   {
@@ -3585,7 +4069,7 @@ items_data = [
         31
       ]
     ],
-    "sortIndex": 323,
+    "sortIndex": 250,
     "key": "verdant_boots"
   },
   {
@@ -3601,7 +4085,7 @@ items_data = [
         54
       ]
     ],
-    "sortIndex": 324,
+    "sortIndex": 251,
     "key": "azure_boots"
   },
   {
@@ -3617,7 +4101,7 @@ items_data = [
         99
       ]
     ],
-    "sortIndex": 325,
+    "sortIndex": 252,
     "key": "burble_boots"
   },
   {
@@ -3633,7 +4117,7 @@ items_data = [
         186
       ]
     ],
-    "sortIndex": 326,
+    "sortIndex": 253,
     "key": "crimson_boots"
   },
   {
@@ -3649,7 +4133,7 @@ items_data = [
         439
       ]
     ],
-    "sortIndex": 327,
+    "sortIndex": 254,
     "key": "rainbow_boots"
   },
   {
@@ -3665,7 +4149,7 @@ items_data = [
         1345
       ]
     ],
-    "sortIndex": 328,
+    "sortIndex": 255,
     "key": "holy_boots"
   },
   {
@@ -3681,7 +4165,7 @@ items_data = [
         12
       ]
     ],
-    "sortIndex": 329,
+    "sortIndex": 256,
     "key": "rough_boots"
   },
   {
@@ -3697,7 +4181,7 @@ items_data = [
         43
       ]
     ],
-    "sortIndex": 330,
+    "sortIndex": 257,
     "key": "reptile_boots"
   },
   {
@@ -3713,7 +4197,7 @@ items_data = [
         99
       ]
     ],
-    "sortIndex": 331,
+    "sortIndex": 258,
     "key": "gobo_boots"
   },
   {
@@ -3729,7 +4213,7 @@ items_data = [
         240
       ]
     ],
-    "sortIndex": 332,
+    "sortIndex": 259,
     "key": "beast_boots"
   },
   {
@@ -3745,7 +4229,7 @@ items_data = [
         905
       ]
     ],
-    "sortIndex": 333,
+    "sortIndex": 260,
     "key": "umbral_boots"
   },
   {
@@ -3761,7 +4245,7 @@ items_data = [
         12
       ]
     ],
-    "sortIndex": 334,
+    "sortIndex": 261,
     "key": "cotton_boots"
   },
   {
@@ -3777,7 +4261,7 @@ items_data = [
         43
       ]
     ],
-    "sortIndex": 335,
+    "sortIndex": 262,
     "key": "linen_boots"
   },
   {
@@ -3793,7 +4277,7 @@ items_data = [
         99
       ]
     ],
-    "sortIndex": 336,
+    "sortIndex": 263,
     "key": "bamboo_boots"
   },
   {
@@ -3809,7 +4293,7 @@ items_data = [
         240
       ]
     ],
-    "sortIndex": 337,
+    "sortIndex": 264,
     "key": "silk_boots"
   },
   {
@@ -3825,7 +4309,7 @@ items_data = [
         905
       ]
     ],
-    "sortIndex": 338,
+    "sortIndex": 265,
     "key": "radiant_boots"
   },
   {
@@ -3849,7 +4333,7 @@ items_data = [
         82
       ]
     ],
-    "sortIndex": 339,
+    "sortIndex": 266,
     "key": "necklace_of_efficiency"
   },
   {
@@ -3869,7 +4353,7 @@ items_data = [
         148
       ]
     ],
-    "sortIndex": 340,
+    "sortIndex": 267,
     "key": "fighter_necklace"
   },
   {
@@ -3889,7 +4373,7 @@ items_data = [
         148
       ]
     ],
-    "sortIndex": 341,
+    "sortIndex": 268,
     "key": "ranger_necklace"
   },
   {
@@ -3909,7 +4393,7 @@ items_data = [
         148
       ]
     ],
-    "sortIndex": 342,
+    "sortIndex": 269,
     "key": "wizard_necklace"
   },
   {
@@ -3933,7 +4417,7 @@ items_data = [
         319
       ]
     ],
-    "sortIndex": 343,
+    "sortIndex": 270,
     "key": "necklace_of_wisdom"
   },
   {
@@ -3953,7 +4437,7 @@ items_data = [
         44
       ]
     ],
-    "sortIndex": 344,
+    "sortIndex": 271,
     "key": "earrings_of_gathering"
   },
   {
@@ -3977,7 +4461,7 @@ items_data = [
         148
       ]
     ],
-    "sortIndex": 345,
+    "sortIndex": 272,
     "key": "earrings_of_armor"
   },
   {
@@ -4001,7 +4485,7 @@ items_data = [
         148
       ]
     ],
-    "sortIndex": 346,
+    "sortIndex": 273,
     "key": "earrings_of_regeneration"
   },
   {
@@ -4025,7 +4509,7 @@ items_data = [
         148
       ]
     ],
-    "sortIndex": 347,
+    "sortIndex": 274,
     "key": "earrings_of_resistance"
   },
   {
@@ -4045,7 +4529,7 @@ items_data = [
         319
       ]
     ],
-    "sortIndex": 348,
+    "sortIndex": 275,
     "key": "earrings_of_rare_find"
   },
   {
@@ -4061,7 +4545,7 @@ items_data = [
         12
       ]
     ],
-    "sortIndex": 349,
+    "sortIndex": 276,
     "key": "basic_task_ring"
   },
   {
@@ -4077,7 +4561,7 @@ items_data = [
         82
       ]
     ],
-    "sortIndex": 350,
+    "sortIndex": 277,
     "key": "advanced_task_ring"
   },
   {
@@ -4093,7 +4577,7 @@ items_data = [
         319
       ]
     ],
-    "sortIndex": 351,
+    "sortIndex": 278,
     "key": "expert_task_ring"
   },
   {
@@ -4113,7 +4597,7 @@ items_data = [
         43
       ]
     ],
-    "sortIndex": 352,
+    "sortIndex": 279,
     "key": "ring_of_gathering"
   },
   {
@@ -4137,7 +4621,7 @@ items_data = [
         148
       ]
     ],
-    "sortIndex": 353,
+    "sortIndex": 280,
     "key": "ring_of_armor"
   },
   {
@@ -4161,7 +4645,7 @@ items_data = [
         148
       ]
     ],
-    "sortIndex": 354,
+    "sortIndex": 281,
     "key": "ring_of_regeneration"
   },
   {
@@ -4185,7 +4669,7 @@ items_data = [
         148
       ]
     ],
-    "sortIndex": 355,
+    "sortIndex": 282,
     "key": "ring_of_resistance"
   },
   {
@@ -4205,7 +4689,7 @@ items_data = [
         319
       ]
     ],
-    "sortIndex": 356,
+    "sortIndex": 283,
     "key": "ring_of_rare_find"
   },
   {
@@ -4225,7 +4709,7 @@ items_data = [
         12
       ]
     ],
-    "sortIndex": 357,
+    "sortIndex": 284,
     "key": "small_pouch"
   },
   {
@@ -4245,7 +4729,7 @@ items_data = [
         54
       ]
     ],
-    "sortIndex": 358,
+    "sortIndex": 285,
     "key": "medium_pouch"
   },
   {
@@ -4265,7 +4749,7 @@ items_data = [
         120
       ]
     ],
-    "sortIndex": 359,
+    "sortIndex": 286,
     "key": "large_pouch"
   },
   {
@@ -4285,7 +4769,7 @@ items_data = [
         319
       ]
     ],
-    "sortIndex": 360,
+    "sortIndex": 287,
     "key": "giant_pouch"
   },
   {
@@ -4305,7 +4789,7 @@ items_data = [
         12
       ]
     ],
-    "sortIndex": 361,
+    "sortIndex": 288,
     "key": "cheese_brush"
   },
   {
@@ -4325,7 +4809,7 @@ items_data = [
         31
       ]
     ],
-    "sortIndex": 362,
+    "sortIndex": 289,
     "key": "verdant_brush"
   },
   {
@@ -4345,7 +4829,7 @@ items_data = [
         54
       ]
     ],
-    "sortIndex": 363,
+    "sortIndex": 290,
     "key": "azure_brush"
   },
   {
@@ -4365,7 +4849,7 @@ items_data = [
         99
       ]
     ],
-    "sortIndex": 364,
+    "sortIndex": 291,
     "key": "burble_brush"
   },
   {
@@ -4385,7 +4869,7 @@ items_data = [
         186
       ]
     ],
-    "sortIndex": 365,
+    "sortIndex": 292,
     "key": "crimson_brush"
   },
   {
@@ -4405,7 +4889,7 @@ items_data = [
         439
       ]
     ],
-    "sortIndex": 366,
+    "sortIndex": 293,
     "key": "rainbow_brush"
   },
   {
@@ -4425,7 +4909,7 @@ items_data = [
         1345
       ]
     ],
-    "sortIndex": 367,
+    "sortIndex": 294,
     "key": "holy_brush"
   },
   {
@@ -4445,7 +4929,7 @@ items_data = [
         12
       ]
     ],
-    "sortIndex": 368,
+    "sortIndex": 295,
     "key": "cheese_shears"
   },
   {
@@ -4465,7 +4949,7 @@ items_data = [
         31
       ]
     ],
-    "sortIndex": 369,
+    "sortIndex": 296,
     "key": "verdant_shears"
   },
   {
@@ -4485,7 +4969,7 @@ items_data = [
         54
       ]
     ],
-    "sortIndex": 370,
+    "sortIndex": 297,
     "key": "azure_shears"
   },
   {
@@ -4505,7 +4989,7 @@ items_data = [
         99
       ]
     ],
-    "sortIndex": 371,
+    "sortIndex": 298,
     "key": "burble_shears"
   },
   {
@@ -4525,7 +5009,7 @@ items_data = [
         186
       ]
     ],
-    "sortIndex": 372,
+    "sortIndex": 299,
     "key": "crimson_shears"
   },
   {
@@ -4545,7 +5029,7 @@ items_data = [
         439
       ]
     ],
-    "sortIndex": 373,
+    "sortIndex": 300,
     "key": "rainbow_shears"
   },
   {
@@ -4565,7 +5049,7 @@ items_data = [
         1345
       ]
     ],
-    "sortIndex": 374,
+    "sortIndex": 301,
     "key": "holy_shears"
   },
   {
@@ -4585,7 +5069,7 @@ items_data = [
         12
       ]
     ],
-    "sortIndex": 375,
+    "sortIndex": 302,
     "key": "cheese_hatchet"
   },
   {
@@ -4605,7 +5089,7 @@ items_data = [
         31
       ]
     ],
-    "sortIndex": 376,
+    "sortIndex": 303,
     "key": "verdant_hatchet"
   },
   {
@@ -4625,7 +5109,7 @@ items_data = [
         54
       ]
     ],
-    "sortIndex": 377,
+    "sortIndex": 304,
     "key": "azure_hatchet"
   },
   {
@@ -4645,7 +5129,7 @@ items_data = [
         99
       ]
     ],
-    "sortIndex": 378,
+    "sortIndex": 305,
     "key": "burble_hatchet"
   },
   {
@@ -4665,7 +5149,7 @@ items_data = [
         186
       ]
     ],
-    "sortIndex": 379,
+    "sortIndex": 306,
     "key": "crimson_hatchet"
   },
   {
@@ -4685,7 +5169,7 @@ items_data = [
         439
       ]
     ],
-    "sortIndex": 380,
+    "sortIndex": 307,
     "key": "rainbow_hatchet"
   },
   {
@@ -4705,7 +5189,7 @@ items_data = [
         1345
       ]
     ],
-    "sortIndex": 381,
+    "sortIndex": 308,
     "key": "holy_hatchet"
   },
   {
@@ -4725,7 +5209,7 @@ items_data = [
         12
       ]
     ],
-    "sortIndex": 382,
+    "sortIndex": 309,
     "key": "cheese_hammer"
   },
   {
@@ -4745,7 +5229,7 @@ items_data = [
         31
       ]
     ],
-    "sortIndex": 383,
+    "sortIndex": 310,
     "key": "verdant_hammer"
   },
   {
@@ -4765,7 +5249,7 @@ items_data = [
         54
       ]
     ],
-    "sortIndex": 384,
+    "sortIndex": 311,
     "key": "azure_hammer"
   },
   {
@@ -4785,7 +5269,7 @@ items_data = [
         99
       ]
     ],
-    "sortIndex": 385,
+    "sortIndex": 312,
     "key": "burble_hammer"
   },
   {
@@ -4805,7 +5289,7 @@ items_data = [
         186
       ]
     ],
-    "sortIndex": 386,
+    "sortIndex": 313,
     "key": "crimson_hammer"
   },
   {
@@ -4825,7 +5309,7 @@ items_data = [
         439
       ]
     ],
-    "sortIndex": 387,
+    "sortIndex": 314,
     "key": "rainbow_hammer"
   },
   {
@@ -4845,7 +5329,7 @@ items_data = [
         1345
       ]
     ],
-    "sortIndex": 388,
+    "sortIndex": 315,
     "key": "holy_hammer"
   },
   {
@@ -4865,7 +5349,7 @@ items_data = [
         12
       ]
     ],
-    "sortIndex": 389,
+    "sortIndex": 316,
     "key": "cheese_chisel"
   },
   {
@@ -4885,7 +5369,7 @@ items_data = [
         31
       ]
     ],
-    "sortIndex": 390,
+    "sortIndex": 317,
     "key": "verdant_chisel"
   },
   {
@@ -4905,7 +5389,7 @@ items_data = [
         54
       ]
     ],
-    "sortIndex": 391,
+    "sortIndex": 318,
     "key": "azure_chisel"
   },
   {
@@ -4925,7 +5409,7 @@ items_data = [
         99
       ]
     ],
-    "sortIndex": 392,
+    "sortIndex": 319,
     "key": "burble_chisel"
   },
   {
@@ -4945,7 +5429,7 @@ items_data = [
         186
       ]
     ],
-    "sortIndex": 393,
+    "sortIndex": 320,
     "key": "crimson_chisel"
   },
   {
@@ -4965,7 +5449,7 @@ items_data = [
         439
       ]
     ],
-    "sortIndex": 394,
+    "sortIndex": 321,
     "key": "rainbow_chisel"
   },
   {
@@ -4985,7 +5469,7 @@ items_data = [
         1345
       ]
     ],
-    "sortIndex": 395,
+    "sortIndex": 322,
     "key": "holy_chisel"
   },
   {
@@ -5001,7 +5485,7 @@ items_data = [
         12
       ]
     ],
-    "sortIndex": 396,
+    "sortIndex": 323,
     "key": "cheese_needle"
   },
   {
@@ -5017,7 +5501,7 @@ items_data = [
         31
       ]
     ],
-    "sortIndex": 397,
+    "sortIndex": 324,
     "key": "verdant_needle"
   },
   {
@@ -5033,7 +5517,7 @@ items_data = [
         54
       ]
     ],
-    "sortIndex": 398,
+    "sortIndex": 325,
     "key": "azure_needle"
   },
   {
@@ -5049,7 +5533,7 @@ items_data = [
         99
       ]
     ],
-    "sortIndex": 399,
+    "sortIndex": 326,
     "key": "burble_needle"
   },
   {
@@ -5065,7 +5549,7 @@ items_data = [
         186
       ]
     ],
-    "sortIndex": 400,
+    "sortIndex": 327,
     "key": "crimson_needle"
   },
   {
@@ -5081,7 +5565,7 @@ items_data = [
         439
       ]
     ],
-    "sortIndex": 401,
+    "sortIndex": 328,
     "key": "rainbow_needle"
   },
   {
@@ -5097,7 +5581,7 @@ items_data = [
         1345
       ]
     ],
-    "sortIndex": 402,
+    "sortIndex": 329,
     "key": "holy_needle"
   },
   {
@@ -5113,7 +5597,7 @@ items_data = [
         12
       ]
     ],
-    "sortIndex": 403,
+    "sortIndex": 330,
     "key": "cheese_spatula"
   },
   {
@@ -5129,7 +5613,7 @@ items_data = [
         31
       ]
     ],
-    "sortIndex": 404,
+    "sortIndex": 331,
     "key": "verdant_spatula"
   },
   {
@@ -5145,7 +5629,7 @@ items_data = [
         54
       ]
     ],
-    "sortIndex": 405,
+    "sortIndex": 332,
     "key": "azure_spatula"
   },
   {
@@ -5161,7 +5645,7 @@ items_data = [
         99
       ]
     ],
-    "sortIndex": 406,
+    "sortIndex": 333,
     "key": "burble_spatula"
   },
   {
@@ -5177,7 +5661,7 @@ items_data = [
         186
       ]
     ],
-    "sortIndex": 407,
+    "sortIndex": 334,
     "key": "crimson_spatula"
   },
   {
@@ -5193,7 +5677,7 @@ items_data = [
         439
       ]
     ],
-    "sortIndex": 408,
+    "sortIndex": 335,
     "key": "rainbow_spatula"
   },
   {
@@ -5209,7 +5693,7 @@ items_data = [
         1345
       ]
     ],
-    "sortIndex": 409,
+    "sortIndex": 336,
     "key": "holy_spatula"
   },
   {
@@ -5225,7 +5709,7 @@ items_data = [
         12
       ]
     ],
-    "sortIndex": 410,
+    "sortIndex": 337,
     "key": "cheese_pot"
   },
   {
@@ -5241,7 +5725,7 @@ items_data = [
         31
       ]
     ],
-    "sortIndex": 411,
+    "sortIndex": 338,
     "key": "verdant_pot"
   },
   {
@@ -5257,7 +5741,7 @@ items_data = [
         54
       ]
     ],
-    "sortIndex": 412,
+    "sortIndex": 339,
     "key": "azure_pot"
   },
   {
@@ -5273,7 +5757,7 @@ items_data = [
         99
       ]
     ],
-    "sortIndex": 413,
+    "sortIndex": 340,
     "key": "burble_pot"
   },
   {
@@ -5289,7 +5773,7 @@ items_data = [
         186
       ]
     ],
-    "sortIndex": 414,
+    "sortIndex": 341,
     "key": "crimson_pot"
   },
   {
@@ -5305,7 +5789,7 @@ items_data = [
         439
       ]
     ],
-    "sortIndex": 415,
+    "sortIndex": 342,
     "key": "rainbow_pot"
   },
   {
@@ -5321,7 +5805,7 @@ items_data = [
         1345
       ]
     ],
-    "sortIndex": 416,
+    "sortIndex": 343,
     "key": "holy_pot"
   },
   {
@@ -5338,7 +5822,7 @@ items_data = [
         12
       ]
     ],
-    "sortIndex": 417,
+    "sortIndex": 344,
     "key": "cheese_enhancer"
   },
   {
@@ -5355,7 +5839,7 @@ items_data = [
         31
       ]
     ],
-    "sortIndex": 418,
+    "sortIndex": 345,
     "key": "verdant_enhancer"
   },
   {
@@ -5372,7 +5856,7 @@ items_data = [
         54
       ]
     ],
-    "sortIndex": 419,
+    "sortIndex": 346,
     "key": "azure_enhancer"
   },
   {
@@ -5389,7 +5873,7 @@ items_data = [
         99
       ]
     ],
-    "sortIndex": 420,
+    "sortIndex": 347,
     "key": "burble_enhancer"
   },
   {
@@ -5406,7 +5890,7 @@ items_data = [
         186
       ]
     ],
-    "sortIndex": 421,
+    "sortIndex": 348,
     "key": "crimson_enhancer"
   },
   {
@@ -5423,7 +5907,7 @@ items_data = [
         439
       ]
     ],
-    "sortIndex": 422,
+    "sortIndex": 349,
     "key": "rainbow_enhancer"
   },
   {
@@ -5440,7 +5924,19 @@ items_data = [
         1345
       ]
     ],
-    "sortIndex": 423,
+    "sortIndex": 350,
     "key": "holy_enhancer"
   }
 ]
+
+function test() {
+  index = items_data[0].sortIndex
+  for(i = 0; i < items_data.length; i++) {
+    if(items_data[i].sortIndex <= index)
+      index = items_data[i].sortIndex
+    else {
+      index = items_data[i-1].sortIndex+1
+      items_data[i].sortIndex = index
+    }
+  }
+}

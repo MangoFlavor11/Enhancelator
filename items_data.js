@@ -1924,12 +1924,20 @@ items_data = [
         8
       ],
       [
-        "holy_cheese",
-        2
+        "gobo_essence",
+        2000
       ],
       [
-        "umbral_leather",
-        2
+        "sorcerer_essence",
+        2000
+      ],
+      [
+        "bear_essence",
+        2000
+      ],
+      [
+        "twilight_essence",
+        1000
       ],
       [
         "coin",
@@ -1948,12 +1956,20 @@ items_data = [
         8
       ],
       [
-        "arcane_lumber",
-        2
+        "aqua_essence",
+        2000
       ],
       [
-        "umbral_leather",
-        2
+        "jungle_essence",
+        2000
+      ],
+      [
+        "gobo_essence",
+        2000
+      ],
+      [
+        "bear_essence",
+        2000
       ],
       [
         "coin",
@@ -1972,8 +1988,20 @@ items_data = [
         8
       ],
       [
-        "radiant_fabric",
-        4
+        "eyessence",
+        2000
+      ],
+      [
+        "sorcerer_essence",
+        2000
+      ],
+      [
+        "golem_essence",
+        1000
+      ],
+      [
+        "abyssal_essence",
+        1000
       ],
       [
         "coin",
@@ -3041,7 +3069,7 @@ items_data = [
       ],
       [
         "umbral_leather",
-        4
+        2
       ],
       [
         "holy_cheese",

@@ -521,7 +521,7 @@ items_data = [
       ],
       [
         "arcane_lumber",
-        8
+        9
       ],
       [
         "crushed_jade",

@@ -4477,10 +4477,6 @@ items_data = [
         60
       ],
       [
-        "crushed_amethyst",
-        4
-      ],
-      [
         "crushed_amber",
         6
       ],

@@ -100,8 +100,8 @@ ul {
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
-	height: calc(99% - 36px);
-	margin-top: 36px;
+	height: calc(100% - 40px);
+	margin-top: 40px;
 	max-width: 700px;
 	background: #20212f;
 	padding: 0.5% 1%;
@@ -246,7 +246,7 @@ ul {
 }
 
 .side > div > input {
-	width: 78px;
+	width: 102px;
 	margin: 0% 2%;
 }
 

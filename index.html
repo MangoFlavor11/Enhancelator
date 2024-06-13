@@ -18,17 +18,18 @@
 	</div>
 	<div id="info_menu" class="menu info_menu">
 		<div>
-			<p>How to use:<br><br>This Simulator calculates values by running each attempt in real-time loop, hence simulating for +20 will take time, up to a few minutes<br><br>Keep in mind that the nature of enhancing is pure RNG, so every attempt will result in different values. Nevertheless, it's useful to know the range!<br><br>Choose an item from the items list. Once you select an item, some fields will be auto-filled, while others will not<br><br>Set remaining empty fields as needed, such as resource prices, protection price, and enhancing skill level<br><br>Once all fields are filled, click on the "Start" 100 / 1000 / 10,000 iterations buttons to begin the simulation<br><br>You can increase the number of iterations for a more accurate average result by clicking on the 100 / 1000 / 5000 buttons again<br><br>Changing any fields after running iterations will reset everything<br><br><b>What is iterations counter?</b><br>Number of times the item reached from <i>Start At Level</i> to <i>Stop At Level</i><br><br><b>What is Coins counter?</b><br>How much <i>coins</i> used from the enhancing process</i><br><br><b>What is Item level?</b><br>In Game stat for items that affects multiple calculations, it is auto filled, and advised not to temper it</i><br><br><b>What is RNG?</b><br>Random Number Generators (RNG), a way used to determine random events, such as success rate</i></p>
+			<p>How to use:<br><br>This Simulator calculates values by running each attempt in real-time loop, hence simulating for +20 will take time, up to a few minutes<br><br>Keep in mind that the nature of enhancing is pure RNG, so every attempt will result in different values. Nevertheless, it's useful to know the range!<br><br>Choose an item from the items list. Once you select an item, some fields will be auto-filled, while others will not<br><br>Set remaining empty fields as needed, such as resource prices, protection price, and enhancing skill level<br><br>Once all fields are filled, click on the "Start" 100 / 1,000 / 5,000 iterations buttons to begin the simulation<br><br>You can increase the number of iterations for a more accurate average result by clicking on the 100 / 1,000 / 5,000 buttons again<br><br>Changing any fields after running iterations will reset everything<br><br><b>What is iterations counter?</b><br>Number of times the item reached from <i>Start At Level</i> to <i>Stop At Level</i><br><br><b>What is Coins counter?</b><br>How much <i>coins</i> used from the enhancing process</i><br><br><b>What is Item level?</b><br>In Game stat for items that affects multiple calculations, it is auto filled, and advised not to temper it</i><br><br><b>What is RNG?</b><br>Random Number Generators (RNG), a way used to determine random events, such as success rate</i></p>
 		</div>
 		<div class="updates_notes">
 			<p class="updates_titel">Patch: v 1.4.1</p>
 			<ul>
 				<li>Added new items</li>
+				<li>Max limit increased from 10m to 10b</li>
 			</ul>
 			<p class="updates_titel">Patch: v 1.4.0</p>
 			<ul>
-				<li>Changed iteration buttons to 100 / 1000 / 5000</li>
-				<li>Changed Tea selection dropdown list to a Tea selection menu that is identical to the game</li>
+				<li>Changed iteration buttons to 100 / 1,000 / 5,000</li>
+				<li>Changed Tea selection dropdown list to a Tea selection menu</li>
 				<li>Some fields now will be stored in local storage and auto filled when opening the page again</li>
 				<li><i>Start at Level</i> is now a readonly field</li>
 				<li>Added EXP/h and Coins/EXP counters</li>
@@ -146,7 +147,7 @@
 					</div>
 					<input type="number" min="0" max="1000" value="0" id="i_mat_1" placeholder="12">
 					<p>Price</p>
-					<input type="number" min="0" max="10000000" value="0" id="i_prc_1" placeholder="400">
+					<input type="number" min="0" max="10000000000" value="0" id="i_prc_1" placeholder="400">
 				</div>
 				<div id="mat_2_cell" class="r_stat_cell">
 					<div id="mat_2_icon" class="mat_icon">
@@ -154,7 +155,7 @@
 					</div>
 					<input type="number" min="0" max="1000" value="0" id="i_mat_2" placeholder="12">
 					<p>Price</p>
-					<input type="number" min="0" max="10000000" value="0" id="i_prc_2" placeholder="400">
+					<input type="number" min="0" max="10000000000" value="0" id="i_prc_2" placeholder="400">
 				</div>
 				<div id="mat_3_cell" class="r_stat_cell">
 					<div id="mat_3_icon" class="mat_icon">
@@ -162,7 +163,7 @@
 					</div>
 					<input type="number" min="0" max="1000" value="0" id="i_mat_3" placeholder="12">
 					<p>Price</p>
-					<input type="number" min="0" max="10000000" value="0" id="i_prc_3" placeholder="400">
+					<input type="number" min="0" max="10000000000" value="0" id="i_prc_3" placeholder="400">
 				</div>
 				<div id="mat_4_cell" class="r_stat_cell">
 					<div id="mat_4_icon" class="mat_icon">
@@ -170,7 +171,7 @@
 					</div>
 					<input type="number" min="0" max="1000" value="0" id="i_mat_4" placeholder="12">
 					<p>Price</p>
-					<input type="number" min="0" max="10000000" value="0" id="i_prc_4" placeholder="400">
+					<input type="number" min="0" max="10000000000" value="0" id="i_prc_4" placeholder="400">
 				</div>
 				<div id="mat_5_cell" class="r_stat_cell">
 					<div id="mat_5_icon" class="mat_icon">
@@ -178,7 +179,7 @@
 					</div>
 					<input type="number" min="0" max="1000" value="0" id="i_mat_5" placeholder="18">
 					<p>Price</p>
-					<input type="number" min="0" max="10000000" value="0" id="i_prc_5" placeholder="400">
+					<input type="number" min="0" max="10000000000" value="0" id="i_prc_5" placeholder="400">
 				</div>
 				<div class="r_stat_cell" style="display: flex;">
 					<div id="coin_icon" class="mat_icon">
@@ -186,7 +187,7 @@
 							<use xlink:href="#coin"></use>
 						</svg>
 					</div>
-					<input type="number" min="0" max="10000000" value="0" id="i_coins" placeholder="1,034">
+					<input type="number" min="0" max="10000000000" value="0" id="i_coins" placeholder="1,034">
 				</div>
 			</div>
 			<div class="side l_side">
@@ -208,7 +209,7 @@
 				</div>
 				<div id="proto_price_cell" class="l_stat_cell" style="display: none;">
 					<p>Protection Price</p>
-					<input type="number" min="0" max="10000000" value="0" id="i_proto_price" placeholder="88,000">
+					<input type="number" min="0" max="10000000000" value="0" id="i_proto_price" placeholder="88,000">
 				</div>
 				<div id="proto_at_cell" class="l_stat_cell" style="display: none;">
 					<p>Protection At Level</p>
@@ -1823,7 +1824,7 @@
 				<path fill="#fff" d="M0 0h50v50H0z" />
 			  </clipPath>
 			</defs>
-		  </symbol>
+		</symbol>
 	    <symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 50 50" id="cheese">
 	        <path d="M0 24h50v14a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V24Z" fill="#FAA21E" />
 	        <path d="M0 24h50v14a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V24Z" fill="#fff" fill-opacity=".95" />

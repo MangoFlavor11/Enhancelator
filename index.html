@@ -24,6 +24,7 @@
 			<p class="updates_titel">Patch: v 1.4.2</p>
 			<ul>
 				<li>Auto-fill materials prices fields</li>
+				<li>Enhancing Speed is now readonly field</li>
 			</ul>
 			<p class="updates_titel">Patch: v 1.4.1</p>
 			<ul>
@@ -239,7 +240,7 @@
 				<input type="number" min="0" max="6.41" step="0.01" value="0" id="i_enhancer_bonus" placeholder="0.00">
 				<div id="enhancer_item_container" class="sel_item_container" style="z-index: 1;">
 					<div class="close btn" onclick="$('#enhancer_item_container').css('display','none')"><p>&#10005;</p></div>
-					<p class="sel_item_text">Enhance Level</p>
+					<p class="sel_item_text">Enhancer Level</p>
 					<input id="enhace_level" type="number" step="1" value="0" min="0" max="20" class="sel_item_filter" placeholder="10">
 					<div id="enhancer_item" class="sel_item_icons" style="height: 116px;"></div>
 				</div>
@@ -250,7 +251,7 @@
 			</div>
 			<div class="bonuses_cell">
 				<p>Enhancing Speed /s</p>
-				<input type="number" min="3" max="12" value="0" id="i_time" placeholder="7.82">
+				<input type="text" readonly min="3" max="12" value="0" id="i_time" placeholder="7.82">
 			</div>
 			<div class="bonuses_cell" style="flex-direction: row; justify-content: center;">
 				<div id="tea_slot_0" value="0" class="select_tea_slot tea_slot">
@@ -267,7 +268,7 @@
 				</div>
 				<div id="tea_item_container" class="sel_item_container">
 					<div class="close btn" onclick="$('#tea_item_container').css('display','none')"><p>&#10005;</p></div>
-					<div class="sel_item_icons" style="height: 58px; width: 288px; margin-top: 25px; overflow: hidden;">
+					<div class="sel_item_icons" style="height: 56px; width: 288px; margin-top: 25px; overflow: hidden;">
 						<div id="remove_tea" class="sel_item_div tea_sel" style="background: none; border: 1px solid #98a7e9;">
 							<p class="tea_sel_text">Remove</p>
 							<svg><use xlink:href="#"></use></svg>

@@ -4,7 +4,7 @@ Obviously i do not own the game nor any art assets in the this projects
 */
 
 var worker = "",
-	version = "v 1.4.1",
+	version = "v 1.4.2",
 	enhance_bonus = [
 		1, // +0
 		1.02, // +1
@@ -367,6 +367,14 @@ function get_values() {
 	}
 }
 
+function getName(str) {
+    let name = str.replace(/_/g, ' ')
+     name = name.replace(/\b\w/g, function(char) {
+        return char.toUpperCase()
+    })
+    return name
+}
+
 function change_item(value, index) {
 	reset()
 	$(".item_slot_icon > svg > use").attr("xlink:href", "#" + value)
@@ -392,6 +400,12 @@ function change_item(value, index) {
 			$("#mat_" + (i + 1) + "_icon > svg > use").attr("xlink:href", "#" + elm[0])
 			$("#i_mat_" + (i + 1)).val(elm[1])
 			info_["mat_" + (i + 1)] = elm[1]
+
+			fullName = getName(items_data[index].enhancementCosts[i][0])
+			material_price_data = price_data.market[fullName]
+			final_material_cost = (material_price_data.ask + material_price_data.bid) / 2.0
+			$("#i_prc_"+(i + 1)).val(final_material_cost)
+			info_["prc_"+(i + 1)] = final_material_cost
 		}
 	}
 	$("#i_item_level").val(items_data[index].itemLevel)
@@ -451,6 +465,12 @@ $(document).ready(function () {
 	get_values()
 	update_values()
 
+	//get price data
+	const pricesRequest = new XMLHttpRequest();
+	pricesRequest.open("GET", "https://holychikenz.github.io/MWIApi/milkyapi.json", false);
+	pricesRequest.send(null);
+	price_data = JSON.parse(pricesRequest.responseText);
+
 	//generte items list
 	items_data.forEach(function (item, index) {
 		key = item.key
@@ -458,7 +478,7 @@ $(document).ready(function () {
 	})
 
 	//generte ehancers items list
-	for (i = 318; i < items_data.length; i++) {
+	for (i = 320; i < items_data.length; i++) {
 		key = items_data[i].key
 		$("#enhancer_item").append('<div id="' + key + '_enhance" value="' + key + '" data="' + i + '" class="sel_item_div"><svg><use xlink:href="#' + key + '"></svg></use></div>')
 	}

@@ -143,6 +143,14 @@ self.onmessage = function(e) {
   }
   avg_result.l_cost = all_result.total_l_cost / all_result.l_cost_div
   avg_result.h_cost = all_result.total_h_cost / all_result.h_cost_div
+
+  if(avg_result.l_cost == 0 || avg_result.l_cost == NaN || avg_result.l_cost == undefined) {
+    avg_result.l_cost = 0
+  }
   
+  if(avg_result.h_cost == 0 || avg_result.h_cost == NaN || avg_result.h_cost == undefined) {
+    avg_result.h_cost = 0
+  }
+
   self.postMessage({"Enhancelator": 0, "type": 2, "avg": avg_result, "all": all_result})
 }

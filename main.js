@@ -4,114 +4,115 @@ Obviously i do not own the game nor any art assets in the this projects
 */
 
 var worker = "",
-	version = "v 1.4.2",
-	enhance_bonus = [
-		1, // +0
-		1.02, // +1
-		1.042, // +2
-		1.066, // +3
-		1.092, // +4
-		1.12, // +5
-		1.15, // +6
-		1.182, // +7
-		1.216, // +8
-		1.252, // +9
-		1.29, // +10
-		1.33, // +11
-		1.372, // +12
-		1.416, // +13
-		1.462, // +14
-		1.51, // +15
-		1.56, // +16
-		1.612, // +17
-		1.666, // +18
-		1.722, // +19
-		1.78 // +20
-	],
-	info_ = {
-		selected_teas: [],
-		item_level: 0,
-		start_at: 0,
-		stop_at: 10,
-		use_proto: false,
-		proto_at: 0,
-		proto_price: 0,
-		use_gloves: false,
-		gloves_level: 0,
-		enhance_skill: 0,
-		enhancer_bonus: 0,
-		laboratory_level: 0,
-		enhance_tea: 0,
-		total_bonus: 0,
-		wisdom: 1,
-		use_blessing: false,
-		time: 0,
-		mat_1: 0,
-		mat_2: 0,
-		mat_3: 0,
-		mat_4: 0,
-		mat_5: 0,
-		prc_1: 0,
-		prc_2: 0,
-		prc_3: 0,
-		prc_4: 0,
-		prc_5: 0,
-		coins: 0,
-		em: 1,
-	},
-	//all results without dividing
-	all_result = {
-		em: 0,
-		time: 0,
-		tries: 0,
-		exp: 0,
-		coins: 0,
-		used_proto: 0,
-		proto_prc: 0,
-		mat_1: 0,
-		mat_2: 0,
-		mat_3: 0,
-		mat_4: 0,
-		mat_5: 0,
-		prc_1: 0,
-		prc_2: 0,
-		prc_3: 0,
-		prc_4: 0,
-		prc_5: 0,
-		cost: 0,
-		l_cost: 0,
-		h_cost: 0,
-		total_l_cost: 0,
-		total_h_cost: 0,
-		l_cost_div: 0,
-		h_cost_div: 0
-	},
-	//result after dividing for avarage
-	avg_result = {
-		time: 0,
-		tries: 0,
-		exp: 0,
-		coins: 0,
-		used_proto: 0,
-		proto_prc: 0,
-		mat_1: 0,
-		mat_2: 0,
-		mat_3: 0,
-		mat_4: 0,
-		mat_5: 0,
-		prc_1: 0,
-		prc_2: 0,
-		prc_3: 0,
-		prc_4: 0,
-		prc_5: 0,
-		cost: 0,
-		l_cost: 0,
-		h_cost: 0
-	},
-	materials = [],
-	tea_slot = "",
-	tea_pos = 0,
-	temp = 0;
+version = "v 1.4.3",
+enhance_bonus = [
+	1, // +0
+	1.02, // +1
+	1.042, // +2
+	1.066, // +3
+	1.092, // +4
+	1.12, // +5
+	1.15, // +6
+	1.182, // +7
+	1.216, // +8
+	1.252, // +9
+	1.29, // +10
+	1.33, // +11
+	1.372, // +12
+	1.416, // +13
+	1.462, // +14
+	1.51, // +15
+	1.56, // +16
+	1.612, // +17
+	1.666, // +18
+	1.722, // +19
+	1.78 // +20
+],
+info_ = {
+	selected_teas: [],
+	item_level: 0,
+	start_at: 0,
+	stop_at: 10,
+	use_proto: false,
+	proto_at: 0,
+	proto_price: 0,
+	use_gloves: false,
+	gloves_level: 0,
+	enhance_skill: 0,
+	enhancer_bonus: 0,
+	laboratory_level: 0,
+	enhance_tea: 0,
+	total_bonus: 0,
+	wisdom: 1,
+	use_blessing: false,
+	time: 0,
+	mat_1: 0,
+	mat_2: 0,
+	mat_3: 0,
+	mat_4: 0,
+	mat_5: 0,
+	prc_1: 0,
+	prc_2: 0,
+	prc_3: 0,
+	prc_4: 0,
+	prc_5: 0,
+	coins: 0,
+	em: 1,
+},
+//all results without dividing
+all_result = {
+	em: 0,
+	time: 0,
+	tries: 0,
+	exp: 0,
+	coins: 0,
+	used_proto: 0,
+	proto_prc: 0,
+	mat_1: 0,
+	mat_2: 0,
+	mat_3: 0,
+	mat_4: 0,
+	mat_5: 0,
+	prc_1: 0,
+	prc_2: 0,
+	prc_3: 0,
+	prc_4: 0,
+	prc_5: 0,
+	cost: 0,
+	l_cost: 0,
+	h_cost: 0,
+	total_l_cost: 0,
+	total_h_cost: 0,
+	l_cost_div: 0,
+	h_cost_div: 0
+},
+//result after dividing for avarage
+avg_result = {
+	time: 0,
+	tries: 0,
+	exp: 0,
+	coins: 0,
+	used_proto: 0,
+	proto_prc: 0,
+	mat_1: 0,
+	mat_2: 0,
+	mat_3: 0,
+	mat_4: 0,
+	mat_5: 0,
+	prc_1: 0,
+	prc_2: 0,
+	prc_3: 0,
+	prc_4: 0,
+	prc_5: 0,
+	cost: 0,
+	l_cost: 0,
+	h_cost: 0
+},
+materials = [],
+tea_slot = "",
+tea_pos = 0,
+isCalc = false,
+temp = 0;
 
 //tims as seconds, return string "00y:000d:00h:00m:00s"
 function formatTime(seconds) {
@@ -271,13 +272,18 @@ function reset() {
 	update_values()
 }
 
-function stop_calc(stop) {
-	if (stop)
-		all_result.em -= info_.em
+function stop_calc(isCalc, stop) {
+	$(".button").off("click")
+	if(isCalc) {
+		if(stop) {
+			all_result.em -= info_.em
+		}
+			worker.terminate()
+	}
 	$("#calculating").css("display", "none")
 	$(".button").on("click", (e) => { on_click_btn(e.currentTarget.id) })
 	$(".button").css("opacity", 1)
-	worker.terminate()
+
 }
 
 function close_sel_menus() {
@@ -314,9 +320,10 @@ function reset_results() {
 	$("#l_cost").text("0")
 	$("#h_cost").text("0")
 
-	$("#start_100 > p").text("100 itteration")
-	$("#start_1000 > p").text("1000 itteration")
-	$("#start_5000 > p").text("5000 itteration")
+	$("#start_100 > p").text("100 iteration")
+	$("#start_1000 > p").text("1000 iteration")
+	$("#start_5000 > p").text("5000 iteration")
+	stop_calc(isCalc, false)
 }
 
 function update_result() {
@@ -326,6 +333,7 @@ function update_result() {
 		else
 			$("#" + key).text(avg_result[key].toLocaleString())
 	}
+	
 	$("#exp_h").text(Number((avg_result.exp / (avg_result.tries * info_.time / 3600)).toFixed(2)).toLocaleString())
 	$("#c_x").text(Number((avg_result.cost / avg_result.exp).toFixed(2)).toLocaleString())
 	$("#iterations").text(all_result.em)
@@ -341,7 +349,6 @@ function update_result() {
 		$("#r_mat_" + (i + 1) + "_cell").css("display", "flex")
 		$("#r_mat_" + (i + 1) + "_cell_icon > svg > use").attr("xlink:href", "#" + materials[i])
 	}
-
 	$("#enhance_area").scrollTop($("#enhance_area").outerHeight(true))
 }
 
@@ -402,8 +409,13 @@ function change_item(value, index) {
 			info_["mat_" + (i + 1)] = elm[1]
 
 			fullName = getName(items_data[index].enhancementCosts[i][0])
-			material_price_data = price_data.market[fullName]
-			final_material_cost = (material_price_data.ask + material_price_data.bid) / 2.0
+			if(fullName == "Task Crystal") {
+				final_material_cost = 0
+			}
+			else {
+				material_price_data = price_data.market[fullName]
+				final_material_cost = (material_price_data.ask + material_price_data.bid) / 2.0
+			}
 			$("#i_prc_"+(i + 1)).val(final_material_cost)
 			info_["prc_"+(i + 1)] = final_material_cost
 		}
@@ -463,7 +475,6 @@ $(document).ready(function () {
 	init_user_data()
 	reset()
 	get_values()
-	update_values()
 
 	//get price data
 	const pricesRequest = new XMLHttpRequest();
@@ -483,26 +494,16 @@ $(document).ready(function () {
 		$("#enhancer_item").append('<div id="' + key + '_enhance" value="' + key + '" data="' + i + '" class="sel_item_div"><svg><use xlink:href="#' + key + '"></svg></use></div>')
 	}
 
-	//click on transparent background
-	$("#menu_bg").on("click", function () {
-		$("#menu_bg").css("display", "none")
-		$("#info_menu").css("display", "none")
-		$("#success_rate_menu").css("display", "none")
-	})
-
 	$("#success_rate_btn").on("click", function () {
-		$("#menu_bg").css("display", "flex")
-		$("#success_rate_menu").css("display", "flex")
+		$("#success_rate_menu").toggle(0)
 	})
 
 	$("#item_slot").on("click", ".item_slot_icon", function () {
-		temp = $("#sel_item_container").css("display")
-		$("#sel_item_container").css("display", temp == "flex" ? "none" : "flex")
+		$("#sel_item_container").toggle(0)
 	})
 
 	$("#info_btn").on("click", function () {
-		$("#menu_bg").css("display", "flex")
-		$("#info_menu").css("display", "flex")
+		$("#info_menu").toggle(0)
 	})
 
 	$("#item_filter").on("input", function () {
@@ -542,8 +543,7 @@ $(document).ready(function () {
 	})
 
 	$("#i_enhancer_bonus").on("click", function () {
-		temp = $("#enhancer_item_container").css("display")
-		$("#enhancer_item_container").css("display", temp == "flex" ? "none" : "flex")
+		$("#enhancer_item_container").toggle(0)
 	})
 
 	$("#enhancer_item").on("click", ".sel_item_div", function () {
@@ -558,12 +558,12 @@ $(document).ready(function () {
 	$(".tea_slot").on("click", function () {
 		tea_slot = $(this).attr("id")
 		tea_pos = $(this).attr("value")
-		$("#tea_item_container").css("display", "flex")
+		$("#tea_item_container").toggle(0)
 	})
 
 	$(".tea_sel").on("click", function () {
 		add_tea($(this).attr("value"), true)
-		$("#tea_item_container").css("display", "none")
+		$("#tea_item_container").toggle(0)
 		update_values()
 	})
 
@@ -599,6 +599,7 @@ function on_click_btn(id) {
 		worker = new Worker('enhance_worker.js')
 		all_result.em += info_.em
 		close_sel_menus()
+		isCalc = true
 		worker.postMessage({ "Enhancelator": 0, "info_": info_, "avg": avg_result, "all": all_result })
 
 		worker.onmessage = function (e) {
@@ -622,13 +623,14 @@ function on_click_btn(id) {
 			}
 			else {
 				$("#reset_result").css("display", "flex")
-				$("#start_100 > p").text("Add 100 itteration")
-				$("#start_1000 > p").text("Add 1000 itteration")
-				$("#start_5000 > p").text("Add 5000 itteration")
+				$("#start_100 > p").text("Add 100 iteration")
+				$("#start_1000 > p").text("Add 1000 iteration")
+				$("#start_5000 > p").text("Add 5000 iteration")
 				all_result = e.data.all
 				avg_result = e.data.avg
 				update_result()
-				stop_calc(false)
+				stop_calc(isCalc, false)
+				isCalc = false
 			}
 		}
 

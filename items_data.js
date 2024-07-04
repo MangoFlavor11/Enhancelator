@@ -4477,6 +4477,10 @@ items_data = [
         60
       ],
       [
+        "crushed_amethyst",
+        4
+      ],
+      [
         "crushed_amber",
         6
       ],
@@ -4581,7 +4585,7 @@ items_data = [
     "key": "earrings_of_rare_find"
   },
   {
-    "name": "Basic Task Ring",
+    "name": "Basic Task Badge",
     "itemLevel": 1,
     "enhancementCosts": [
       [
@@ -4594,10 +4598,10 @@ items_data = [
       ]
     ],
     "sortIndex": 372,
-    "key": "basic_task_ring"
+    "key": "basic_task_badge"
   },
   {
-    "name": "Advanced Task Ring",
+    "name": "Advanced Task Badge",
     "itemLevel": 30,
     "enhancementCosts": [
       [
@@ -4610,10 +4614,10 @@ items_data = [
       ]
     ],
     "sortIndex": 373,
-    "key": "advanced_task_ring"
+    "key": "advanced_task_badge"
   },
   {
-    "name": "Expert Task Ring",
+    "name": "Expert Task Badge",
     "itemLevel": 60,
     "enhancementCosts": [
       [
@@ -4626,7 +4630,7 @@ items_data = [
       ]
     ],
     "sortIndex": 374,
-    "key": "expert_task_ring"
+    "key": "expert_task_badge"
   },
   {
     "name": "Ring Of Gathering",

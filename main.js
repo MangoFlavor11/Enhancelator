@@ -249,11 +249,8 @@ function reset() {
 	$("#use_proto").prop("checked", false)
 	$("#proto_price_cell").css("display", "none")
 	$("#proto_at_cell").css("display", "none")
-	$("#use_gloves").prop("checked", false)
-	$("#gloves_level_cell").css("display", "none")
 	$("#i_proto_price").val("0")
 	$("#i_proto_at").val("2")
-	$("#i_gloves_level").val("0")
 
 	$("#item_stats").css("display", "none")
 	$(".item_slot_icon > svg > use").attr("xlink:href", "#")
@@ -263,6 +260,8 @@ function reset() {
 	for (i = 1; i <= 5; i++) {
 		$("#i_mat_" + i).val("0")
 		$("#i_prc_" + i).val("0")
+		info_["mat_" + i] = 0
+		info_["prc_" + i] = 0
 		$("#mat_" + i + "_cell").css("display", "none")
 	}
 	$("#iterations").text("0")

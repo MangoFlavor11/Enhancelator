@@ -143,7 +143,7 @@ function update_values() {
 		$(".success_rate_list").find("li:eq(" + i + ")").text("+" + (i + 1) + ": +" + es + "%")
 	}
 	if (info_.use_gloves)
-		temp = get_enhancing_bonus("i_gloves_level", 192)
+		temp = get_enhancing_bonus("i_gloves_level", 193)
 	else
 		temp = 0
 	temp = (12 / (1 + (info_.enhance_skill > info_.item_level ? ((info_.enhance_skill + info_.enhance_tea + info_.laboratory_level - info_.item_level) + temp) / 100 : (info_.laboratory_level + temp) / 100))).toFixed(2)
@@ -458,7 +458,10 @@ function init_user_data() {
 		$("#i_enhancer_bonus").val(info_.enhancer_bonus)
 		$("#i_laboratory_level").val(info_.laboratory_level)
 		$("#i_laboratory_level").val(info_.laboratory_level)
-		$("#use_gloves").prop("checked", info_.use_gloves)
+		if($("#use_gloves").prop("checked")){
+			$("#use_gloves").prop("checked", info_.use_gloves)
+			$("#gloves_level_cell").css("display", "flex")
+		}
 		$("#i_gloves_level").val(info_.gloves_level)
 		info_.selected_teas.forEach(function (item, index) {
 			tea_slot = "tea_slot_" + item[1]
@@ -488,7 +491,7 @@ $(document).ready(function () {
 	})
 
 	//generte ehancers items list
-	for (i = 320; i < items_data.length; i++) {
+	for (i = 321; i < items_data.length; i++) {
 		key = items_data[i].key
 		$("#enhancer_item").append('<div id="' + key + '_enhance" value="' + key + '" data="' + i + '" class="sel_item_div"><svg><use xlink:href="#' + key + '"></svg></use></div>')
 	}
